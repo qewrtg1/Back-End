@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+<style>
+    /*ab : 브라우저를 기준으로 위치하고 이동하는 것?????*/
+
+body{height: 3000px;}/*04-4랑 비교해봐*/
+
+.box{
+    width: 200px;
+    height:200px;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color:blueviolet;
+}
+.box3{
+    background-color: yellowgreen;
+    position: absolute; /* ab는 절대 위치. 상대위치가 아니라고 함.(?) pr은 모름*/
+    right: 50px;
+    border: 50px;
+}
+.box4{
+    background-color: coral;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

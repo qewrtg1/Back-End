@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+                                    /* 464p */
+    h1{text-align: center; font-size: 52px;}
+    
+    .tr1{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border: 1px solid black;
+        /* transition: all 1s; */
+        transition-property: background-color, transform, width, height;
+        transition-duration:  2s , 3s; 
+        /* transition-duration:  2s , 3s, 2s, 3s; 4개가 나와야 하는데 2개밖에 안적으면 이렇게 생략되어서 멋대로 적용됨 */
+
+    }
+    .tr1:hover{
+        width: 200px;
+        height: 200px;
+        background-color: blue; /*#ff6e5f*/
+        transform: rotate(180deg); /*트랜스폼은 위에 없으면 위는 기본값으로 들어감?*/
+    }
+
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="tr1"><h1>!</h1></div>
+    
+</body>
+</html>

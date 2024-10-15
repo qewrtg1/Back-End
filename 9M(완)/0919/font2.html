@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    h1{
+        font-family: "굴림", Gulim; /* 아마 글씨체 */
+        font-size: 25px;            /* 글자 크기*/
+        font-weight: bold;          /* 글씨 진하게 */
+        font-style: italic;         /* 글씨 기울이기 */
+        font-variant: small-caps;   /* 아래 참고 */
+        line-height: 120%;          /* 위아래 줄 간격*/
+        color: #808;              /* 글씨 색상 */
+    }
+    /*위 해석본 = 글자가 굴림, 크기 25px, 두께는 두껍게, 모양은 기울어짐, 
+    small caps는 영문 소문자를 작은 대문자로 교체
+    행간 1.2배 */
+
+    .hh1{
+        font: bold italic small-caps 25px/120% "굴림";
+        color: #808;        
+    }
+    /* font 태그만 사용한다면 이렇게 위의 긴 내용을 이렇게 축약해서 쓸 수 있음 */
+    /* font 속성을 쓸려면 크기와 글씨체는 반드시 기술해 주어야함*/
+</style>
+
+
+</head>
+
+<body>
+    <h1>Web Standard Publishing</h1>
+    <h1 class="hh1">Web Standard Publishing</h1>
+
+    <p>웹디자인의 한 분야로 우너래 용어는 웹콘텐츠 UI 다자인이다.</p>
+    
+</body>
+</html>

@@ -1,0 +1,132 @@
+*{margin: 0; padding: 0;}
+/* 모든 요소에 마진패딩을 0으로 부여하는 태그      [ * ]<<---     */
+
+#container{   /* id 로 부여된 카테고리는 #으로 시작한다고 함 */
+    width: 800px;
+    margin: 0 auto;  
+    /* 전체 넓이 800에 중앙 정렬 하는 태그*/
+}
+header{
+    background-color: #f46075;
+    overflow: hidden;  /* 자식에 float 할 거면 반드시 이 태그를 써야함*/
+                        /* 이게 싫으면 높이를 줘도 되지만 수치 조절이 귀찮음*/
+    padding: 10px 0;
+}
+
+header h1{
+    float: left;
+    margin-top: 70px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+header img{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+nav{
+    height: 60px;
+    background-color: #ccc;
+}
+
+nav ul{list-style: none;}
+nav ul li{ 
+    float: left;
+    margin-left: 35px;       /* 이 태그를 아래 ....li a에 주면 안 됨 */ 
+    margin-top: 10px;        /* a에 주면 li를 넘어버릴 수 있음?? 궁금하면 해보셈 완벽히 이해 못함*/
+}
+/*a에 높이를 주면 그 윗단계는 안줘도 된다...?*/
+nav ul li a{
+    display: block;
+    width: 150px;      /* 여기에 높이 너비를 주는 이유는*/ 
+    height: 40px;      /* 마우스를 글자 바로 위에 두는 것보다 편하게 범위를 잡아주기 위함임*/ 
+    text-align: center;
+    line-height: 40px; /* 위아래 가운데 정렬해주는 것*/ /*패딩으로 줘도 되긴 하는데 이게 편함*/
+
+    text-decoration: none;    /* 밑줄 없애기 */
+    color: black;
+
+}
+
+nav ul li a:hover{  /* 마우스 올렸을 때의 상태를 보여주는 게 hover */
+    background-color: #f46075;
+    color: #fff;
+    border-radius: 20px; /*호버에만 주는건가봄? 이거 수업 놓쳐서 모름*/
+                         /*이거하면 호버로 올려둔 칸에 둥근 효과 들어감 */
+}
+
+section{
+    width: 550px;
+    height:550px; 
+    background-color: skyblue;
+    float: left;
+}
+
+section h2{
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+article{
+    width: 210px;
+    height: 200px;
+    border: 1px solid #333;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin: 0 0 15px 30px;
+
+    font-size: 12px; /*폰트의 기본 크기는 16임*/
+                     /* 아티클 통째로 주지말고 h3랑 p를 별도로 나눠주는 게 더 좋음 */
+
+}
+
+article h3{
+    /* background-color: #f46075; 범위 보려고 일부로 넣는 것 */
+    /* padding-bottom: 10px;  이거나 마진바텀 보고 늘어나는 범위 측정할 겸 하는 것 없어도 됨*/
+    margin-bottom: 10px;
+
+    /* background-image: url(../images/bg.png);
+    background-repeat: no-repeat; */  
+
+    background: url(../images/bg.png) no-repeat; /* 윗 두 줄의 명령어를 한번에 압축시킬 수 있음*/
+
+                                                /* 이미지 위치 오른쪽 위로 바꾸고 싶으면 right top*/
+                                                /* 숫자로 [70% 0] 이렇게 부여해도 위치를 바꿀 수 있음*/
+    padding-left: 30px;
+    font-size: 20px;
+
+}
+
+
+aside{
+    text-align: center; 
+     /*글자뿐만이 아니라 사진도 중앙 정렬 된다*/
+    width: 250px;
+    height: 550px; 
+    background-color: #ffffcc;
+    float: right;
+}
+aside h2{
+    margin: 10px;
+}
+
+
+.main{overflow: hidden;} /* class로 부여받은 애들만 . 을 붙임 아닌 애들은 인식이 안됨*/
+
+
+footer{
+    display: block;
+}
+
+footer{
+    height: 50px;
+    line-height: 50px;
+
+    text-align: center;
+    color: white;
+    background-color: #333;    
+}

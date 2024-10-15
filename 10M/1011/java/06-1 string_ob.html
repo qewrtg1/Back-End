@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>//104p 어려움
+//참고 : index번호는 0부터 시작, 띄어쓰기도 번호로 포함함.
+var t = "Hello Thank you good luck to you";
+	document.write(t.charAt(16), "<br>"); //index번호 16번째에 있는 글자 하나를 출력해 달라
+	document.write(t.indexOf("you"), "<br>");
+	document.write(t.indexOf("you", 16), "<br>"); //16번째 뒤에 있는 것을 찾으시오, 란 의미임 그래서 29번째 you를 봄
+	document.write(t.lastIndexOf("you"), "<br>");
+	document.write(t.lastIndexOf("you", 25), "<br>");
+	document.write(t.match("luck"), "<br>");
+	document.write(t.search("you"), "<br>");
+	document.write(t.substr(21, 4), "<br>");
+	//인덱스 번호 21번부터 4개의 문자(영어 스펠링 1개 1개 인듯, 를 출력하라?)
+	document.write(t.substring(6, 12), "<br>");
+	//인덱스 번호 6번부터 12번까지(11) (를?출력하라?)
+
+
+	document.write(t.replace("you","me"), "<br>");
+	document.write(t.toLowerCase(), "<br>");
+	document.write(t.toUpperCase(), "<br>");
+	document.write(t.length, "<br>", "<br>", "<br>", "<br>", "<br>", "<br>"); // 갯수를 구함 몇 글자인지.
+
+
+	var s = t.split(" ");
+	document.write(s[0], "<br>");
+	document.write(s[4], "<br>");
+
+	var str = "A";
+	var t = atr.charCodeAt(0); //A를 아스키 코드값을 반환 106P 봐라 설명들어도 모르겠더라
+	document.write(t, "<br>");
+	document.write(String.fromCharCode(65), "<br>");
+	// 아스키 코드값 65(A)에 해당하는 문자를 반환 -> A
+
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

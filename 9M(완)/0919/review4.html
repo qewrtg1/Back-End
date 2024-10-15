@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 200px; 
+        height: 200px;
+        border: 1px solid #333;
+    }
+    .box1{
+        background-color: aqua;
+        padding-left: 20px;
+    }
+    .box2{
+        background-color: violet;
+        padding: 20px;
+        /*안 여백 위 오른 아래 왼 순서로 시계방향 전방향 10px씩 늘어남*/
+    }
+    .box3{
+        background-color: blanchedalmond;
+        padding: 20px 30px;
+        /*이렇게 부여하면 안여백 위 아래 20씩, 좌우 30씩 값이 주어짐*/
+
+    }
+    .box4{
+        background-color: antiquewhite;
+        padding: 10px 20px 30px 50px;
+        /*이러면 시계방향 순으로 주어짐*/
+
+    }
+
+
+</style>
+
+
+</head>
+<body>
+    <!-- div 는 division 구역을 나눌때 쓴다. -->
+     <div class="box box1">박스1</div>
+     <div class="box box2">박스2</div>
+     <div class="box box3">박스3</div>
+     <div class="box box4">박스4</div>
+     <!-- box라는 공통클래스와 box1~4개별 클래스를 동시에 갖는다 -->
+
+
+</body>
+</html>

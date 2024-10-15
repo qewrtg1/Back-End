@@ -1,0 +1,88 @@
+*{/*아마 512p*/
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(9, 100, 160);
+}
+#container{
+    width: 320px;
+    margin: 50px auto;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 20px 10px;
+    border: 1px solid #333;
+    background-color: #fff;
+}
+
+.words{
+    position: absolute;
+    left: 10px;
+    top: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1719px) {
+    #container{
+        width: 570px;
+        margin: 50px auto;
+    }
+    .card{
+        position: relative;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid #333;
+        background-color: #fff;
+    }
+    .words{
+        position: absolute;
+        left: 310px;
+        top: 50px;
+        width:200px;          
+
+        text-align: center;
+    }
+}
+
+
+
+
+/* 이 아래 추가한다고 뭐가 다른 건지 잘 모르겠네 ㅅㅂ*/
+
+@media screen and (min-width:1720px) {
+    #container{
+        width:1720px;
+        margin: 50px auto;
+
+    }
+    .card{
+        position: relative;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid #333;
+        background-color: #fff;
+
+        float: left; /*카드 왼쪽으로 배열시킴*/
+    }
+    .words{
+        position: absolute;
+        left: 310px;
+        top: 50px;
+        width:200px;          
+
+        text-align: center;
+    }
+}

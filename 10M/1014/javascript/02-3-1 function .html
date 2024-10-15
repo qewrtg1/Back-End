@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+<style>
+a{color:black;text-decoration: none;}
+ul{
+    list-style: none;    
+    width:500px;    
+    margin:10px auto;    
+    padding:0;
+}
+li{
+    display: inline-block;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+}
+#result{
+    width: 500px;
+    height: 300px;
+    margin: 30px auto;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+p {
+    width:80%;    padding:10px;    line-height: 2em;
+ }
+
+
+</style>
+
+
+
+<script>
+
+function changeBg(kkk){
+    var result = document.querySelector('#result');
+    result.style.backgroundColor = kkk;
+}
+</script>
+
+
+
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+        <!-- changBg 안에 들어 있는 값을 '인수'라고 부름 -->
+        <!-- onclick: 얘를 클릭하면 chang라는 함수를 불러오도록 만들었음 -->
+
+    <!-- 위 자바스크립트에changeBg를 부를때 ()값을 보내고 부름
+function changeBg(kkk) 에 'green' 같은 값을 보내게 되고 값을 받은 js는
+    result.style.backgroundColor = kkk; 에 kkk부분에 그 색상 값을 전달함
+
+    그러면 b-g-c값에 적용이 되서 화면에 출력됨    -->
+
+    </ul>
+    <div id="result"></div>
+</body>
+</html>

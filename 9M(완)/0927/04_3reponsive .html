@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /*<head> viewport: 이게 사라지면 다른 기기에선 똑같이 볼 수 없는 상황이 있다고 함.*/
+    /*<head> device-width : 기기의 넓이에 맞춰라, 라는 의미*/
+    .box{
+        width: 25%;
+        height: 250px;
+    }
+    .box1{background-color: aliceblue;}
+    .box2{background-color: aquamarine;}
+    .box3{background-color: yellowgreen;}
+    .box4{background-color: thistle;}
+
+@media screen and (max-width:600px){ /*핸드폰용 사이즈*/
+    .box{float: none; width: 100%;}
+}
+@media screen and (min-width:601px) and (max-width:1023px){ /*스마트 패드(라고 가정)*/
+    .box{float: left; width: 50%;} /*이 50%가 초기 25%를 기준으로 영향을 주는 것*/
+}
+@media screen and (min-width:1024px){ /*PC용 사이즈(라고 가정)*/
+    .box{float: left;}
+}
+
+/* 여기까지가 반응형의 기본임*/
+/* 크기(사이즈)에 반응해서 디자인, 컨텐츠, 등등이 바뀌는 것이 반응형*/
+
+
+</style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+
+    
+</body>
+</html>

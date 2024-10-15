@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+<script> //136p
+    function myFnc(name, area){  //변수 값은 변동하고 함수 값은 고정이다? 그래서 myfnc값 4개가 전부 나온다?
+        var intro = document.querySelector("#introduce"); //querySelector : html의 id, class 값을 가져올 수 있는 함수
+        intro.innerHTML = "안녕 ㅎㅇㅎㅇ " + name + "입니다. <br> 사는 곳은 " +area+ "입니다."
+    }
+// innerHTML: 지정한 html? 값에 innerHTML 뒷 내용을 넣을 수 있다.
+
+</script>
+
+
+
+
+
+
+<body>    
+    <button onclick="myFnc('홍당무','서울')">버튼1</button>
+    <button onclick="myFnc('깍두기','부산')">버튼2</button>
+    <p id="introduce"></p>
+</body>
+</html>

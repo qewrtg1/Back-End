@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script> //136p
+    function myFnc(name, area){ 
+//myFnc : 함수 호출문이 먼저 나와도 호이스팅 방식이 적용되서 정상 작동 되게 만듬
+        document.write("안녕하세요." +name+ "입니다." ,"<br>");
+        document.write("사는 곳은." +area+ "입니다." ,"<br><br>");
+    }
+    myFnc("홍당무", "서울");
+    myFnc("깍두기", "부산");
+// 여기서 name,area는 아래 myfnc에서부터 값을 받아온 후 적용됨.
+
+</script>
+
+
+
+
+
+
+<body>    
+</body>
+</html>

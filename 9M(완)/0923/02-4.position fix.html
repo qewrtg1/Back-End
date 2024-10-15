@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+
+<style>
+
+body{height: 3000px;}   /*  position: fixed; 실험용 높이임  */
+
+
+
+
+
+/**/
+
+    .box{
+        width: 200px;
+        height: 200px;
+    }
+    .box1{
+        background-color: aqua;
+    }
+    .box2{
+        background-color: rgb(214, 211, 29);
+    }
+    .box3{
+        position: fixed;    /* 고정 시킴*/
+        background-color: rgb(69, 24, 95);
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .box4{
+        background-color: rgb(230, 119, 29);
+    }
+/*
+fixed
+1. 자리값이 없음 (원래 자리를 뺏김)
+2. top left bottom right 이동 가능( 다 된다는 의미인가 봄)
+3. 화면에 고정시킴 (스크롤 움직여도 fixed 대상은 움직이지 않음)
+4. 기준위치 : 부모(없으면 브라우저 화면)
+5. 겹칠 수 있다?
+*/
+
+</style>
+
+</head>
+
+<body>
+    <div class="box box1">박스1</div>    
+    <div class="box box2">박스2</div>    
+    <div class="box box3">박스3</div>    
+    <div class="box box4">박스4</div>    
+</body>
+</html>

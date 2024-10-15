@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style> /*html의 특징 : 클릭하면 보라색으로 변함 에 대한 공부 438p*/
+            /*438p*438p*438p*438p*438p*438p*438p*438p*438p* 중요해보이니 꼭 펼쳐볼 것 */
+    .container {
+        width: 960px;
+        margin : 0 auto;
+    }
+    .navi{
+        width:960px;
+        height:60px;
+        padding-bottom:10px;
+        border-bottom:2px solid #ccc;
+    }
+
+    .navi ul{
+        list-style: none;
+        padding-top:10px; 
+        padding-bottom:5px;
+    }
+    .navi ul li {
+        display:inline-block;
+        width:150px;
+        padding:10px;   
+    }
+    .navi a:link, .navi a:visited{ /* ,(콤마)는 동시에 여러 곳 부여하고싶을 때 쓰는 것*/
+        font-size: 14px;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+    }/*.navi a{} <-걍 이걸로 해서 부여해도 효과는 같음*/
+
+    .navi a:hover, .navi a:focus{ /* a:focus : tap키로 옮겨 다닐 수 있게 하는 것 */
+        background-color: #222;
+        color: #fff;
+    }
+    .navi a:active{ /* 클릭하면 변함. 당장은 이렇게 외울 것*/
+        background-color: #f00;
+    }
+
+
+
+</style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navi">
+          <ul>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">객실 소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+          </ul>
+        </nav>  
+      </div>
+    
+</body>
+</html>

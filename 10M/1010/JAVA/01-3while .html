@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .blue{color: #00f;}
+    .red{color: #f00;}
+</style>
+<script>
+    var i = 20;
+    while( i >= 10){
+
+        if(i%2 == 0 ){
+            document.write("<p class='blue'>" + i + "</p>")
+                // blue를 감싸는 따옴표를 유의해야함 
+        }else{
+            documet.write("<p class='red'>"+ i + "</p>");
+        }
+        i--;
+        // i가 20부터 10까지 1씩 감소하면서, 숫자를 각각 파랑(짝수), 빨강(홀수)로 나타냄 
+    }
+    document.write("===THE END===");
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

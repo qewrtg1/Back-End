@@ -1,0 +1,161 @@
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+ul,li{list-style:none;}
+.cf::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+ header{
+    width: 100%;
+    height: 165px;
+    border-top:5px solid #009223;
+	position:relative;
+    z-index: 10;
+ }
+#h_top{
+    width:1200px;
+    height:90px;
+    margin: 0 auto;
+    /* 중앙정렬 */
+}
+#h_top>a{
+    position: absolute;
+    /*  margin: 0 auto; 중앙정렬 할 수 없음 */
+    width:202px;
+    height:40px;
+    border: 1px solid red;
+    left:50%;
+    transform: translate(-50%, 0);
+    /* 중앙정렬 */
+    top:25px;
+}
+#h_top>a img{
+    display: block;width: 100%;
+}
+#h_top ul{
+    /* position: absolute;
+    right:0;
+    top:30px; header 가 relative이므로 안됨*/
+    float: right;
+    margin-top: 30px;
+    /* #h_top 의 오른쪽으로 배치 */
+}
+
+#h_top ul li{float: left;margin-left: 15px;}
+#h_top ul li a{
+    display: block;
+    height:20px;
+    padding: 5px 13px;
+}
+#h_top ul li a.earth{
+    width: 32.5px;
+    text-indent: -9999px;
+    /* 내어쓰기 - 글자를 숨길수있다. */
+    padding: 5px 0;
+    background: url(../img/icon_global_subway.png) no-repeat center;
+}
+nav {
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+nav > ul{
+    width: 1200px;
+    /* 중앙정렬을 해야하므로 넓이를 지정 */
+    height:75px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 100px;
+    box-sizing: border-box;
+    position: relative; 
+    /* background-color: #333; */
+/*(2)아래 shadow와 동등한 위치에 있고 position을 씀
+ul이 shadow보다 먼저 쓰였기 때문에 가려짐*/
+    z-index: 15;
+
+}
+nav > ul > li{float: left;}
+nav > ul > li > a{
+    /* 대표매뉴 a */
+    display: block;
+    width:200px;
+	height:75px;
+	font-size:18px;
+	font-weight:bold;
+	line-height:75px;
+}
+
+nav ul ul a{
+    font-size: 15px;
+    color: #666;
+    padding: 8px 0 0px;
+    display: block;
+    letter-spacing: -0.05;/*글자 간격 미세히 줄인 것*/
+    font-weight: bold;
+}
+
+nav ul li ul li{ /*a에 넓이를 줘보려고 만든 것. 필수는 아님*/
+    width: 200px;
+}
+nav ul li ul{
+    position: absolute;/*메뉴를 밀어낼 때가 있어서*/
+    top: 75px;
+    text-align: center;
+    height: 0; /*높이 0을 넘는 것을 가리려고*/
+    overflow: hidden;
+
+    transition: all 0.2s;
+    padding-top: 20px;
+}
+nav ul:hover li ul{
+    height: 240px;
+}
+.shadow{
+    position: absolute;
+    left: 0;
+    top: 165px; /*header 가 relative임으로 위에서부터 165 떨어진곳에 shadow가 펼쳐지게 만든 것*/
+    width: 100%;
+    background-color: #fff;
+    height: 0px;
+    transition: all 0.2s;
+}
+/*(2)아래 shadow와 동등한 위치에 있고 position을 씀
+ul이 shadow보다 먼저 쓰였기 때문에 가려지는 게 정상임.
+해결책 nav > ul 에 z-index 부여*/
+nav ul:hover + .shadow{
+    height: 250px;
+}
+
+
+
+
+
+/**************/
+
+section{
+    width: 100%;
+    position: relative;
+}
+
+.slide{
+    height: 440px;
+    width: 100%;
+    position: relative;
+}
+.slide .sg{
+    width: 1920px;
+    height: 440px;
+    margin: 0 auto;   
+}
+.slide .sg a{
+    width: 1920px;
+    height: 440px;
+    position: absolute;
+    left: 0;    
+}
+.slide .sg a.i_01{
+    background: url(../img/00_써브웨이_main_02_20200427112753722.jpg) no-repeat center;
+}

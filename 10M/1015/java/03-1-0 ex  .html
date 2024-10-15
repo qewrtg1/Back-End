@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+//132p
+
+add() //03-0과 다르게 적용이 안 됨.
+var add = function() {
+    document.write("안녕하세요")
+}
+add(); //03-0 이랑 같은 값이 나옴
+
+//132p 전문가의 조언 참고: 일반함수는 함수 호출시 '호이스팅'기술이 적용됨.
+//호이스팅 : 스크립트를 읽어서 함수부터 맨 위로, 등록시킨 후 코드를 읽는 방식.
+
+// var add = function() {     <<<<<< 이걸 '익명 함수선언 참조방식' 이라고 한다 
+//     document.write("안녕하세요") <<<< 호이스팅 기술은 익명함수선언에 적용되지 않는다.
+// }
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+</style>
+</head>
+
+
+<body>
+<script>
+ var num = 1;
+    var t = "<table border='1'>";
+        for(var i=1; i<=5;i++){
+            t += "<tr>";     //세로
+            for(var k=1; k<=5;k++){
+                t += "<td>"+ num +"</td>";  //가로 "tr이 하나 들어올 때 td는 5번을 반복한다" 라는 의미.
+                num++; // td가 반복할 때마다 num엔 1을 더함. 고로 1 2 3 4 5 의 표가 나옴
+            }    
+            t += "</tr>";  // 하나의 행(가로)를 끝맺음. 이후 i=2, 2번째 줄을 만들기 시작함.
+        } //i가 <=5가 되어 5에 도착할때 까지 반복함.
+        t += "</table>";   //5에 도착하면 for반복문을 끝내면서 table을 닫음
+    document.write(t);
+    console.log(t);
+</script>
+</body>
+</html>

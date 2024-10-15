@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS3 애니메이션</title>
+  <style>
+    .prod-list {/*482p*/
+      list-style:none;
+      margin:0;
+      padding:0;
+     }
+
+      .prod-list li {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        float: left;
+        padding: 0;
+        margin: 10px;
+        overflow: hidden;
+      }
+
+    .prod-list img {
+      margin:0;
+      padding:0;
+      float:left;
+      z-index:5;
+    }   
+    /*
+    .prod-list li:hover .caption{
+      background-color: rgba(0, 0, 0, 0.5);
+      display: block;
+      bottom: 0;
+      color: white;
+    }
+      */
+    .caption{
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.6);
+      top: 200px;
+      color: #fff; /* 상속되니 귀찮게 p, h1 따로 안 만들어도 됨*/
+      text-align: center; /* 상속되니 귀찮게 p, h1 따로 안 만들어도 됨*/
+      transition: all 0.3s;
+    }
+    .prod-list li:hover .caption{
+      /*top: 0;*/ 
+      /*위에가 0이니까________ 이 아래는 교재에 나온 해답임*/
+
+      transform: translateY(-200px); /*차이는 없음*/
+    }
+/*hite 진로때와 차이점은 hite는 동작이 2개임. 백그라운드 배경1과 글자2. 이 두 개가 따로따로 적용되는 것*/
+/*이번 04과제의 경우 한 페이지에 글자와 화면을 묶어서 하나에 하나의 동작만으로 끝낸 것*/
+
+  </style>
+</head>
+<body>
+  <h1>신상품 목록</h1>
+	<div id="container">
+		<ul class="prod-list">
+      <li>
+<!-- li가 캡션(글자)를 감싸고 있는 형태 (1-1) -->
+        <img src="images/prod1.jpg">
+        <div class="caption">
+          <h1>상품 1</h1>
+          <p>상품 1 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/prod2.jpg">
+        <div class="caption">
+          <h1>상품 2</h1>
+          <p>상품 2 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+      <li>
+        <img src="images/prod3.jpg">
+        <div class="caption">
+          <h1>상품 3</h1>
+          <p>상품 3 설명 텍스트</p>
+          <p>가격 : 12,345원</p>
+        </div>
+      </li>
+    </ul>
+	</div>
+</body>
+</html>

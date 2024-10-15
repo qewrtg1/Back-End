@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이키</title>
+    <!-- 07 내용이랑 연계되는 듯(그래서 아래 링크 또 씀) -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css.nike.css">
+
+
+</head>
+
+<body>
+    <!-- 배경에 동영상 삽입하기 연습(자동재생/반복) -Loop -->
+    <figure class="vid">
+        <video autoplay muted loop> 
+            <!-- video 뒷 내용 전부 안쓰면 반복이 안됨 / 창을 끌때까지 반복됨 -->
+            <source src="media/nike.mp4" type="video/mp4">
+        </video>
+<!-- muted(음소거) 하지 않으면 자동재생이 되지 않는다고 함 (태러방지임) -->
+    </figure>
+<!-- figure:영상을 감싸는 태그인가봄. 특별한 의미는 없다? -->
+    <h1><img src="images/logo2.png" alt="나이키 로고"></h1>
+<!-- 1차 메뉴 <- 이걸 왜 적으라고 한지 모름 -->
+    <!-- ul#gnb>(li>a[href=#]>em)*5    이거 다 치고 마지막에 탭or엔터치면 아래 그대로 완성됨-->
+    <header>
+    <ul id="gnb">
+        <li ><a href="#"><em>About NIKE</em></a></li>
+        <li><a href="#"><em>Brand Info</em></a>
+        <!-- 2차 메뉴 -->
+         <!-- ul>(li>a[href=#]>em{2차메뉴$})*4 -->
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul>
+        </li>
+        <li><a href="#"><em>Community</em></a></li>
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul>
+        <li><a href="#"><em>Prouect Value</em></a></li>
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul>
+        <li><a href="#"><em>Company History</em></a></li>
+    </ul>
+</header>
+    <!-- sns 생성버튼 만들거임 -->
+    <div id="sns">
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      </div>
+      <!-- 텍스트상자 만들기 -->
+      <section class="txtBox">
+        <p class="txt">Best Qulified<strong>AIR MAX</strong></p>
+        <p class="tit">50<em>/24</em></p>
+      </section>
+      <section id="side">
+        <div class="con">
+            <p><em>Event & Community</em>
+                <a href="#"><img src="images/pic1.png" alt=""></a></p>
+            <p><em>News & Notice</em>
+                <a href="#"><img src="images/pic2.png" alt=""></a></p>
+            <p><em>Product Review</em>
+                <a href="#"><img src="images/pic1.png" alt=""></a></p>            
+        </div>
+        <!-- 왼쪽 더블 화살표 아이콘(자동 롤링 버튼) -->
+        <div class="btn">
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>
+        </div>
+      </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

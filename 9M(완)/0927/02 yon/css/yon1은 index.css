@@ -1,0 +1,85 @@
+*{margin: 0;padding: 0;}
+ul{list-style:none;}
+a{text-decoration:none;color:#333;}
+.cf:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+header{
+	width: 1000px;
+	height: 250px;
+	border: 1px solid #333;
+	margin: 0 auto;
+	position: relative;
+	}
+
+header .sns{
+	position: absolute;
+	top: 20px;
+	left: 10px; /* 최초 위치 잡는것 */
+}
+header .sns li{
+	float: left;
+	margin-left: 10px; /*쓰면 sns이미지가 깔끔해짐*/
+}
+
+
+header .lnb{
+	position: absolute;
+	top: 10px;
+	right: 10px; /* 최초 위치 잡는것 */
+}
+
+header .lnb li{
+	float: left; /*right 쓰면 거꾸로 들어감 순서가 */
+	font-size: 13px;
+	padding: 10px;
+	background: url(../images/bar.png) no-repeat 100% 50%;
+}
+
+header .lnb li:nth-child(3){ /*몇번째 걸 선택하겠는가*/
+	background: none;
+}
+
+header .logo{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px; /*(1-1 이거랑)*/
+}
+
+header .logo img{
+	width: 100%; /*(1-1 여기 전체가 합쳐지면 이미지가 작아짐)*/
+}
+/*참고 : 일부로 포지션만 사용하여 위치 잡는 중임*/
+.gnb{ /*메뉴 위치를 잡는 중임*/
+	position: absolute;
+	top: 220px;
+	left: 0;
+	width: 100%;
+}
+.gnb > li{ /*아직 >(꺽새)가 감이안오면 여기서 지워보고 결과 봐*/
+	float: left;
+	background-color: rgba(225, 0, 0, 0.5);
+	position: relative;
+	/* (2-1)width: 20%; 여기에 이렇게 넓이를 줄 거라면 아래 gnb li a 에 width을 100%으로 줘야함 */
+}
+.gnb li a{
+	display: block;
+	width: 200px; /*(2-1)여기에 200px를 주면 어차피 위도 자동으로 커지니까 이렇게 해도 됨*/
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.gnb li ul{
+	position: absolute;
+	background-color: rgba(225, 0, 0, 0.5);
+ /*색상이 없어질 수도 있어서 일단 넣는 것*/
+	display: none;
+}
+.gnb li:hover ul{display: block;}

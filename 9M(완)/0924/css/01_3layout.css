@@ -1,0 +1,73 @@
+*{margin: 0; padding: 0;}
+
+#container{
+    width: 1200px;
+    border: 10px solid #333;
+    margin: 0 auto;
+
+}
+header{
+    width: 100%; /*부모의 크기만큼 따라감*/
+    height: 120px;
+    background-color: cadetblue;
+}
+nav{
+    /* width: 100%; */
+    height: 70px;
+    background-color: chocolate;
+}
+nav ul{list-style: none;} /*블릿제거*/
+
+nav ul li{float: left;
+    /*바깥여백 margin은 li에 준다(줄 수 있다? 주는 게 좋다?)*/
+    margin-left: 70px;
+    margin-top: 10px;
+}
+nav ul li a{
+    display: block; 
+    /*a태그는 항상 인라인 요소임 ->그래서 블록 요소로 변환 시켜야 할 때가 많음*/
+    /*a 너비와 높이를 주면 li크기와 동일해짐 (?)*/
+    width: 200px;
+    height: 50px;
+    /* background-color: yellow; 위치 정확히 보는 용 쓰면 지우거나 가림 */
+    text-align: center;
+    line-height: 50px; /*높이와 줄간격을 동일하게 하면 세로 중앙 정렬이 되는 태그*/
+    text-decoration: none; /*밑줄 제거*/
+    color: #fff;
+}
+
+nav li a:hover{
+    background-color: yellow;
+    color: black;
+    border-radius: 25px;
+}
+
+.main{
+    overflow: hidden; /*clear를 쓰기 싫으면*/
+    /* height: 600px;    clear를 쓰고 싶으면 */
+}
+
+aside{
+    width: 300px;
+    height: 600px;
+    background-color: antiquewhite;
+    float: left;
+}
+section{
+    width: 900px;
+    height: 600px;
+    background-color: cornflowerblue;
+    float: left;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: darkblue;
+    color: aliceblue;
+
+    clear: both;
+    /*clear 는 float를 해제해주는데 컨테이너 border의 선 압축도 해제해줌*/
+    margin-top: 300px; /*clear를 사용하면 마진-탑이 먹히지 않음*/
+                       /* 이는 주 블록(컨테이너)에 별도의 높이가 설정되어 있지 않기 때문임 */
+                       /*따라서 overflow-h 나 주 블록에 별도의 높이를 설정해줘야 함*/
+}

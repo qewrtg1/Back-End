@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+<style>
+*{margin: 0;}
+.blue{color:#00f;}
+.red{color:#f00;}
+</style>
+</head>
+
+
+<body>
+<script>
+    for(var i = 1; i <=10;i++){ // i는 1이며 10보다 작고 1씩 증가할 거다
+         if(i % 2 == 0) continue;   // continue:는 조건식이 참이면 더 진행하는 게 아니라 이전으로 되돌림
+          document.write(i, "<br/>"); // 그래서 여기서 i를 출력할 때 continue를 피해간 false값만 남아 출력됨
+    }
+
+    document.write("======The End =======");
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>//99p
+var arr = [30, "따르릉", true];
+document.write("<h3>배열값 가져오기-1</h3>");
+document.write(arr[0], "<br>");
+document.write(arr[1], "<br>");
+document.write(arr[2], "<br>"); //하나씩 수동, 노가다로 가져오는 좋지 못한 방법(이렇게 할 수는 있다)
+
+//arr.length -> 배열을 갯수 3 ?? 먼소리요
+
+document.write("<h3>배열값 가져오기-2</h3>");
+for(var i = 0 ; i < arr.length; i ++){
+    document.write(arr[i], "<br>");
+}
+
+document.write("<h3>배열값 가져오기-3</h3>");
+for(k in arr){ // 이걸 보면 알겠지만 선언한 변수가 중요한 게 아님 i던 k던 arr에 변수만 잘 넣어주면 된다
+    document.write(arr[k], "<br>");
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

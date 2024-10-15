@@ -1,0 +1,127 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    height: 250px;
+    background-color: #f46075;
+    background-image: url(../1234/nav2.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%; /*왼쪽에서 95이동 위에서 50 이동*/
+
+    /* background: #f46075 url(../1234/nav2.png) no-repeat 95% 50% ;
+    위의 내용을 한 줄로 요약하는 방법임 (복습) */
+    border-top :1px solid transparent; /*넣은 이유는 h-h1참고*/
+}
+
+header h1{
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 50px;
+/*이렇게 작성했을 경우 h1이 움직이는 게 아니라 header 전체가 움직여 버림*/ 
+/* header는 블록요소. h1도 블록요소임
+이 상태에서 자식에게 마진탑을 주게되면 부모에 흡수되어 header 자체에 margin top 이 먹혀버림
+float 요소를 받은 경우, block 요소가 아니게 됨.  이 경우엔 margin이 제대로 먹음 (책, html 319p에 상세히 나와 있음)  인터넷에 '마진 병합 현상' 이라고 검색하면 도움이 될 것*/
+/*마진 병합 현상을 피하려면
+1. header h1에 margin top 대신 padding top을 사용
+2. h1에 float:left 를 사용
+3. 부모의 자식을 구분할 수 있는 border-top을 부모에게 부여 하여 서로 구분 지음
+        Ex) header에 border-top 1px solid transparent(투명선_이라서 넓이에 영향을 주지 않음);*/
+}
+
+
+/**********************************************************/
+
+nav{
+    height: 50px;
+    background-color: #aaa; 
+    /*여기까지 쓰면 ul이 튀어 나갈 거임 높이가 낮아서*/
+}
+
+nav ul li {
+    float: left;
+    margin-top: 8px ; /*    float: left; 를 줬기 때문에 병합 현상은 안 일어남*/
+    margin-left : 40px ; /* a에는 부여하면 안됨 li이가 감싸고 있기 때문에, 라고 함*/
+}
+nav ul li a{ /*여기서 display를 주고 높넓을 부여하면 li에도 적용 됨*/
+    display: block; /*a는 글자라 넓이 높이를 부여할 수 없어서 block 요소를 부여해야 넓높을 줄 수 있음*/
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: #f46075;
+    border-radius: 18px;
+}
+
+
+
+
+/***********************************/
+
+
+
+
+
+section{
+    width: 550px;
+    height: 500px;
+    background-color: #ddd;
+}
+
+aside{
+    width: 250px; /*800-250=250이니까*/
+    height: 500px;
+    background-color: #ffffcc; /*여기까지 작성했을 때 float:left , 이 없으니까 수직으로 나올 거임*/
+}
+
+
+section{float: left;}
+aside{float: left;} /*이렇게 둘다 적용해주면 나란히 정렬될 것*/
+/*이 두 태그를 한 번에 감싸는 것이 있다면 따로따로안줘도 되나? */
+
+section article{
+    width: 220px;
+    height: 180px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+section article p{font-size: 12px;}
+section h2{
+    text-align: center;
+    margin: 10px 0;
+}
+section article h3{
+    padding-bottom: 10px;
+}
+
+aside{text-align: center;} /*그림도 in-bk이라 중앙 정렬이 됨*/
+
+aside h2{margin-top: 10px;}
+aside img{margin-top: 10px;}
+
+
+
+footer{
+    /* clear: both;  */    /*없으면 float:left에 끌려가서 가려짐;*/
+    display: inline-block;/*인라인 블록요소로 위치 고정시킬 수도 있네*/
+    
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        border: 1px solid #333;
+        position: absolute;
+        left: 50%; 
+    /*포지션 기준 50퍼센트로 둘 경우, 중앙 기점으로 오른쪽으로 상자가 생김*/
+    /*그래서 중앙에 정렬된 것처럼 보이지 않음*/
+
+        margin-left: -150px;    /* 그래서 넓이 300.300 기준으로 이렇게 -150 -150으로 맞추면 정중앙에 옴*/
+        top: 50%;
+        margin-top: -150px;     /* 근데 솔직히 왜 -150해야 하는지 잘 모르겠음 나중에 복습하길 바람*/
+  
+        transform: rotate(45deg);
+        /*transform: 찌그리기, 회전하기 등을 위해 사용하는 태그*/
+        /*rotate 회전을 주기 위한 태그*/
+        /*45deg = 45도 돌린다?*/
+    }
+
+</style>
+
+
+
+
+</head>
+
+<body>
+    <div class="box box1">
+
+    </div>
+    
+</body>
+</html>

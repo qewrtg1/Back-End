@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>    /*440p*/
+	body {
+		background-color:#fff; 
+	}
+	form fieldset{
+		margin-bottom:25px; 
+	}	 
+	form legend{
+		font-size:15px;
+		font-weight:600; /*400 이상은 그냥 진하게 라고 생각하면 편함*/
+	}
+    input:disabled{
+        background: #ddd;
+        border: 10px #ccc solid;
+    }
+    input:checked +span{ /*체크하면 스판태그의 글자를 파랗게 만들겠다, 라는 뜻*/
+        color: blue;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label>이름<input type="text" disabled></label>
+            <!-- disabled: 글 못 쓰게 막는 거 -->
+        </fieldset>
+        <fieldset>
+            <legend>신청과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요</p>
+            <label><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+            <label><input type="radio" name="subject" value="grammar"><span>회화</span></label>
+            <labe><input type="radio" name="subject" value="writing" checked><span>회화</span></labe>
+            <!-- checked: 미리 체크가 되어 있도록 하는 거 -->
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>

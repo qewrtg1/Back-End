@@ -1,0 +1,176 @@
+
+/*0-1 을 보고 난 후에 여기를 보면 됨*/
+
+
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+header{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.top-bar{
+    height: 34px;
+    border-bottom : 1px solid #333 ;/*아마 아래만 선 만드는*/
+}
+.top-bar ul{
+    position: absolute ;
+    right: 100px; 
+    /* background-color: blue; */
+}
+.top-bar ul li{
+    float: left;
+    /* background-color: yellowgreen; */
+}
+.top-bar ul li a{
+    display: block; 
+    /*넓이 높이 주려고 넣는 것임 없애봐도 큰 차이는 없는데
+    코딩 중에 박살날 우려가 있어서 일단 넣어두는듯*/
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/**************************/
+
+
+.logos{
+    position: relative; /* 새롭게 기준을 잡는 거임. 안 쓰면 header가 기준이 되어버림*/
+    width: 1200px;
+    height: 61px;
+    margin: 0 auto;
+}
+.logos .online-study{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.logos h1{
+    /* text-align: center; 중앙정렬 하는 방법 1 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 10px;
+    /*x 쓰는게 중요해*/ /*중앙정렬 2번째 방법*/
+}
+
+
+
+
+/*************************/
+
+
+
+/*지금까지 위 height 96px*/
+nav{
+    position: absolute;
+    width: 100%;
+    top: 96px;
+    height: 60px;
+    border-bottom : 1px solid #333;
+    background-color: #fff;
+
+}
+nav>ul{
+    width: 1198px;
+    margin: 0 auto;
+    position: relative; /*이걸 줘야지 아래 shadow의 기준점을 잡을 수 있게 됨*/
+    z-index: 5; /*포지션을 주지 않으면 z인덱스가 적용이 안됨*/
+}
+
+nav>ul>li{
+    float: left;
+}
+nav> ul > li > a{
+    display: block; /*a에 넓이 높이를 부여하기 위해서*/
+    width: 170px;
+    height: 60px;
+
+    line-height: 60px; /*텍스트 위아래 중앙정렬해줌*/
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+nav ul li ul li a{ /*바로 위랑 뭔 차인지 모르겠음*/
+    display: block; 
+    width: 170px;
+    height: 40px;
+    line-height: 40px; 
+    text-align: center;
+}
+
+nav ul li:nth-child(1) ul{ /*선 만드는 거임*/
+    border-left: 1px solid #333;
+}
+nav ul li ul{
+    position: absolute;  /* 이거 */
+    top: 61px;           /* 없으면 보더 선 안 보여서 넣음*/
+
+    background-color: #fff;
+    border-right: 1px solid #333;
+
+    overflow: hidden;  
+    height: 0px;        /*높이를 안 주면 숨겨지지가 않음*/
+        /* height: 200px; 원래 이거였음 transition 효과를 위해 0으로 바꿈*/
+
+    transition: all 0.3s;
+}
+
+
+
+
+
+/*********************************/
+
+
+
+.menuShadow{
+    width: 100%;
+    background-color: #ff6969;
+
+    position: absolute;
+    top: 61px;
+    height: 0px;
+    transition: all 0.3s;
+}
+
+
+/*********************************/
+
+
+
+nav > ul:hover li ul{
+    height: 200px; /*본래 높이가 200px였기에 위에는 0px, 여기엔 200px 넣어야 딱 맞는 크기로 등장함*/
+}
+
+nav > ul:hover + .menuShadow{ 
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

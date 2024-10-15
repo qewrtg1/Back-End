@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script> //131p
+    var count =0 ;
+    
+    function myFnc(){  //(1=1)지금까진 var로 변수를 선언했는데 함수에서는 function을 사용하여 함수를 선언함
+        count++;
+        document.write("hello" + count, "<br>");
+    }
+
+    var theFnc  =  function (){ // (1=1) 이런 느낌이긴 함(대신 위와 좀 다름 이 경우는 theFnc로 불러도 반응을 안함{1-1참고}. var 자체에 들어있어서)
+        count++;
+        document.write("hello" + count, "<br>");
+    }
+//여기까지 하면 아무것도 실행되지 않았을 거임
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script> //131p
+    var count =0 ;
+    
+    myFnc();   
+    function myFnc(){  
+        count++;
+        document.write("hello" + count, "<br>");
+    }
+    myFnc(); 
+
+
+    theFnc(); 
+    // var theFnc  =  function (){ 
+    //     count++;
+    //     document.write("hello" + count, "<br>");
+    // }
+    var theFnc  = () => { 
+        count++;
+        document.write("hello" + count, "<br>");
+    }
+    theFnc(); 
+
+    //이래도 위와 같은 값으로 적용됨
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

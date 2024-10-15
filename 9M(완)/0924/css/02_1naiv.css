@@ -1,0 +1,42 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+#container{
+    width: 800px;
+}
+
+#header{
+    height: 70px;
+}
+.one>li{ 
+    /*  꺽새(>) 
+    현 태그(.one) 바로 밑 li만 선택하게 하는 기능*/
+    float: left;
+}
+.one li{
+    background-color: cornflowerblue;
+}
+.one li a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+.one li ul{
+    display: none; /*안 보이게 하는 것(?)*/
+    position: absolute;
+    /*겹치게 하는 속성. 이동 속성은 left, top을 주지 않았기에 원래 위치에 나옴*/
+}
+
+.one li:hover ul{ /*one li에 마우스를 올렸을 때 (호버) 감쳐둔 li를 보이게 하고 싶을 때 를 위해 공부하는 부분임*/
+    display: block;
+}
+.one li:hover a{
+    background-color: yellow;
+}
+.one li a:hover{
+    background-color: aqua;
+}  /* a 의 위치에 따라 달라지는 거 유의할 것*/
+

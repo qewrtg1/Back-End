@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    //해당 연도가 윤년인지 확인하는 방법
+    //연수가 4로 나누어 떨어지는 해는 윤년
+
+     //100으로 나누어 떨어지는 해는 평년
+
+     //400으로 나누어 떨어지는 해는 윤년
+     var year = parseInt(prompt("해당연도를 입력하세요","2000"))
+/*parseInt : 문자열에 포함된 숫자를 찾아서 number로 변환 ex) :
+                let str = parseInt('123숫자들');
+                console.log(str);   // 123 
+                                */
+//prompt : 질문창을 띄우는 명령어 : 기본적으로 문자를 입력받는다.
+//number , parseInt 메서드(명령어)를 사용하여 숫자로 변환 시킨다.
+
+    var yun = (year%4==0) && (year%100!=0) || (year % 400 == 0); 
+// a==b : a와b는 같다_year는4로 나눠서 남은 값이0이다   && : 그리고 and(앞 뒤 연상이 ture여야 전체가 ture. 아니면 false)
+//  ||: 또는 or 
+//해석 : yun은 ()and() 둘다 참이 아님 거짓이다, or ()가 참이면 참이다. 고로 (()) || ()
+
+    if(yun){
+        document.write("해당년도는 윤년입니다.");
+    }else{
+        document.write("해당년도는 윤년이 아닙니다.");
+    }
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

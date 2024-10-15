@@ -1,0 +1,112 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{text-decoration: none; color:#333;}
+.cf:after{content: ""; display: block; clear: both;}
+
+header{
+    position: absolute;
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    z-index: 100;
+    display: none;
+        /*(1)위 두 개는 일단 가리려고 넣은거임*/
+}
+.right1{
+    position: absolute;
+    z-index: 100;
+    display: none;
+        /*(1)위 두 개는 일단 가리려고 넣은거임*/
+}
+
+
+/*************************************/
+
+
+.nav{
+    position: absolute;
+    z-index: 102;
+    height: 70px;
+    width: 100%;
+    background: url(../images/h_bar.png) no-repeat center bottom;
+}
+nav > ul{ /*> 꺽새를 안 쓰면 세로로 나열됨*/
+    width: 950px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 103;
+    /* background-color: yellow; 확인용임 */
+    overflow: hidden; /*(3-1_아래도 있음)*/
+    transition: all 0.35s;  /*(3-1_를 동시에다 작성해야 완성)*/
+}
+
+nav > ul > li{
+    float: left;
+}
+
+nav > ul > li > a{
+    display: block; /* 높이 넓이를 줘야하는데 a는 line 요소라*/
+    height: 70px; /*블록 줬으니까 이젠 높이 줌*/
+    padding: 0 40px;
+/*여기까지가 어제 내가 혼자해서 높이 박살난 거 맞추는 방법임*/
+    line-height: 70px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 19px;
+    position: relative; /*얘가 기준이 되게*/
+}
+
+
+/*******************************/
+
+
+nav > ul > li > a::before{/*after*/
+    content: '';
+    position: absolute; /*위 a가 기준 점임*/
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+/*hover했을때 선 생기게 만들기 위한 기초 공사임*/
+
+    transform: scale(0,1);
+    transition: all 0.3s;
+    /* transform-origin: right center; 기준위치를 변경 가능 */
+}
+
+
+nav > ul > li > a:hover::before{  /*after나 before나 absolute를 줬기에 차이는 없다고 함*/
+    transform: scale(1,1);
+}
+
+nav ul ul a{
+    display: block;
+    padding: 0 35px 0 40px;
+    line-height: 38px;
+    color: #fff;
+}
+
+
+nav > ul:hover{ /*(3-1)*/
+    height: 300px;
+}
+
+
+.sub_shadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0px; /* 아래에서 줄거라 300넣고 확인해 본 후 0으로 고치고 아래300주면 됨*/
+    /* background-color: #1f2572; */
+    transition:all 0.35s;
+    background: url(../images/h_bar.png) no-repeat center bottom 70%;
+}
+
+nav > ul :hover +.sub_shadow{
+    height: 300px;
+}

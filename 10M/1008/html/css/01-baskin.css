@@ -1,0 +1,108 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: #555;}
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section{
+    width: 100%;
+}
+
+.title{
+    width: 100%;
+    /* height: 100px; 빼고 대신 패딩을 넣겠음 안 넣어도 이쁜 각 낼 수 있어서*/
+    padding: 30px 0;
+    text-align: center; /* 중앙 정렬 */
+}
+
+.title h2{
+    font-size: 50px;
+    color: #ff5484;
+}
+
+.title p{
+    font-size: 14px;
+    color: #858585;
+}
+
+
+section .inner{
+    width: 1500px;
+    height: 370px;  /*높넓이 계산은 홈페이지 보고 추정해서 맞춰 넣은 거임*/
+    margin: 0 auto;
+    border: 1px solid #333;
+}
+
+
+
+
+/** 여기까지가 기초 공사 1번 **/
+
+
+
+section .inner ul li{ /*사진 들어가는 곳임*/
+    width: 258px;
+    height: 370px;
+    float: left;
+    margin-right: 42px;
+    /* border: 1px solid red; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section .inner ul li .frame{ /*사진 자체임*/
+    width: 258px;
+    height: 258px;
+}/*(1-1)여기까지만 하면 이미지 자체의 크기 때문에 삐져 나감*/
+section .inner ul li .frame img{
+    display: block; /*이건 왜 써줘야 하는지 모르겠음*/
+    width: 100%;
+}/*(1-2)그래서 이렇게 적용시켜서 맞춰줌
+원래 이미지 크기는 297-> 258*/
+
+
+
+/***여기까지해서 칸 넓이 및 정렬 1차 해줌*/
+
+section .inner ul li .frame{ 
+    border-radius: 50% 50% 0% 0;   
+    overflow: hidden; 
+}
+
+
+section .inner ul li .content{
+    margin-top: 20px;
+}
+
+section .inner ul li .content .date{
+    color: #d9bb97;
+    font-size: 12px;
+}
+section .inner ul li .content .text{
+    margin-top: 20px;
+    padding-top: 20px; 
+    border-top: 2px solid #f0e7d9; /*선 만들기임*/
+    font-size: 14px;
+    line-height: 1.4;/*줄간격 1.4배*/
+    color: #666;
+}

@@ -1,0 +1,111 @@
+*{margin: 0; padding: 0;}
+
+ul,li{list-style: none;} /*블릿제거*/
+a{text-decoration: none;} /*밑줄제거*/
+
+#wrap{
+    width: 1200px;
+    height: 700px;
+    background-color: #eee;/*없어도 됨 틀 확인용임*/
+    margin: 0 auto;
+    /*너비가 있는 블록요소 중앙정렬 하는 방법*/
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+}
+header .logo{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+header .mainmenu{
+    float: right; /*(1-1)이렇게 먼저 li를 오른쪽으로 다 보내고(이땐 아래로 깔린다) */
+
+    margin-top: 30px;
+    margin-right: 20px; 
+
+}
+.mainmenu > li{ /* 꺽새(>)는 자식선택자. mainmenu 바로 아래의 li까지만*/ 
+    float: left; /*(1-2) 오른쪽 고정된 상태에서 다시 왼쪽으로 펼침 */
+
+}
+.mainmenu li{background-color: yellow;}
+
+
+.mainmenu li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+}
+
+.mainmenu li ul{
+    position: absolute;
+    display: none; /* 안 나오게 가림*/
+}
+.mainmenu li:hover ul{ /* 나오게*/
+    display: block;
+}
+.mainmenu li a:hover { /* 나올 때*/ 
+                       /* a의 위치가 굉장히 중요함*/
+    background-color: #333;
+    color: #eee;
+}
+
+
+
+
+
+#img_slide{
+    width: 100%;
+    height: 300px;
+    background-color: bisque;
+}
+
+section{
+    height: 200px;
+    background-color: blueviolet;
+
+    overflow: hidden;
+}
+section article{
+    width: 400px;
+    height: 200px;
+    float: left;
+}
+
+
+.notice{
+    background-color: yellow;
+    /* width: 400px;
+    height: 400px;
+    float: left;  위 s-a에서 일괄로 넣어서 필요없*/
+}
+.banner{
+    background-color: tan;
+    /* width: 400px;
+    height: 400px;
+    float: left; */
+
+}
+.icons{
+    background-color: violet;
+    /* width: 400px;
+    height: 400px;
+    float: right; */
+}
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: tomato;
+}

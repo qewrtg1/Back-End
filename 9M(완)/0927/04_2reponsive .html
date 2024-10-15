@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box1{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #333;
+    }
+    /* 화면의 크기에 따라 상자가 바뀜 잘 못하겠으면 f12눌러서 화면 크기 바꿔보셈 */
+
+@media screen and (max-width:600px){ /*핸드폰용 사이즈*/
+    .box1{background-color: blue;}
+}
+@media screen and (min-width:601px) and (max-width:1023px){ /*스마트 패드(라고 가정)*/
+    .box1{background-color: green;}
+}
+@media screen and (min-width:1024px){ /*PC용 사이즈(라고 가정)*/
+    .box1{background-color: red;}
+}
+
+</style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+
+    
+</body>
+</html>

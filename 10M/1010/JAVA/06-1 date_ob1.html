@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        var today = new Date();
+        // alert(today);
+        var nowYear = today.getFullYear();
+        var nowMonth = today.getMonth()+1;
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+
+
+        var tlrks = today.getHours();
+        var qns = today.getMinutes();
+        var ch = today.getSeconds();
+
+
+        var yoil;
+        // if(nowDay == 0 ){
+        //     yoil = "일";
+        // }else if (nowDay == 1 ){
+        //     yoil = "월";
+        // }else if (nowDay == 2 ){
+        //     yoil = "화";
+        // }else if (nowDay == 3 ){
+        //     yoil = "수";
+        // }else if (nowDay == 4 ){
+        //     yoil = "목";
+        // }else if (nowDay == 5 ){
+        //     yoil = "금";
+        // }else if (nowDay == 6 ){
+        //     yoil = "토";
+        // } 이걸로도 잘 되는데 ''넣어야 한다고 아래로 함 이유는 모름
+
+        if(nowDay == '0'){
+         yoil = "일";
+       }else if(nowDay == '1'){
+         yoil = "월";
+       }  else if(nowDay =='2' ){
+         yoil = "화";
+       } else if(nowDay =='3' ){
+         yoil = "수";
+       } else if(nowDay =='4' ){
+         yoil = "목";
+       } else if(nowDay =='5' ){
+         yoil = "금";
+       } else if(nowDay =='6' ){
+         yoil = "토";
+       }   
+
+    document.write("<h1>오늘 날짜 정보</h1>");
+    document.write("현재 년도: ", nowYear , "<br>");
+    document.write("현재 월: ", nowMonth , "<br>");
+    document.write("현재 일: ", nowDate , "<br>");
+    document.write("현재 요일: ", nowDay , "<br>");
+    document.write("현재 " +yoil + "요일" , "<br>");
+    document.write("현재 시간: ", tlrks , "<br>");
+    document.write("현재 분: ", qns , "<br>");
+    document.write("현재 초: ", ch , "<br>");
+
+    document.write("현재 시간: " + tlrks +"시"+ qns + "분"+ ch+ "초", "<br>");
+
+   document.write(`${nowYear} 년 ${nowMonth} 월${nowDate} 일`);
+//위의 노가다를 이렇게 줄여서 쓸 수 있음. `는 esc 밑 물결표. 백틱(`)라고 부름
+
+
+
+    //    document.getElementById("year").innerHTML = nowYear; 
+    // 이렇게 쓰면 아래 body의 year보다 윗 태그가 먼저 읽히면서 적용이 되질 않음 그래서 1-1로 넘어감
+
+
+
+</script>
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minute">00</span>분
+        <span id="second">00</span>초
+    </h1>
+</body>
+</html>

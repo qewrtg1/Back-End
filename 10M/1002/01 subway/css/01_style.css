@@ -1,0 +1,98 @@
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+ul,li{list-style:none;}
+.cf::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+header{
+    width: 100%;
+    height: 165px;
+    border-top:5px solid #009223;
+	position:relative;
+}
+#h_top{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+}/*여기까지만하면 제대로 중앙정렬 안됨*/
+/*마진으론 ab을 중앙정렬 할 수 없음*/
+
+
+#h_top>a{
+    position: absolute;
+    width: 202px;
+    height: 40px;
+    border: 1px solid red;
+
+    left: 50%;   /*그래서 margin대신 이걸로 중앙정렬*/
+    transform: translate(-50%, 0); /*하는 것*/
+
+    top: 25px;
+}
+
+#h_top>a img{
+    display: block; /*이미지를 꽉 채우기 위해*/
+    width: 100%; /* 필수는 아니지만 해두면 좋은 것*/
+}
+
+
+#h_top ul{
+/*이 구간 참고*/
+    /* position: absolute; 
+    right: 0;           
+    top: 30px;           */
+/*header에 re를 줬기에 안가거나 가도 원하는 위치로 못감 ab 쓰면 안됨*/
+
+    float: right;
+    margin-top: 30px;
+}
+
+#h_top ul li{float: left; margin-left: 15px};
+/************************************여기까지 이상무 */
+
+
+
+
+
+/* 
+#h_top ul li a{
+    display: block;
+    height: 20px;
+    padding: 5px 13px;
+} */
+
+
+/*#h_top ul li:nth-child(3) a{}
+/**li에 3번째 3이라는 뜻 아래 태그랑 동일한 곳 지정하는 거*/
+/* #h_top ul li a.earth{
+    width: 32.5px;
+    text-indent: -9999px;
+    padding: 5px 0;
+    background: url(../img/icon_global_subway.png) no-repeat center;
+}  */
+/*글자엔 넓이가 없어서 이걸로 감추는*/
+ 
+/*indent내여쓰기: 글자를 숨길 수 있음_ 일단 글자로 위치를 잡고 이후 숨기는 것*/
+
+
+/* 이 위에 뭔가 고장났음*/
+
+
+#h_top ul li a{
+    display: block;
+    height:20px;
+    padding: 5px 13px;
+}
+#h_top ul li a.earth{
+    width: 32.5px;
+    text-indent: -9999px;
+    /* 내어쓰기 - 글자를 숨길수있다. */
+    padding: 5px 0;
+    background: url(../img/icon_global_subway.png) no-repeat center;
+}
+
+/*여기서 포기하고 다시 */
+
+

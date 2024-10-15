@@ -1,0 +1,164 @@
+*{margin: 0;padding:0;}
+/*http://bhher1.dothome.co.kr/vertical.html*/
+
+
+ul,li{list-style: none;} /*블릿제거*/
+a{text-decoration: none; color: black;} /*밑줄제거*/
+
+
+
+#wrap{
+    width:1000px;
+    height:650px;
+}
+header{
+    width: 200px;
+    height:650px;
+    background-color: pink;
+    text-align: center;
+    float:left;
+}
+h1{    
+    line-height: 70px;
+}
+
+
+.gnb{
+    width: 180px;
+    height: 250px;
+    border: 1px solid #333;
+    text-align: center;
+
+    position: absolute;
+    left: 10px;
+    top: 100px; 
+
+    font-size: 20px;
+}
+
+
+.gnb li a{
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    padding: 5px;
+    font-size: 20px;
+
+}
+/*   이게 원래 내가 줬던 값임. 많이 틀려서 교수님 꺼 보고 위와 같이 고쳤음
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-indent: 20px; 
+*/
+
+.gnb>li>a{
+    color: black;
+}
+/* .gnb>li{    } */
+.gnb>li{
+    position: relative;
+}
+.gnb li ul{
+    position: absolute; 
+    top: -55px;
+    left: 180px;
+    display: none;
+}
+.gnb li:hover ul{
+    display: block; 
+    background-color: #e2dfdf;
+}
+.gnb li a:hover{
+    background-color: #333;
+    color: aliceblue ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main{
+    width:800px;
+    height:650px;
+    background-color: hotpink;
+    float:left;
+}
+#main #img_slide{
+    width: 100%;
+    height:350px;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+    height:200px;
+    background-color: yellow;
+}
+section article{
+    width:33.33%;
+    height:200px;
+    float: left;
+}
+section article.notice{background-color: tan;}
+section .banner{background-color: orange;}
+.icons{background-color: yellowgreen;}
+footer{
+    width:100%;
+    height:100px;
+    background-color: yellow;
+}
+footer .f_logo{
+    width:150px;
+    height:100px;
+    background-color: #999;
+}
+footer .f_menu{
+    width:650px;
+    height:50px;
+    background-color: #777;
+}
+footer .f_copy{
+    width:650px;
+    height:50px;
+    background-color: #555;
+}
+footer article{
+    float: left;
+}

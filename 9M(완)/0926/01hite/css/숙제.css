@@ -1,0 +1,115 @@
+/* http://bhher1.dothome.co.kr/hite/index.html */
+*{margin: 0;padding: 0;}
+
+header{
+    text-align: center;
+}
+
+.wrap{
+    position: relative;
+    width: 1070px;
+    height: 900px;
+    position: relative;
+    border: 1px solid red;
+    margin: 0 auto;
+    
+}
+.box{
+    position: absolute;
+    display: none;
+
+}
+.box img{
+    display: block;
+}
+.box1{
+    display: block;
+    left:0;top:0;
+}
+.box2{
+    display: block;
+    left:270px;top:0;
+}
+.box3{
+    display: block;
+    left:540px;top:0;
+}
+.box4{
+    display: block;
+    left:810px;top:0;
+}
+.box5{
+    display: block;
+    left:0;top:270px;
+}
+.box6{
+    display: block;
+    left:540px;top:270px;
+}
+.box7{
+    display: block;
+    left:0px;top:540px;
+}
+.box8{
+    display: block;
+    left:270px;top:540px;
+}
+.box9{
+    display: block;
+    left:810px;top:540px;
+}
+
+
+.box::before{
+    content: "";/*반드시 기입*/
+    position: absolute;
+    width:0%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    transition: all 0.2s;
+  }
+  .box:hover::before{
+    width:100%;
+  }
+
+
+
+
+.box6::before{
+    width:100%;
+    height:0%;
+}
+.box6:hover::before{
+    height:100%;
+}
+
+.box8::before{
+    width:100%;
+    height:0%;
+}
+.box8:hover::before{
+    height:100%;
+}
+
+
+
+
+
+.box p{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    /* border, padding 포함 100%; */
+    color:#fff;
+    text-align: center;
+    transition: all 0.4s;
+    opacity: 0; /*불투명도 관련?????*/
+    background: url(../images/more.png) no-repeat 50% 80%;
+  }
+  .box:hover p{opacity: 1;}

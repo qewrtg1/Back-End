@@ -1,0 +1,61 @@
+*{margin: 0; padding: 0;}
+
+#wrap{
+    width: 1200px;
+    height: 700px;
+    background-color: #eee;/*없어도 됨 틀 확인용임*/
+    margin: 0 auto;
+    /*너비가 있는 블록요소 중앙정렬 하는 방법*/
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: pink;
+}
+
+#img_slide{
+    width: 100%;
+    height: 300px;
+    background-color: bisque;
+}
+
+section{
+    height: 200px;
+    background-color: blueviolet;
+
+    overflow: hidden;
+}
+section article{
+    width: 400px;
+    height: 200px;
+    float: left;
+}
+
+
+.notice{
+    background-color: yellow;
+    /* width: 400px;
+    height: 400px;
+    float: left;  위 s-a에서 일괄로 넣어서 필요없*/
+}
+.banner{
+    background-color: tan;
+    /* width: 400px;
+    height: 400px;
+    float: left; */
+
+}
+.icons{
+    background-color: violet;
+    /* width: 400px;
+    height: 400px;
+    float: right; */
+}
+
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: tomato;
+}

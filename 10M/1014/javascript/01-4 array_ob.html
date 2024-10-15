@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var days = ["일", "월", "화", "수", "목", "금", "토"]
+    // var days = [ "월", "화", "수", "목", "금", "토" ,"일"] 순서 바꾸면 어찌될지 궁금해서 내가 해본 거임
+
+    var today = new Date();
+    var day = today.getDay(); //0: 일요일 ~ 6 토요일 , getday랑 getdate는 자르다 date는 날짜임
+    // alert(day);
+    var yoli = days[day]; 
+//해석(내가 이해한) y는 ds가 되고. ds는 dy로부터 정보값을 받아옴
+//dy는 0~6 의 인덱스(숫자)가 존재하고 그 순서에 맞는 ds의 월, 화 ~ 순서의 위치의 데이터값을 가져와서 적용시키는 원리
+    document.write(yoli+"요일 </br>")
+
+//위를 더 줄이면
+
+    var days = ["일", "월", "화", "수", "목", "금", "토"]
+    var today = new Date();
+    // var day = today.getDay();  여기를 생략해도 똑값는 값이 나옴
+    var yoli = days[day]; 
+    document.write(yoli+"요일 </br>")
+
+
+
+
+    //전체 은행 잔고 계산하는 거 만들 거임
+
+
+
+
+
+// length:자바스크립트에서 배열(Array) 또는 문자(String)를 사용하는 경우
+// length 속성을 이용하여 쉽게 길이를 구할 수 있음
+
+
+
+    // var money = [1000, 2000, 500, 10000, 7500];  //이게 배열 객체?
+    // for(var i=0; i< money.length; i++){
+    // document.write(money[i],"<br>"); 
+    // }
+//이렇게 하면 그냥 주르륵 출력됨
+
+
+    var money = [1000, 2000, 500, 10000, 7500]; 
+    var total = 0;
+    for(var i=0; i < money.length; i++){
+        total = total + money[i]; //for문으로 반복, money의 값은 total에 누적됨
+    }
+    document.write(total);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

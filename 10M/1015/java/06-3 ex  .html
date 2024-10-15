@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+    let score = prompt();
+
+    let grade = score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : score >= 60 ? 'D' : 'F';
+    console.log(grade); // 출력: B
+    document.write(grade);
+
+/*    let grade = score >= 90   ....'A' score가 90이상이면 A를,
+        ?   .... A가 아니면 
+    : score >= 80 ? 'B' .... 다시 score로 돌아가 80인지 확인 후 B
+    : score >= 70 ? 'C' .... 위의 경우를 반복
+    : score >= 60 ? 'D' 
+    : 'F';
+*/
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 넘기기</title>
+    <style>
+    *{margin:0; padding:0;}
+    img{vertical-align:top; border:0;}
+    #galleryWrap{width: 530px; margin: 0 auto; text-align: center;}
+    #galleryWrap img{vertical-align: middle;}
+ 
+    </style>
+
+<script>
+
+</script>
+
+</head>
+<body>
+    <div id="galleryWrap">
+        <h1>이미지 넘기기</h1>
+        <a href="#prev" onclick="return prevGallery(0)">
+            <img src="images/left_btn.png" alt="이전그림">
+        </a>
+        <img src="images/img1.jpg" alt="갤러리그림" id="gallery">
+        
+        <a href="#next" onclick="return nextGallery(1)">
+            <img src="images/right_btn.png" alt="다음그림">
+        </a>
+    </div>
+
+
+
+    <script>
+        var num = 1;
+        function nextGallery(){
+            num++;//갤러리 이미지에 src 속성을 변경해야함.
+            if(num>7){ //이미지는 7개 뿐임
+                num=1; //num가 7이 되면 1이 되게 만듬
+            }
+            var gallery=document.getElementById('gallery');
+            gallery.setAttribute('src', "images/img"+num+".jpg");
+        }
+
+        function prevGallery(){
+            num--;
+            if(num<1) num=7;
+            // if문 바로 다음 수행해야할 문장이 하나뿐이라면 중괄호 생략이 가능하다.
+
+            var gallery=document.getElementById('gallery');
+            gallery.setAttribute('src', "images/img"+num+".jpg");
+        }
+
+
+    </script>
+</body>
+</html>

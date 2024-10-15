@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin: 0; padding: 0;}
+
+    /* http://bhher1.dothome.co.kr/lastani.html */
+
+    .bigbox{
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        left: 50%;
+        top: 50%;
+        border: 1px solid #333;
+
+        /* margin-left : -250px;
+        margin-top: -250px;  */
+        /*중앙으로 정렬하게 만드는 건데 넓높을 계산해야함 귀찮음*/
+
+        transform: translate(-50%, -50%); /* l t 에 50% 부여 했을 때 이걸로 중앙 정렬 자동으로 하게 해줄 수 있음*/
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+
+        position: absolute;
+    }
+    .box1{left: 0;top: 0;}
+    .box2{right: 0; top: 0;}
+    .box3{right: 0;bottom: 0;}
+    .box4{left: 0;bottom: 0;}
+
+    .line{position: absolute;}/*선그릴수있게 위치를 지정하는것*/
+    .line1{
+        top: 50px;
+        left: 50px;
+        height: 2px;
+        width: 0px;
+        background-color: #333;
+        animation: line1 1.5s 0s forwards;
+        /* 0s는 딜레이 말하는듯?*/
+        /*forwards: 안 쓰면 사라짐*/
+    }
+    @keyframes line1{
+        0%{width: 0;}
+        100%{width: 400px;}
+    }
+
+    .line2{
+        top: 50px;
+        left: 450px;
+        height: 0px;
+        width: 2px;
+        background-color: #333;
+        animation: line2 1.5s 1.5s forwards;
+        /* 0s는 딜레이 말하는듯?*/
+        /*forwards: 안 쓰면 사라짐*/
+    }
+    @keyframes line2{
+        0%{height: 0;}
+        100%{height: 400px;}
+    }
+
+    .line3{
+        bottom: 50px;
+        right: 50px;
+        height: 2px;
+        width: 0px;
+        background-color: #333;
+        animation: line3 1.5s 3s forwards;
+        /* 0s는 딜레이 말하는듯?*/
+        /*forwards: 안 쓰면 사라짐*/
+    }
+    @keyframes line3{
+        0%{width: 0;}
+        100%{width: 400px;}
+    }
+
+    .line4{
+        bottom: 50px;
+        right: 450px;
+        height: 0px;
+        width: 2px;
+        background-color: #333;
+        animation: line4 1.5s 4.5s forwards;
+        /* 0s는 딜레이 말하는듯?*/
+        /*forwards: 안 쓰면 사라짐*/
+    }
+    @keyframes line4{        
+        0%{height: 0;}
+        100%{height: 400px;}
+    }
+
+    .bigbox img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+    .bigbox img:hover{
+        opacity: 1;
+
+    }
+
+    
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="bigbox">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <img src="images/women1.jpg" alt="">
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,67 @@
+*{margin: 0; padding: 0;}
+
+
+
+#container{
+    width: 1000px;
+    border: 1px solid #333;
+    margin: 10px auto 0;
+    padding: 20px;
+}
+
+
+#header {
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+#left-sidebar{
+    width: 130px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 30px 20px;
+
+    float: left;
+}
+#contents{
+    width: 600px;
+    height: 300px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    /* padding-bottom: 50px; */
+    float: left;       
+}
+/* #contents h2{line-height: 170%; } */
+    /*줄 간격(글씨 한 줄 마다의 간격)*/
+
+#contents p{
+    line-height: 180%; /*줄 간격(글씨 한 줄 마다의 간격)*/
+    text-align: justify /*양쪽 정렬 */; 
+}
+
+
+
+ul{
+    text-align: center;
+}
+
+#right-sidebar{
+    width: 130px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+
+    float: right;
+}
+
+
+#footer{
+    clear: both;  /* 양쪽 플로트 해제 -줄 바꾸고 싶어서 그렇다고 함*/
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    line-height: 180%; /*줄 간격(글씨 한 줄 마다의 간격)*/
+}

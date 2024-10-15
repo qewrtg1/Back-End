@@ -1,0 +1,113 @@
+*{margin: 0; padding: 0;}
+/* http://bhher1.dothome.co.kr/ */
+
+.wrap{
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    height: 300px;
+    background-image: url(../images/top.jpg);
+}
+
+.content{
+    overflow: hidden;
+}
+
+
+header h1{
+    text-align: right;
+    color: white;
+    margin-right: 45px;
+}
+
+
+nav{
+    height: 50px;
+    background-color:#2a1d0a;
+}
+
+nav ul{list-style: none;} /*블릿 없애기*/
+
+nav ul li{ 
+    float: left;
+    margin-left: 8px;       /* 이 태그를 아래 ....li a에 주면 안 됨 */ 
+    margin-top: 5px;        /* a에 주면 li를 넘어버릴 수 있음?? 궁금하면 해보셈 완벽히 이해 못함*/
+    border: 1px solid #333;
+    border-radius: 20px;
+}
+/*인라인 요소엔 넓이를 줄 수 없다. =그래서 li가 아니라 아래 a에 넓이 높이를 준다
+
+a에 높이를 주면 그 윗단계는 안줘도 된다...?
+*/
+
+nav ul li a{
+    display: block;
+    width: 150px;      /* 여기에 높이 너비를 주는 이유는*/ 
+    height: 40px;      /* 마우스를 글자 바로 위에 두는 것보다 편하게 범위를 잡아주기 위함임*/ 
+    text-align: center;
+    line-height: 40px; /* 위아래 가운데 정렬해주는 것*/ /*패딩으로 줘도 되긴 하는데 이게 편함*/
+
+    text-decoration: none;    /* 밑줄 없애기 */
+    color: white;
+}
+
+
+section{
+    width: 550px;
+    height:550px; 
+    background-color: #ccc;
+    float: left;
+}
+section h3{
+    text-align: center;
+    margin: 12px 0 12px 0;
+}
+section h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+article{
+    width: 210px;
+    height: 200px;
+    border: 1px solid #333;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin: 0 0 15px 30px;
+}
+
+
+
+aside{
+    text-align: center; 
+     /*글자뿐만이 아니라 사진도 중앙 정렬 된다*/
+    width: 250px;
+    height: 550px; 
+    background-color:#726054;
+    float: right;
+}
+aside h3{
+    text-align: center;
+    margin: 12px 0 12px 0;
+
+}
+aside img {
+    width: 220px;
+    padding-bottom: 15px;
+}
+
+
+footer{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    height: 60px;  
+    line-height: 60px
+}
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <h1>일정 시간 간격으로 값 증감시키기</h1>
+    <p>콘솔 패너를 열어 확인하세요</p>
+    <button onclick="clearInterval(stop1)"> 증가 멈춤 버튼 </button>
+    <button onclick="clearInterval(stop2)"> 감소 정치 버튼 </button>
+</body>
+
+
+<script> // 책에 없는 방법으로 진행한다고 함 07-1
+
+    var addNum = 0;
+    var subNum = 1000;    
+    var stop1 = setInterval(auto1,2000);
+    function auto1(){ //해석 :auto1이라는 함수를(이 위에 있는 auto1) 2초마다 실행함
+        addNum++;
+        // document.write("addNum: " + addNum, "</br>"); 위아래 뭘로 해도 볼수있음
+        console.log ("addNum: " + addNum);
+    }
+    
+    // auto1() // 얘가 윗 auto1을 1회 실행하는 것. 그래서 숫자 1이 붙었을 거임 이후 안의 내용을 써보면 충분함.
+
+    var addNum1 = 0;
+    var subNum = 1000;    
+    var stop2 = setInterval(auto2,2000);
+    function auto2(){ //해석 :auto1이라는 함수를(이 위에 있는 auto1) 2초마다 실행함
+        addNum1--;
+        console.log ("-Num1: " + addNum1);
+    }
+
+    </script>
+    
+
+
+</html>

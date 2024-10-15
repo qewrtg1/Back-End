@@ -1,0 +1,119 @@
+*{margin:0;padding:0;}
+.cf:after{
+	display:block;
+	clear:both;
+	content:"";
+}
+ul,li{
+	list-style:none;
+}
+a{text-decoration:none;color:#666;}
+
+#header{
+    width:100%;
+    height: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 10;
+}
+#header_out{
+    width:1000px;
+    height:110px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+#header_out .logo{
+    width:230px;
+    height:60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#header_out .logo img{
+    display: block;
+    width: 100%;
+}
+
+#header_out .header_left{
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+}
+#header_out .header_left span ,
+#header_out .header_right span {
+    display: inline-block;
+    padding: 5px 20px;
+    border:1px solid #ddd;
+    border-radius: 20%;
+}
+#header_out .header_right{
+    float: right;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.header_nav{/*메뉴를 중앙정렬 시키고*/
+    position: absolute;
+    top:110px;
+    left: 0;/*이거 놓치면 이상하게 들어감*/
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd ;
+}
+.header_nav > ul{
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.header_nav > ul >li{
+    float: left;
+}
+.header_nav > ul >li > a{
+    display: block;
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.header_nav ul li ul li{
+    display: block;
+    width: 200px;
+    height: 20px;
+    line-height: 20px; /* 위와 다른 점 1.*/
+    padding-top: 20px; /* 위와 다른 점 2.*/
+    font-size: 14px;  /* 위와 다른 점 3.*/
+    color: #666;  /* 위와 다른 점 4.*/
+    text-indent: 25px; /*들여쓰기*/
+}
+
+.header_nav ul li ul{/*선 만들기*/
+    position: absolute;
+    width: 200px;
+    height: 450px;
+    border-left: 1px solid #ddd;
+}
+.header_nav ul li:last-child ul{/*선 한 줄이 모잘라서 추가*/
+    border-right: 1px solid #ddd;
+}
+.header_shadow{
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    /*확인용임*/
+    left: 0px;
+    top: 71px;
+    height: 0;
+    height: 450px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header_nav .logo_left{
+    display: none;
+}
+.header_nav .logo_right{
+    display: none;
+}

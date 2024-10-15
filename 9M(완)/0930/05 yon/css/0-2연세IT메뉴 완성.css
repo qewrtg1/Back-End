@@ -1,0 +1,143 @@
+
+/*0-1랑은 다른 방식임*/
+
+
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+header{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.top-bar{
+    height: 34px;
+    border-bottom : 1px solid #333 ;
+}
+.top-bar ul{
+    position: absolute ;
+    right: 100px; 
+}
+.top-bar ul li{
+    float: left;
+}
+.top-bar ul li a{
+    display: block; 
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/**************************/
+
+
+.logos{
+    position: relative; 
+    width: 1200px;
+    height: 61px;
+    margin: 0 auto;
+}
+.logos .online-study{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.logos h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    top: 10px;
+}
+
+
+
+
+/*************************/
+
+
+
+/*0-1 과 다른 부분이 여기서 부터*/
+
+
+nav{
+    position: absolute;
+    width: 100%;
+    top: 96px;
+    height: 60px;
+    /* border-bottom : 1px solid #333; */
+    background-color: #fff;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+nav:hover{
+    height: 261px;
+    border-bottom: 1px solid #333;
+}
+
+
+
+nav>ul{
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+nav>ul>li{
+    display: inline-block;
+}
+
+
+nav> ul > li > a{
+    display: block; 
+    width: 170px;
+    height: 60px;
+
+    line-height: 60px; /*텍스트 위아래 중앙정렬해줌*/
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+nav ul li ul li a{ /*바로 위랑 뭔 차인지 모르겠음*/
+    display: block; 
+    width: 170px;
+    height: 40px;
+    line-height: 40px; 
+    text-align: center;
+}
+
+nav ul li:nth-child(1) ul{ /*선 만드는 거임*/
+    border-left: 1px solid #333;
+}
+nav ul li ul{
+    position: absolute; 
+    top: 61px;  
+    height: 200px;         
+    background-color: #fff;
+    border-right: 1px solid #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

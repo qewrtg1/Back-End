@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 전에 만들었던 보노보노 한 번 더 복습하는 것 -->
+<style>
+    .bigbox{
+        width: 500px;
+        height: 500px;
+        border: 1px solid #333;
+
+        /* margin: 100px auto 0 ; /// 위 100 좌우 a 아래 0/ */ 
+        /*일반적인 중앙정렬 방법임 아래는 다른 방법*/
+
+        position: absolute; /*바깥의 박스가 re가 아니어도 바깥 박스를 기준으로 위치를 잡을 수 있음*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);/*자기 크기에 -50%를 함*/
+    }
+
+    .face{
+        width: 500px;
+        height: 500px;
+        border: 5px solid #333;
+        border-radius: 50%; /*여기까지 하면 원이 박스를 튀어나옴*/
+
+        box-sizing: border-box; /*보더,패딩 포함 사이즈 맞춰주는 태그임*/
+
+        position: absolute; /*한번 더 ab를 사용함으로서 이후 face에 넣을 기준은 .big이 아니라 .face가 됨(근데 원래 그런거 아닌가?)*/
+        bottom: 0;
+
+        background-color: #8cd5ff;
+    }
+    .eyeball{
+        width: 23px;
+        height: 23px;
+        border: 1px solid #333; /*넓이 계산할때 사각형으로 생각해서 23에 위 아래 border 1을 생각해 25px로 봐야함*/
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 200px;
+    }
+    .eyeball.left{
+        left: 100px;
+    }
+
+    .eyeball.right{
+        right: 100px;
+    }
+    .nose{
+        width: 45px;
+        height: 45px;
+        border: 1px solid #333;
+        border-radius: 50%;
+        background-color: #000;
+        
+        position: absolute;
+        top: 280px;
+        left: 50%; /*22.5px만큼 이동시켜도 되지만*/
+        transform: translateX(-50%); /*이걸로 이동시켜도 됨 좌우(가로) 중앙정렬*/
+        z-index: 3;
+    }
+
+    .mouth{
+        width: 75px;
+        height: 95px; /*타원 줘야 하니까 */
+        border: 4px solid #333;
+        border-radius: 50%;
+        background-color: #fff;
+
+        position: absolute;
+        top: 300px;
+    }
+    .mouth.left{
+        left: 170px;
+        transform: rotate(45deg);
+    }
+    .mouth.right{
+        right: 170px;
+        transform: rotate(-45deg);
+
+    }
+    .beard_left{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 300px;
+        left: 100px;
+        border: 1px dotted #333;
+    }
+    .beard_right{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 300px;
+        right: 100px;
+        border: 1px dotted #333;
+    }
+    /* .beard_left > div{ 포지션 안 쓰고 만들어 본 것
+        width: 80px;
+        height: 2px;
+        background-color: #333;
+        margin-top: 20px;
+
+    }
+    .beard_left > div.a1{
+        transform: rotate(20deg);
+    }
+    .beard_left > div.a3{
+        transform: rotate(-20deg);
+    } */
+
+    .beard_left > div{
+        width: 80px;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+    .beard_left > div.a1{
+        transform-origin: right center;
+        transform: rotate(20deg);
+    }
+    .beard_left > div.a2{
+        top: 50px;
+    }
+    .beard_left > div.a3{
+        transform-origin: right center;/*rotate 회전 기준점을 오른쪽 끝점으로 (예전에 한 적 있음)*/
+        transform: rotate(-20deg);
+        top: 70px;
+    } 
+
+
+    .beard_right > div{
+        width: 80px;
+        height: 2px;
+        background-color: #333;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        transform-origin: left center;
+
+    }
+    .beard_right > div.b1{
+        transform: rotate(-20deg);
+    }
+    .beard_right > div.b2{
+        top: 50px;
+    }
+    .beard_right > div.b3{
+        transform: rotate(20deg);
+        top: 70px;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <!-- 기준이 되는 녀석을 하나 만듬 -->
+    <div class="bigbox"> 
+        <div class="face">
+            <div class="eyeball left"></div>
+            <div class="eyeball right"></div>
+            <div class="nose"></div>
+
+            <div class="mouth left"></div>
+            <div class="mouth right"></div>
+            
+            <div class="beard_left">
+                <div class="a1"></div>
+                <div class="a2"></div>
+                <div class="a3"></div>
+            </div>
+            <div class="beard_right">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

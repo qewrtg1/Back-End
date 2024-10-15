@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script> // 97p
+
+    var imgNum = Math.floor(Math.random()*7)+1; //6까지 나옴 , +1하면 7까지 나옴
+    // alert(imgNum) 작동하는지 확인용
+
+/* 해석
+   1. Math.random()*7 : 0~1 중 숫자가 나오면 곱하기 7 = 0.0000000000007~ 6.99999999 값이 나오는 것?
+   2. Math.floor : 소수점을 버리게 하는 명령어임 그래서 0 ~ 6이 나오는 거
+   3. +1 했으니 1~7 사이가 나오게 되는 것
+*/
+
+    document.write("<img src='images/img1.jpg'>")  // js에서 이미지를 넣는 방법
+    document.write("<img src='images/img" + imgNum + ".jpg'>") //이미지 랜덤 출력기
+    document.write(`<img src="images/img1.jpg">`) // ``(백틱) 써서 이미지 넣어봄 
+    document.write(`<img src="images/img${imgNum}.jpg">`)  // 백틱써서 이미지 랜덤 출력기
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

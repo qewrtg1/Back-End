@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0;}
+
+#container{
+    width: 1200px;
+    border: 10px solid #333;
+    margin: 0 auto;
+
+}
+#header{
+    width: 100%; /*부모의 크기만큼 따라감*/
+    height: 120px;
+    background-color: cadetblue;
+}
+#sidebar{
+    width: 300px;
+    height: 600px;
+    background-color: antiquewhite;
+    float: left;
+}
+#section{
+    width: 900px;
+    height: 600px;
+    background-color: cornflowerblue;
+    float: left;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: darkblue;
+    color: aliceblue;
+    clear: both;
+    /*clear 는 float를 해제해주는데 컨테이너 border의 선 압축도 해제해줌*/
+    margin-top: 300px; /*clear를 사용하면 마진-탑이 먹히지 않음*/
+                       /* 이는 주 블록(컨테이너)에 별도의 높이가 설정되어 있지 않기 때문임 */
+                       /*따라서 overflow-h 나 주 블록에 별도의 높이를 설정해줘야 함*/
+}

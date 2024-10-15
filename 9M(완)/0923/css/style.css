@@ -1,0 +1,41 @@
+*{margin: 0; padding: 0;}
+
+
+
+#container{
+    width: 960px;
+    border: 1px solid #333;
+    margin: 10px auto 0;
+    padding: 20px;
+}
+
+
+#header {
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+#sidebar{
+    width: 200px;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#contents{
+    width: 620px;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    float: left;   
+}
+
+
+#footer{
+    clear: both;  /* 양쪽 플로트 해제 -줄 바꾸고 싶어서 그렇다고 함*/
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}

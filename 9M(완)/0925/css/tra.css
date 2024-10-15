@@ -1,0 +1,80 @@
+*{margin: 0; padding: 0;}
+h1{
+    width: 400px; height: 70px;
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    background-color: brown;
+}
+
+p{
+    font-size: 30px;
+    padding-bottom: 30px;
+
+    cursor:pointer /*커서가 손가락처럼 바뀌는 것*/
+}
+
+
+
+.tra{
+    background-color: #ae5329;
+    transform: translate(-410px,0); 
+    /*transform: 변형 이라는 뜻*//*현재위치에서 X Y 만큼(여기선 X=-410PX만큼 왼쪽으로 이동*/
+    transition: all 0.5s;
+}
+
+.bth1:hover + .tra{ /* + 는 형제의 개념. 밑의 태그에 관련되게 만듬*/
+    transform: translate(0,0); /*이렇게 이동시킬 수 있음*/
+}
+
+
+.rot1{
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+.bth2:hover + .rot1{
+    transform: rotate(20000deg);
+}
+
+
+.rot2{
+    margin: 200px 0;
+    transform: rotateY(0deg); /*대문자 X Y 로 축을 부여하여 돌릴 수 있음*/
+    transition: all 0.5s;
+}
+.bth3:hover + .rot2{
+    transform: rotateY(360deg);
+}
+
+
+.rot3{
+    margin: 200px 0;
+    transform: rotateX(0deg);
+    transition: all 2.5s;
+}
+.bth4:hover + .rot3{
+    transform: rotateX(360deg);
+}
+
+
+
+.sca{
+    margin: 50px 0;
+    transform: scale(1); /*얘가 중요함 크기 관련*/
+    transition: all 0.5s;
+}/*이걸 이용하면 이미지에 마우스 가져다 놨을 때 크게 만드는 효과부여*/
+.bth5:hover + .sca{
+    transform: scale(1.3);
+}
+
+
+
+
+.ske{
+    margin: 50px 0;
+    transform: skewX(0deg); /*얘가 찌그리는거 같은데*/
+    transition: all 0.5s;
+}
+.bth6:hover + .ske{
+    transform: skewX(45deg)
+}

@@ -1,0 +1,109 @@
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none;}
+
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+section{width: 100%;}
+
+header{
+    background-color: aqua;
+
+    height: 90px;
+    width: 1220px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    /* display: block; */
+}
+
+header h3{
+    float: left;
+    font-size: 3.75rem;
+    font-weight: 800;
+}
+header p{
+    float: right;
+    padding: 1rem 1.5rem;
+    border: 1px solid #333;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+/* header img{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    /* z-index: 2;
+} 잘못 넣음*/
+
+.text{width: 100%;}
+
+.text ul{
+    width: 1220px;
+    height: 45px;
+    margin: 50px auto 0;
+    background-color: antiquewhite;
+    position: relative;
+}
+.text ul li{
+    display: inline-block;
+}
+
+/*****************************************************************************/
+
+
+
+
+.test{
+    width: 1220px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid #333;
+}
+
+
+.test ul li{
+    width: 305px;
+    height: 377px;
+    float: left;
+}
+
+.test ul li .pic{
+    width: 258px;
+    height: 258px;
+}
+.test ul li .pic img{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+/*************************/
+
+
+
+
+.test ul li .num span{
+    background-color: #fb9622;
+    border-radius: 10px;
+    color: #fff;
+    /* font-size: 10px; */
+
+}
+.test ul li .num span.sol{
+    background-color: #fb9622;
+
+}
+.test ul li .num span.re{
+    background-color: #0bab6d;
+
+}

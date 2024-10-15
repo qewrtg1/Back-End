@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box{
+        width: 200px; 
+        height: 200px;
+        border: 1px solid #333;
+    }
+    .box1{
+        background-color: aqua;
+        margin-left: 30px;
+        /*바깥여백 왼쪽 30만큼*/
+    }
+    .box2{
+        background-color: violet;
+        margin: 10px 20px;
+        /*위 아래는 10 좌우 20*/
+    }
+    .box3{
+        background-color: blanchedalmond;
+        /* margin-left: auto;
+        margin-right: auto; */
+                /*중앙 정렬하되 위 아래는 맞출 수 없음*/
+
+        margin: 0 auto;
+                /*바깥여백 위아래 0  좌우 auto = 위랑 똑같은 효과임*/
+        text-align: center;
+                /*블록요소 자체는 margin태그로 그 안에 든 글자는 text-align*/
+    }
+    .box4{
+        background-color: antiquewhite;
+        margin: 10px auto 20px;
+        /*바깥여백 위 10 좌우 auto 아래 20 주는 특이한 방법. 자주 안씀*/
+    }
+
+
+</style>
+
+
+</head>
+<body>
+    <!-- div 는 division 구역을 나눌때 쓴다. -->
+     <div class="box box1">박스1</div>
+     <div class="box box2">박스2</div>
+     <div class="box box3">박스3</div>
+     <div class="box box4">박스4</div>
+     <!-- box라는 공통클래스와 box1~4개별 클래스를 동시에 갖는다 -->
+
+
+</body>
+</html>

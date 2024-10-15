@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    ul::after{ /* :: 하나만 써도 되지만 이유는 몰라도 2개를 쓰기를 권장시킨다고 함 */
+        content: "마지막";
+    }
+    ul::before{
+        content: "0번째";
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li>네번째</li>
+        <li>다섯번째</li>
+        <li>여섯번째</li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,160 @@
+*{margin: 0; padding: 0;}
+
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}/*위 아래 0 좌우 자동 = 가운데로 정렬되게 만듬*/
+
+
+header{
+    height: 300px;
+    background: url(../images/top.jpg) 0 30% / cover;
+    position: relative;
+}
+    /*  [..]  은 폴더 하나 나갈때 마다 하는 거임*/
+    /* 0이라는 수치에는 px 와 같은 수치를 적지 않아도 되는 유일한 숫자임*/
+    /* 0 (좌우)30% (위 아래) */
+
+
+.logo{ /* header.logo , header h1 라고 해도 똑같음*/
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: #fff;
+}
+    /* 부모한테 position : relative 주고 
+    자식한테 position: absolute를 주면
+    left right top bottom 을 부여 해서 위치를 설정할 수 있음*/
+
+/*이렇게 부여하면 오른쪽, 아래, 에 위치하고 거기서 px를 부여하면 그 만큼 멀어짐*/
+
+/* 부모한테 relative를 안 주면 현재 값 기준 독립적으로 화면을 기준 우측 하단부에 나올 거임*/
+
+/* absolute는 곂치는 성질이 있다고 함. */
+
+
+nav{
+    width: 900px;
+    height: 70px;
+    background-color: #2a1d0a;
+}
+
+nav ul{
+    list-style: none;  /*블릿 없애기*/
+}
+
+nav ul li{
+    float: left;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+nav ul li a{
+    display: block; 
+    /* 넓이와 높이를 주기 위해서 부여. inline은 넓 높 못 줌*/ 
+
+    width: 150px;
+    height: 40px;
+    text-align: center;
+
+    line-height: 40px; /*줄간격 세로(위아래) 정렬시키는 것*/
+                        /*이거 boder로 테두로 안 만들면 정렬하기 위한 수치가 달라짐*/
+    border: 1px solid #fff;
+    border-radius: 20px;
+
+    text-decoration: none; /*밑줄 제거*/
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover{ /*마우스 올려둘 때 나오는 효과*/
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline; /* 밑줄 만드는 효과*/
+}
+
+
+.content{
+    /* height: 550px; */ /*아래 footer의 예시를 위해 썼음*/
+    overflow: hidden; 
+    /* float에 의한 clear 비교용*/
+}
+
+section{
+    width: 650px;
+    height: 550px;
+    background-color: #ccc;
+    float: left;/* 여기와 (1_아래에 (1)을 찾아)*/
+}
+
+
+section h3{
+    padding: 10px 0; /*위 아래 안여백*/
+    text-align: center;
+}
+
+section article{
+    width: 270px;
+    height: 200px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin: 0 0 20px 20px;
+}
+
+article h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;   /*글자 */
+    margin-bottom: 10px;  /*안 곂치게 하려고*/
+}
+
+article p{
+    line-height: 170%; /*줄 간격(글씨 한 줄 마다의 간격)*/
+    text-align: justify /*양쪽 정렬 */;
+}
+
+
+
+
+
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #726054;
+    float: left;
+    /* 여기에 (1) float속성이 부여된 탓에 그 
+    아래(footer)도 적용되어버림*/
+    text-align: center; /*모든 게 중앙정렬. 글자(뿐만 아니라)+이미지*/
+}
+
+aside h3{
+    padding: 10px 0;
+}
+
+aside img{
+    width: 220px;
+    padding-top: 10px;
+}
+
+
+
+
+
+footer{
+    height: 60px;
+    background-color: #333;
+    color: white;
+    /* float에 의해서 공간의 유무에 관계 없이 억지로 
+    비집고 뒷면으로 들어가는 상태. 
+    때문에 overflow나 clear가 없으면 보이지 않게 됨*/
+    clear: both;
+    /* clear 로 float를 클리어(청소_취소) 하는 것*/
+    /* but ! 단점이 존재하는 명령어임 margin top으로 예시 */
+
+    margin-top: 100px;
+    /* 줘도 바뀌지 않을 것임. 기준점이 이상한데(부모_contant 있기 때문임*/
+    /* 때문에 부모_content에 별도로 높이를 부여해야 함*/
+
+    text-align: center;
+    line-height: 60px
+}

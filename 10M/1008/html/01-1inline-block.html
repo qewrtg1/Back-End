@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    img{vertical-align: top;
+    display: inline;
+    }
+    p{
+        display: inline;
+    }
+
+    /*이미지는 대표적인 inline-block 요소다(자체가 이미 in-bk란 뜻)*/
+    /*때문에 알아서 수직 아래로 정렬된다*/
+    /*vertical-align: top; 또는 vertical-align: middle로 수직 위치를 조정할 수 있다.*/
+
+/*테스트 결과 :
+   1) block : 가로로 정렬됨 (글자가 여기에 해당됨)
+   2) inline: 세로로 정렬됨 (아마도 이미지?)
+   3) inline-block : 그래서 이건 뭐임???
+   */
+</style>
+    
+
+</head>
+<!--  -->
+<body>
+    <img src="images/cover.jpg" alt="">
+    <img src="images/git.jpg" alt="">
+    <img src="images/prod.jpg" alt="">
+    <img src="images/easyspub.jpg" alt="">
+    <p> 나 1</p>
+    <p> 나 2</p>
+    <p> 나 3</p>
+    <p> 나 4</p>
+</body>
+</html>

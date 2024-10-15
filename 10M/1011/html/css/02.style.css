@@ -1,0 +1,304 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+/*media로 화면 조정 하는 연습*/
+
+
+
+@media screen  and (min-width:601px) and (max-width:1023px){ /* and 띄어쓰기 중요*/
+    
+    #wrapper{
+            width: 100%; /*or 580px*/
+        margin: 0 auto;
+    }
+    
+    header{
+            height: 160px;  /*여기 바뀜 : 스마트폰에선 120px 데스크탑에선 더 넓었음*/
+        border-top: 1px solid transparent;
+        background:#f46075 url(../1234/nav2.png) no-repeat  95% 50% ;
+            background-size: 160px; /*여기 바뀜 : 배경사진 크기가 작아짐*/
+    }
+    header h1{
+        color:#fff;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    
+    nav{
+        height: 50px;
+        background-color: #aaa;
+    }
+    
+    nav ul li{
+        float: left;
+            margin-left: 15px; /*여기 바뀜 40 >> 15*/
+        margin-top: 8px;
+    }
+    
+    nav ul li a{
+        display: block;
+            width: 120px; /*여기 바뀜  400 >> 120*/
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    nav ul li a:hover{
+        background-color: #f46075;
+        border-radius: 18px;
+    }
+    section{
+        /* float: left; */ /*여기 바뀜*/
+            padding: 5px 0; /*여기 바뀜*/
+            width: 100%; /*여기 바뀜 580=100%*/
+            height:500px;
+        background-color: #ddd;
+    }
+    section h2{
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    section article{
+        width:220px;
+        height: 180px;
+        border: 1px solid #333;
+        float: left;
+        padding: 10px;
+            margin-left: 30px;/*여기 바뀜  20 >>> 30*/
+        margin-bottom: 15px;
+    }
+    section article h3{padding-bottom: 10px;}
+    section article p{font-size: 12px;}
+    
+    aside{
+        /* float: left;  *//*여기 바뀜*/
+        padding: 5px 0 10px 0;
+        width: 100%;
+        /* width:250px; */
+        /* height:500px; */
+        background-color: #ffffcc;
+        text-align: center;
+    }
+    aside h2{margin-top: 10px;}
+    aside img{
+        margin-top: 10px;
+    }
+    footer{
+        clear: both;
+        height:50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 핸드폰 용 */
+@media screen  and (max-width:600px){
+    
+    #wrapper{
+            width: 100%; /*여기 바뀜*/
+        /* margin: 0 auto; 100퍼센트라 중앙정렬 할 게 없음 */
+    }
+    
+    header{
+            height: 120px; /*여기 바뀜*/
+            background-size: 100px;
+        border-top: 1px solid transparent;
+        background:#f46075 url(../1234/nav2.png) no-repeat  95% 50% ;
+    }
+    header h1{
+        color:#fff;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    
+    nav{
+            height: 100px;  /*여기 바뀜 : 여기 바꿔야 메뉴가 안 잘리고 제대로 나옴*/
+            /* 320 이하로 작아지면 똑같이 메뉴가 망가지긴 할텐데. 핸드폰 기준 320이하의 사이즈는 없기에 ㄱㅊ다고 함*/
+            background-color: #aaa;
+    }
+    
+    nav ul li{
+        float: left;
+            width: 50%; /*여기 바뀜*/
+        /* margin-left: 40px; */ /*여기 바뀜*/
+        margin-top: 8px;
+    }
+    
+    nav ul li a{
+        display: block;
+            margin: 0 auto;  /*여기 바뀜 : 블록요소에 중앙정렬까지 더해져서 움직여도 중앙에 있을 것*/
+            width: 100%;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    nav ul li a:hover{
+        background-color: #f46075;
+        border-radius: 18px;
+    }
+    section{
+        /* float: left; *//*여기 바뀜*/
+            width: 100%; /*여기 바뀜*/
+            height:auto; /*여기 바뀜*/
+        background-color: #ddd;
+            padding: 10px; /*여기 바뀜*/ 
+/*border-top 줘도 병합현상을 막을 것. 아까 01에서 길게설명했던 병합현상 해결때문에 생긴 흰색선을 이걸로 가리는 것임*/
+    }
+    section h2{
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    section article{
+            width:85%; /*여기 바뀜*/
+            height: auto; /*여기 바뀜*/
+        border: 1px solid #333;
+        /* float: left; */ /*여기 바뀜*/
+        padding: 10px;
+        /* margin-left: 20px; 
+        margin-bottom: 15px; */ /*여기 바뀜*/
+        margin: 0 auto;
+    }
+    section article h3{padding-bottom: 10px;}
+    section article p{font-size: 12px;}
+    
+    aside{
+        /* float: left;*/ /*여기 바뀜 이러면 위랑 똑같이 또 흰색선으로 박살남*/
+            width:100%; /*여기 바뀜*/
+        /* height:500px; */ /*여기 바뀜 이걸 지워야 img에서 오토가 잘 적용됨*/
+        background-color: #ffffcc;
+        text-align: center;
+            padding: 10px 0;/*여기 바뀜*/
+    }
+    aside h2{margin-top: 10px;}
+    aside img{
+        margin-top: 10px;
+            width: 75%; /*여기 바뀜*/
+            height: auto; /*여기 바뀜*/
+    }
+    footer{
+        clear: both;
+        height:50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+    }
+    }
+
+
+
+
+
+
+
+
+
+/* 데스크탑 용 */
+@media screen  and (min-width:1024px){
+    
+#wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    height: 205px;
+
+    border-top: 1px solid transparent;
+    background:#f46075 url(../1234/nav2.png) no-repeat  95% 50% ;
+}
+header h1{
+    color:#fff;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+nav{
+    height: 50px;
+    background-color: #aaa;
+}
+
+nav ul li{
+    float: left;
+    margin-left: 40px;
+    margin-top: 8px;
+}
+
+nav ul li a{
+    display: block;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+nav ul li a:hover{
+    background-color: #f46075;
+    border-radius: 18px;
+}
+section{
+    float: left;
+    width: 550px;
+    height:500px;
+    background-color: #ddd;
+}
+section h2{
+    text-align: center;
+    margin: 10px 0;
+}
+
+section article{
+    width:220px;
+    height: 180px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+section article h3{padding-bottom: 10px;}
+section article p{font-size: 12px;}
+
+aside{
+    float: left; 
+    width:250px;
+    height:500px;
+    background-color: #ffffcc;
+    text-align: center;
+}
+aside h2{margin-top: 10px;}
+aside img{
+    margin-top: 10px;
+}
+footer{
+    clear: both;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+}

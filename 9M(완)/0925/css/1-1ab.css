@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0;}
+.wrap{
+    position: relative;
+    width:830px;
+    height:310px;
+    border:1px solid red;
+    margin: 100px auto 0;
+}
+.box{
+    width:200px;
+    height:150px;
+    position: absolute;
+    display: none;
+}
+.box img{
+    display: block;
+}
+.box1{
+    display: block;
+    left:0;top:0;
+}
+.box2{
+    display: block;
+    left:0;top:160px;
+}
+
+.box3{
+    display: block;
+    width:200px;
+    height:310px;
+    left:210px;top:0px;
+}
+.box4{
+    display: block;
+    left:420px;top:0; 
+  }
+  .box5{
+    display: block;
+    /* left:630px;  */
+    top:0;
+    right:0;
+  }
+  .box6{
+    display: block;
+    width:410px;
+    height:150px;
+    right:0;
+    top:160px;
+  }
+  .box::before{
+    content: "";/*반드시 기입*/
+    position: absolute;
+    width:0%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    transition: all 0.5s;
+  }
+  .box:hover::before{
+    width:100%;
+  }

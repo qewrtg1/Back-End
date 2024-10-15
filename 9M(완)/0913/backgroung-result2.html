@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container div{
+        width: 100vw;
+        height: 100vh;
+        /* border: 1px solid #333; */
+    }
+
+    .b1{
+        background-color: aquamarine;
+        background-image: url(images/back1.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .b2{
+        background-color: rgb(113, 182, 57);
+        background-image: url(images/back2.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .b3{
+        background-color: rgb(76, 104, 230);
+        background-image: url(images/back3.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;/*사진을 고정시키는 명령어*/
+    }
+    .b4{
+        background-color: rgb(185, 64, 94);
+        background-image: url(images/back4.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .b5{
+        background-color: rgb(198, 224, 104);
+        background: url(images/back5.jpg) no-repeat fixed 50% 50% / cover;
+        /* 위 1~4를 5처럼 요약할 수도 있음*/
+        /* (no-repeat_1) (fixed_2) (50% 50%_3)
+        에서 1 2 는 위치가 바뀌어도 되지만 3은 고정으로 맨 뒤에 있어야 함 */
+
+    }
+
+</style>
+
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="b1">배경1</div>
+        <div class="b2">배경2</div>
+        <div class="b3">배경3</div>
+        <div class="b4">배경4</div>
+        <div class="b5">배경5</div>
+
+    </div>
+
+    
+</body>
+
+</html>

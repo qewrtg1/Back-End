@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <script>//48p 증감연상자 
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--; // 해석하면 num1 = num1 - 1 이라는 의미임.
+        document.write(num1, "<br>");
+        num1++; // 반대임 
+        document.write(num1, "<br>");
+
+
+
+
+
+        
+    /* 여 기 중 요 해 어 려 워*/
+    /* 여 기 중 요 해 어 려 워*/
+    /* 여 기 중 요 해 어 려 워*/
+        result = num2++;
+        document.write(result, "<br>"); // = 20이 나오는 이유는?
+    /* 'result =' 여기까지를 먼저 계산함 그래서 20으로 나옴 
+이후 num2++가 적용되서 21로 처리됨.그래서 result는 20, num2은 21로 결과가 나옴*/
+
+
+        result = ++num2;
+        document.write(result, "<br>");
+/*+가 앞에 있는가, 뒤에 있는 가에 따라서 값이 달라짐. ++가 앞에 있으면 result에*/
+/*현 시점에선 위에서 먼저 21이 된 num2인 것을 기억하고 계산해라*/
+
+
+    </script>
+</head>
+
+
+<body>
+
+</body>
+</html>

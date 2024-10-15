@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var ha = prompt("당신의 성적은?" , "0");
+
+    if(ha >= 90){
+        document.write("학점 A");
+    }else if(ha >= 80){
+        document.write("학점 B");
+    }
+    else if(ha >= 70){
+        document.write("학점 C");
+    }
+    else if(ha >= 60){
+        document.write("학점 D");
+    }
+    else if(ha <= 59){
+        document.write("학점 f");
+    }
+    else{
+        document.write("잘못 입력하셨습니다.");
+    }
+
+/**************    또는    **/ 
+var avg = prompt("당신의 점수는?", "0");
+var hak;
+if(avg >=90){
+    hak = "A학점"
+}else if(avg >=80){
+    hak = "B학점"
+}else if(avg >=70){
+    hak = "C학점"
+}else if(avg >=60){
+    hak = "D학점"
+}else{
+     hak = "F학점"
+}
+document.write(hak);
+
+
+/**************** 로도 가능함 **/
+
+</script>
+
+
+</head>
+<body>
+    
+    
+</body>
+</html>

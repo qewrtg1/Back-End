@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minute">00</span>분
+        <span id="second">00</span>초
+    </h1>
+</body>
+
+
+
+
+<script>
+    var today = new Date();
+    // alert(today);
+    var nowYear = today.getFullYear();
+    var nowMonth = today.getMonth()+1;
+    var nowDate = today.getDate();
+    var nowDay = today.getDay();
+
+
+    var tlrks = today.getHours();
+    var qns = today.getMinutes();
+    var ch = today.getSeconds();
+
+
+    var yoil;
+
+    if(nowDay == '0'){
+     yoil = "일";
+   }else if(nowDay == '1'){
+     yoil = "월";
+   }  else if(nowDay =='2' ){
+     yoil = "화";
+   } else if(nowDay =='3' ){
+     yoil = "수";
+   } else if(nowDay =='4' ){
+     yoil = "목";
+   } else if(nowDay =='5' ){
+     yoil = "금";
+   } else if(nowDay =='6' ){
+     yoil = "토";
+   }   
+
+    document.write("현재 시간: " + tlrks +"시"+ qns + "분"+ ch+ "초", "<br>");
+
+   document.write(`${nowYear} 년 ${nowMonth} 월${nowDate} 일`);
+
+
+
+  //  document.getElementById("year").innerHTML = nowYear; 
+  //  document.getElementById("year"): html문서에서 id가 year인 요소를 찾습니다
+  // .innerHTML 해당 요소의 내부 html을 의미 . 이 값을 수정하면 해당요소의 내용이 바뀜. ----년 >>> 2024년으로
+  // nowyear에 저장된 값을 html 요소에 넣겠다. 라는 뜻? 하지만 얘보단 이 아래 쓰일 태그가 최근엔 더 자주 쓴다고 함
+
+   document.querySelector('#year').innerHTML= nowYear;
+   document.querySelector('#month').innerHTML= nowMonth;
+   document.querySelector('#date').innerHTML= nowDate;
+   document.querySelector('#nday').innerHTML= yoil;
+   document.querySelector('#hour').innerHTML= tlrks;
+   document.querySelector('#minute').innerHTML= qns;
+   document.querySelector('#second').innerHTML= ch;
+</script>
+</html>

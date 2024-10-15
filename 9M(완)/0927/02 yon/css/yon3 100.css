@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;}
+ul{list-style:none;}
+a{text-decoration:none;color:#333;}
+/*이번엔 position을 쓰지 않고 정렬하는 연습임*/
+.cf:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.header_out{
+    width: 100%;
+    position: relative;
+}
+
+header{
+	width: 1000px;
+	height: 250px;
+	border: 1px solid #333;
+	margin: 0 auto;
+	/* position: relative;  위에 새로운 부모가 생겨서 그쪽으로 옮김*/
+	}
+
+header .sns{
+    float: left; /*float는 다음 부모의 위치가 기준이라서 이렇게 응용 가능함*/
+    margin-top: 20px; /*바로 윗 부모의 포지션이 사라졌으니 이렇게 위치 잡아야 함*/
+    margin-left: 20px;
+	/* position: absolute;
+	top: 20px;
+	left: 10px;  */
+}
+header .sns li{
+	float: left;
+	margin-left: 10px; 
+}
+
+
+header .lnb{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* position: absolute; */
+	/* top: 10px;
+	right: 10px;  */
+}
+
+header .lnb li{
+	float: left; 
+	font-size: 13px;
+	padding: 10px;
+	background: url(../images/bar.png) no-repeat 100% 50%;
+}
+
+header .lnb li:nth-child(3){
+	background: none;
+}
+
+header .logo{ /* 여긴 어차피 어느 기점이던 중앙 정렬이라 손대지 않아도 됨*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px; /*(1-1 이거랑)*/
+}
+
+header .logo img{
+	width: 100%; /*(1-1 여기 전체가 합쳐지면 이미지가 작아짐)*/
+}
+
+
+
+
+
+
+.main_menu{
+    position: absolute;
+	top: 220px;
+	left: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+.gnb{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative; /*shadow와 친구 ? 동등한위치임(태그가 같은 열에 존재 서로 종속 못하게 별도임). 동등한 친구끼리는 밑에 있는놈이 위로, 또는 포지션을 받은 놈이 위로 올라감*/
+    z-index: 2;
+    	/*  main_menu에 다 넘겨주고 새로운 태그로 위치 잡는 것
+    position: absolute;
+	top: 220px;
+	left: 0;
+	width: 100%; */
+}
+
+.gnb > li{ 
+	float: left;
+	background-color: rgba(225, 0, 0, 0.5);
+	position: relative;
+	/* (2-1)width: 20%; 여기에 이렇게 넓이를 줄 거라면 아래 gnb li a 에 width을 100%으로 줘야함 */
+}
+.gnb li a{
+	display: block;
+	width: 200px; /*(2-1)여기에 200px를 주면 어차피 위도 자동으로 커지니까 이렇게 해도 됨*/
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.gnb li ul{
+	position: absolute;
+	background-color: yellowgreen;
+	display: none;
+}
+
+/* 이 아래부터는 어려워짐*/
+
+.gnb:hover li ul{display: block;} /*yon1과 다른 점*/
+
+
+.main_menu .shadow{
+    position: absolute;/*겹쳐야하니까.*/
+    top: 30px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: yellowgreen;
+    display: none;
+}
+.gnb:hover + .shadow{ /*서로 평행하게 있는 태그를 묶는 방법 = +*/
+    display: block;
+}
+
+ 
+ 
+ 
+ 
+

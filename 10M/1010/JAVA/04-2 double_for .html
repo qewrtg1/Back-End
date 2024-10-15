@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>//82p 중첩for문
+    var num =1;
+    var t = "<table border='1'>";
+    for(var i = 1; i <= 5; i++){
+        t+= "<tr>"//줄만드는 태그
+
+        for(var k = 1; k <= 5; k++){
+            t += "<td>" + num + "</td>";
+            num++; // num은 제한이 없어서 계속 td, tr이 늘어날 때마다 1씩 더해지는 거임
+            //i =5 k = 5 5*5까지 1씩 늘어나서 25가 되는거임
+        }
+        t += "</tr>";
+        // document.write("<br>");
+    }
+    for(var i = 1; i <= 5; i++){
+        t+= "<tr>"//줄만드는 태그
+
+        for(var k = 1; k <= 5; k++){
+            t += "<td>" + num + "</td>";
+            num++; // num은 제한이 없어서 계속 td, tr이 늘어날 때마다 1씩 더해지는 거임
+            //i =5 k = 5 5*5까지 1씩 늘어나서 25가 되는거임
+        }
+        t += "</tr>";
+        // document.write("<br>");
+    }
+    t +="</table>";
+    console.log(t);
+    document.write(t);
+
+
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

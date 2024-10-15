@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script> //92p 복습. 어제 했음
+    window.onload = function(){  //(1-2) html과 css가 모두 로드된 후(읽은 후) 이 값을 실행하게 만드는 명렁어.
+//window는 document로 대처 가능하다고 함 
+
+autoTime(); // 이렇게 쓰면 처음에 000000 이 안나오고 바로 시작할 수 있음
+setInterval(autoTime, 1000); 
+    function autoTime() {
+        // setInterval(autoTime, 1000); 안에 있으면 적용이 안되네 
+
+        var today = new Date();
+        // alert(today); //현재의 시간 정보가 객채화 되서 alert로 출력함
+        var y = today.getFullYear(); //년도
+        var m = today.getMonth()+1; //달은 1월을 0월로 표기해서
+        var d = today.getDate(); 
+        var n = today.getDay(); // 여긴 숫자로 표기되는 특이성이 있음 0:일요일 ~ 6:토요일
+                                // 나중에 아래처럼 귀찮게 노가다 하는 방식이 아닌 걸 배울 예정이라고 함
+        var yoil;
+
+        if( n == '0'){
+            yoil = "일";
+        }
+        else if( n == '1'){
+            yoil = "월";
+        }
+        else if( n == '2'){
+            yoil = "화";
+        }
+        else if( n == '3'){
+            yoil = "수";
+        }
+        else if( n == '4'){
+            yoil = "목";
+        }
+        else if( n == '5'){
+            yoil = "금";
+        }
+        else{
+            yoil = "토";
+        }
+
+        var h= today.getHours();
+        var ml = today.getMinutes();
+        var s = today.getSeconds();
+
+        // document.write(y + "년 " + m + "월 " + d + "일 " + yoil + "요일 "+h + "시 " + ml + "분 " + s + "초");
+        // document.write(`${y} 년 ${m} 월${d} 일 ${n}요일 ${h}시 ${ml}분 ${s}초 `);  위 아래는 동일한 출력문임
+        //아래 html body에 js값을 출력하게, 반영하게 하기 위해 이 두 줄은 주석처리 , 방법은 2가지가 있음
+
+
+        document.getElementById('year').innerHTML = y ;// 이 명령어로 아래에 반영시킴 "해석 : year(bddy)에 inner로 y를 넣겠다
+       
+        // document.querySelector('#year').innerHTML = y ;
+        document.querySelector('#month').innerHTML = m ;//id도 class도 넣을 수 있어서 이게 더 많이 쓰임
+        //어젠 여기까지, 작성했을 경우 script 다음으로 body로 가기 때문에 제대로 읽히지 않음. 그래서 script를 body 아래로 내렸음
+        //오늘은 다른 방식으로 진행할 것임 (1-1)
+        document.querySelector('#date').innerHTML = d ;
+        document.querySelector('#nday').innerHTML = yoil ;
+        document.querySelector('#hour').innerHTML = h ;
+
+        document.querySelector('#minute').innerHTML = ml ;
+        document.querySelector('#second').innerHTML = s ;
+     }
+}
+
+</script>
+
+
+
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="nday">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minute">00</span>분
+        <span id="second">00</span>초
+    </h1>
+</body>
+</html>

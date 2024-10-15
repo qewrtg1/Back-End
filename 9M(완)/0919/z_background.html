@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.container div{
+    width: 100%;
+    height: 100vh; /*높이엔 100%라는 개념이 없어서 비슷한 수치를 넣는 것*/ 
+}
+.b1{
+    background-color: bisque;
+    background-image: url(images/galic.jpg); /* 이렇게 하면 뒷 배경 색이 그림에 가려짐*/           /* 첨부 사진이 무한이 반복 됨*/
+    background-repeat: no-repeat; /* repeat는 no-repeat(반복 안 하기), x와y를 첨부할 수 있으며 /- - -/ x는 x축 1행 y는 y축 1열로만 사진이 반복되게 함*/
+    /* background-repeat: repeat-x;  */
+    background-position: 50% 50%;    /* 가로 세로 50%의 위치에 있도록 함*/   /* position : 포지션 = 위치 */
+
+    background-size: cover;   /* 화질은 떨어지나 현재 속해있는 범위를 가득 메움*/
+}
+.b2{
+    background-color: rgb(15, 212, 64);
+    background-image: url(images/back2.png); 
+    background-repeat: no-repeat; 
+    /* background-position: 50% 50%;   */
+    background-size: cover;   
+}
+.b3{
+    background-color: rgb(238, 135, 9);
+    background-image: url(images/back3.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%;  
+    background-size: cover;   
+
+    background-attachment: fixed;  /* fixed : 고정된 확고한. 이라는 뜻으로 사진이 고정됨 */
+}
+.b4{
+    background-color: rgb(204, 24, 24);
+    background-image: url(images/back4.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%;  
+    background-size: cover;   
+}
+.b5{
+    background-color: rgb(18, 209, 243);
+    background-image: url(images/back5.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%;  
+    background-size: cover;   
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="b1">배경1</div>
+        <div class="b2">배경2</div>
+        <div class="b3">배경3</div>
+        <div class="b4">배경4</div>
+        <div class="b5">배경5</div>
+    </div>
+    
+</body>
+</html>

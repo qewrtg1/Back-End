@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+div{
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    background: #0094ff;
+}
+/* 트랜스폼은 생략이 가능하다, 라고 갑자기 말하심*/
+.box{
+    transition: all 2s ease-in;
+}
+.box:hover{
+    transform: scale(2);
+    perspective: 120px; /*원근이래*/
+    transform: rotate(180deg);
+}/*여기까지 쓰면 로테이트만 적용된다. 백그라운드 2개 적용했을 때처럼 맨 마지막만 적용되는 논리인듯*/
+ /*한번에 다 쓰고 싶으면*/
+
+</style>
+
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>

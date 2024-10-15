@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+
+<style>
+
+    .box{
+        width: 200px;
+        height: 200px;
+    }
+    .box1{
+        background-color: aqua;
+    }
+    .bigbox{
+        width: 700px;
+        height: 500px;
+        border: 1px solid #333;
+        margin: 0 auto;
+        /* position: relative; */
+    }
+
+    .box2{
+        background-color: rgb(214, 211, 29);
+        position: absolute;    /* relative 가 있고 없고의 차이를 확인해 보셈*/ 
+                               /*기준점이 없냐 있냐의 차이*/
+        bottom: 0;
+        right: 0;
+    }
+    .box3{
+        background-color: rgb(69, 24, 95);
+        color: aliceblue;
+    }
+    .box4{
+        background-color: rgb(230, 119, 29);
+    }
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="box box1">박스1</div>   
+     <div class="bigbox">
+            <div class="box box2">박스2</div>    
+            <div class="box box3">박스3</div>    
+    </div>
+    <div class="box box4">박스4</div>    
+</body>
+</html>

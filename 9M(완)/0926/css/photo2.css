@@ -1,0 +1,297 @@
+*{margin: 0;padding: 0;}
+.cf:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 이렇게 코딩하고 높이가 필요한 부분에 class="cf" 넣어주면됨 */
+
+.bigbox{
+  width:1000px;
+  border:5px solid tan;
+  margin: 0 auto; 
+  padding-bottom: 30px;
+}
+.bigbox h2{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.bigbox .box{
+  float:left;
+  border: 5px solid lime;
+  margin-left: 32px;
+  margin-top: 30px;
+  width:200px;
+  height:150px;
+}
+
+.bigbox .box img{
+  display:block;
+  width:100%;
+}
+
+
+
+.abigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .abigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .abigbox .abox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  
+  .abigbox .abox img{
+    display:block;
+    width:100%;
+  }
+
+  .abox1{overflow: hidden;}
+  .abox1 img{
+    transform: scale(1);
+    transition:all 0.3s;
+  }
+
+ .abox1:hover img{
+    transform: scale(1.3);
+  }
+
+  .abox2{overflow: hidden;}
+  .abox2{
+    transform: scale(1);
+    transition:all 0.3s;
+  }
+
+ .abox2:hover{
+    transform: scale(1.3);
+
+  }
+
+
+  .abox3{overflow: hidden;}
+  .abox3 img{
+    transform: scale(1, 1);
+    transition:all 0.3s;
+  }
+
+ .abox3:hover img{
+    transform: scale(1, 1.5);
+  }
+  
+
+  .bbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .bbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .bbigbox .bbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .bbigbox .bbox img{
+    display:block;
+    width:100%;
+  }
+
+  .bbox1 img{
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+  .bbox1:hover img{
+    transform: rotate(360deg);
+  }
+
+
+  .bbox2 img{
+    transform: rotateY(0deg);
+    transition: all 0.3s;
+  }
+  .bbox2:hover img{
+    transform: rotateY(360deg);
+  }
+
+  .bbox3 img{
+    transform-origin: left top;
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+  .bbox3:hover img{
+    transform: rotate(360deg);
+  }
+
+
+.bbox4{
+    perspective: 200px;
+    /* 원근 */
+}  
+  .bbox4 img{
+    transform-origin: left top;
+    transform: rotateY(0deg);
+    transition: all 0.3s;
+  }
+  .bbox4:hover img{
+    transform: rotateY(360deg);
+  }
+
+
+/*여기 위까지 못하고 이 아래부터 다시 시작*/
+
+
+  .cbigbox{
+    width:1000px;
+    border:5px solid tan;
+    margin: 0 auto; 
+    padding-bottom: 30px;
+  }
+  .cbigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .cbigbox .cbox{
+    float:left;
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width:200px;
+    height:150px;
+  }
+  .cbigbox .cbox img{
+    display:block;
+    width:100%;
+  }
+
+
+
+
+  .cbox1{
+    position: relative;
+    overflow: hidden;/*이거 제외했다 다시 봐봐*/
+  }
+
+  .cbox1 img{
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    transition: all 0.3s;
+  }
+
+  .cbox:hover img{
+    top: 0;
+  }
+
+/* 위 cbox1과 cbox2는 동일함. 뒤가 좀 더 간편하다 */
+
+  .cbox2{overflow: hidden;}
+
+
+  .cbox2 img{
+    transform: translate(0, 150px);    /*이동 시키는 태그*/
+    /*tranform은 현재위치가 기준임 
+    즉, position으로 위치를 정해주지 않아도 됨*/
+    transition: all 0.3s;
+  }
+
+  .cbox2:hover img{
+    transform: translate(0, 0px);
+  }
+
+
+
+  .cbox3{
+    position: relative;
+    overflow: hidden;
+  }
+  .cbox3::before{
+    content: "Best 1 상품";
+    position: absolute; /*이걸로 사진과 글이 겹치게 만듬*/
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+
+    bottom: -40px;
+    left: 0;
+    transition: all 0.5s;
+
+  }
+/*before after : 글자를 위에 두고 싶을 때 b 아래 두고 싶을때 a*/
+/*뭔 태그를 쓰면 ab 가 자유로워 진다는데 까먹음*/
+
+  .cbox3:hover::before{
+    bottom: 0px;
+  }
+
+
+
+
+
+  .cbox4{
+    position: relative;
+  }
+  .cbox4::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5);
+    top: 0;
+    left: 0;
+    transition: all 1.5s;
+  }
+  .cbox4:hover::after{
+    width: 100%;
+
+  }
+/*a b 는 장문을 넣기엔 적합하지 않다고 함*/
+
+  .cbox4 p{
+    position: absolute;
+    width: 100%;
+    /* height: 70%;
+    padding-top: 30%; 이렇게 딱 100% 맞추기 위한 계산이 하기 귀찮으면*/
+    height: 100%;
+    padding-top: 10%;/*이러면 130%지만*/
+
+    box-sizing: border-box;/*보더패팅 합쳐서 강제로 100%로 만들어줌*/
+/*이렇게 하면 글자 위치를 맞추면서 높이도 맞추려고 귀찮게 계산할 필요 없음*/
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url(../images/more.png)no-repeat 50% 70%;
+    background-color: rgba(255, 0, 0, 0.5);
+/*이 b와 b-c는 위치에 따라 잡아 먹음 b-c를 위로 올리면 사라질 거임*/
+    opacity: 0; /* 불투명도 주는 옵션*/
+    transition: all 0.6s;
+
+  }
+  .cbox4:hover p{
+    opacity: 1;
+  }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script> //
+var color=["white", "yellow", "aqua", "purple"];
+var i = 0;
+function changeColor(){
+    i++;
+    var bodyTag = document.getElementById("theBody");
+    bodyTag.style.backgroundColor = color[i];
+}
+//이렇게하면 0 1 2 3까지만 증가하고 4로 넘어가지 못하거나 0으로 돌아가지 않음
+
+
+</script>
+
+</head>
+<body id="theBody">
+    <button onclick="changeColor();">배경색 바꾸기</button>
+    
+</body>
+</html>

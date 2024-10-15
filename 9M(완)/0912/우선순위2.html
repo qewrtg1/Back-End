@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .red{color: red;}
+    h1{color: blue;}
+    /*이 경우 class로 지정된 명칭(별명or이름)이 우선권이 강함*/
+    #purple{color: blueviolet;}
+    /*id로 만들어진 명칭이 class로 만든 명칭보다 우선권을 가짐. 이유는 아래 확인*/
+
+</style>
+
+
+</head>
+
+<body>
+    <div>
+        <h1 class="red" id="purple">나는 빨간색</h1>
+        <!-- class는 명칭을 여러 개, 동일한 이름으로 만들 수 있음. 
+         id는 같은 이름으로 중복 불가. 잡스 백엔드 등에서 적용이 안됨 -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+<style>
+
+.box{
+    width: 200px;
+    height:200px;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color:blueviolet;
+}
+.box3{
+    background-color: yellowgreen;
+    position: relative; /* 본래는 자리를 옮기기 위해 사용하는 건 아니지만 사용이 가능함 */
+    /*보통은 그냥 부모 역할을 하려고 만든다는데?*/                   /* p-re를 사용하게 되면 margin 없이 상하좌우에 값을 부여 가능 구체적 설명은 전 날짜에 있을것*/
+    left: 50px;
+    top: 50px;
+}
+.box4{
+    background-color: coral;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

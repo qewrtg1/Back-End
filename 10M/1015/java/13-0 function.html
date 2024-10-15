@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+
+    #galleryZone{text-align: center;}
+
+</style>
+
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+        <p class="buttons">
+            <button onclick="gallery(0)">이전</button> 
+            <button onclick="gallery(1)">다음</button>
+            <!-- 여기서 숫자는 참1 거짓0을 의미함 -->
+        </p>
+    </div>
+    <script>
+        var num = 1;
+        function gallery(direct){ //direct는 변수 이름임 명령어 아님
+            if(direct){  //if문 괄호 안에는 1번이 오면 참, 0을 거짓으로 인식함.
+                if(num == 8 ) return;//이중 if(가정)문.   // return: num이 8이 아니면 되돌리고 8이면 빠저나감(동작을 안 함)
+                num++;
+            }else{
+                if(num == 0 )return;
+                num--;
+            }
+            console.log(num);
+            var imgTag = document.getElementById('photo'); 
+            //html id값 불러오기 /// 이 id를 앞으로 var로 선언한 변수가 대신함
+// var img1 = imgTag.getAttribute('src'); 
+// src: html에 img 다음에 쓰이는 놈. 
+//console.log(img1);
+            imgTag.setAttribute('src', "images/pic_"+num+".jpg");
+            //src, id alt의 내용을 불러올 수 있음?
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

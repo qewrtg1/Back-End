@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*540페이지*/
+    .flex-container{
+        width: 700px;
+        background-color: dodgerblue;
+        /* height: 100px; */
+        display: flex; /*float 보다 더 편하게 대처하는 태그* (1-1) 강제로 압축시킴*/
+        flex-wrap: wrap;  /*(1-2) 이걸로 해결 */
+        /*flex-wrap: nowrap; 넘쳐도 한줄로 표시*/
+        /*flex-wrap: wrap; 넘치면 줄바꿈*/
+        /*flex-wrap: wrap-reverse 여러줄을 표시하되 기존방향과 반대로 541p 참고*/
+
+
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+
+    }
+
+
+</style>
+
+
+
+</head>
+<body>
+    <h1>Flexiable Boxes</h1>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <!-- 이론적으로 말이 안되는 이유 : 넓이가 700인 태그에 100 상자가 9개가 있는데
+        상자가 전부 안에 담겨있음 이유가 뭘까 : display : flex (1-1) -->
+    </div>
+    
+</body>
+</html>
