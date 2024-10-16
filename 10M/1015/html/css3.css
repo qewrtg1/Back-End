@@ -1,9 +1,17 @@
 *{margin: 0; padding: 0;}
+
+
 .bigbox{
    width: 1200px;
    height: 770px;
    margin: 15px auto;
    border: 1px solid #333;
+
+   /* display: flex;  */
+/*넓이가 안맞으면 강제로 맞춰줘버림. 
+ 여기에 flex를 주면 h2도 영향이 감*/
+/* 그래서 html에 bbox를 만들어서 h2를 제외한 컨테이너를 만듬 */
+
 }
 .bigbox h2{
    text-align: center;
@@ -11,7 +19,13 @@
    font-size: 40px;
 }
 
-
+.bbox{
+   display: flex;
+   /* 이래도 여전히 box 6개가 지랄남. */
+   flex-wrap: wrap;
+   /* 그래서 이걸 추가함.*/
+   /* flex-wrap: wrap-reverse;  <- 반대로 나열 시킴*/
+}
 
 
 

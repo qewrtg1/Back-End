@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#container{
+    width:400px;
+    margin: 50px auto;
+    text-align: center;
+}
+ul{list-style: none;}
+.rect {
+    width:100px;
+    height:100px;			
+    border:1px solid #222;
+    margin:30px auto;
+    transition: 1s;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <p>도형위에 마우스 포인터를 올려 놓으세요</p>
+        <ul>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+        </ul>
+    </div>
+
+    <script>
+       var rects = document.querySelectorAll('.rect'); // 03-6과 다르게 같은 명칭의 class가 여러개라 셀렉트 All을 써야함
+       rects.addEventListener('mouseover',function(){
+            rects.style.backgroundColor = 'green';
+            rects.style.borderRadius = "50%";
+       }); 
+
+       rects.addEventListener('mouseout',function(){
+            rects.style.backgroundColor = '';
+            rects.style.borderRadius = "";
+       }); 
+//이렇게 해도 03-6 처럼 움직이지 않음. 같은 클래스명이 많은 경우엔 for문을 활용해야만 함
+    </script>    
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" alt="" id="cup">
+    </div>
+    <script>
+        //var cup = document.getElementById('cup');
+        var cup = document.querySelector('#cup');
+        cup.onclick = function(){
+            alert("클릭한 이미지 파일 : " + this.src); //this가 중요함. 내가 클릭한 장소에 대한 정보가 나오게 하는 명렁어인듯?
+        }
+// this : 현재 클릭한 요소(정보)
+// src : 이미지 주소(위치) 를 보여줌
+    </script>    
+
+</body>
+</html>

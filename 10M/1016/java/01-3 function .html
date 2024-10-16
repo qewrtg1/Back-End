@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <button id="bth1"> 버튼 </button>
+
+
+
+
+    <script>
+        setTimeout(function(){//1회성 함수가 필요할 땐 지금처럼 익명함수를 사용해야 함
+            // document.write //콘솔로그도 똑같이 2초 뒤에 나옴
+            console.log("2초후에 내용이 출력됩니다");
+        },2000); //여기서 시간은 ms(밀리초) 단위임. 2초 = 2000
+    
+    
+    
+        document.getElementById("bth1").addEventListener("click",function(){
+        // addEventListene : 클릭시 발생하는 이벤트 출력용 명렁어. "click":말 그대로 클릭. -> function을 클릭하여 출력되는 이벤트
+        // 코드의 간결성 : 버튼 클릭시 발생하는 간단한 동작을 코드에 바로 넣어 쓸 수 있다.
+            alert("button click");
+    
+        });
+    </script>
+</body>
+</html>

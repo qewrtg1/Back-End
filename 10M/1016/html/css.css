@@ -1,0 +1,86 @@
+*{margin: 0; padding: 0;}
+
+
+
+.bigbox{
+    width: 1440px;
+    margin: 0 auto;
+    /* height: 140px; */
+    /* border: 1px solid #333; */
+}
+
+
+.bigbox h2{
+    display: block;
+    margin: 30px 0px 30px 30px;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.bbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 480px; 
+    height: 549px;
+}
+
+.box1{
+    background-image: url(img/1.jpg);
+    background-repeat: no-repeat;
+}
+.box2{
+    background-image: url(img/2.jpg);
+    background-repeat: no-repeat;
+    
+    
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box h3{
+    font-size: 50px;
+    /* font-weight: 700;
+    line-height: 1; */
+    margin-bottom: 21px;
+}
+
+.box p{
+    font-weight: 400px;
+    line-height: 1.4em;
+    /* letter-spacing: -0.02em; 못본거라서 걍 뺌 */
+
+}
+.box #txt{
+    border: 1px solid #000;
+    background-color: #000;
+
+    width: 150px;
+    color: #fff;
+    padding: 15px 20px;
+    margin-top: 15px ;
+
+    transition: all 0.4s;
+    opacity: 1;
+}
+
+.box #txt:hover{
+    opacity: 0.6;
+}
+
+
+
+
+.box3{
+    background-image: url(img/3.jpg);
+    background-repeat: no-repeat;
+}

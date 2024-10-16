@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    var numbers = [1,2,3,4,5];
+    for(var i = 0; i<numbers.length; i++){ //인덱스 함수의 숫자는 0부터 시작이니까. 0번엔 1이 들어가 있고 4엔 5가 들어가 있음.
+//i는 number.length(안의 함수를 전부 세어주는)보다 작아야 하며 i는 1씩 증가하길 반복한다. 라는 의미
+        document.write(numbers[i],'<br>');
+    }
+
+    var abc = [6,7,8,9,10];
+
+    abc.forEach(function(n){ //Each:각각, 각자. =  for에 들어 있는 각각의 함수. = length
+        document.write(n,"<br>");
+    })
+// 1. abc라는 배열을 선언.abc
+// 2. forEach 라는 메서드가 실행됨
+// 3. abc 배열을 순회하기 시작함
+// 4. 각 요소(678910)에 대해 function(number_아무 변수를 적어도 됨)함수가 실행됨
+// 5. number 변수에 현재 순회중인 요소의 값이 저장됨(6,7,8,9,10)
+// 결론 = 위 for문과 forEach가 똑같음 
+//          위 for문의 i의 역할을 n이 대신하는 거임
+//          안에 들어있는 함수의 숫자만큼 알아서 반복하고 출력함
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

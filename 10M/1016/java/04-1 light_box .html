@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+            <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+            <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+            <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+            <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+            <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+    var pics = document.querySelectorAll(".pic");
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImage = document.getElementById("lightboxImage");
+
+        for( i=0; i<pics.length; i++){
+            pics[i].addEventListener("click", showLightbox);
+        }
+//pics 라는 변수에 여러 이미지가 있는 class 요소가 저장되어 있고. 반복문을 통해서 
+//이벤트 리스너를 추가합니다(addEventListener)
+
+// i = 0부터 pics.length 까지 반복하면서 배열처럼 class요소에 pics[i].에 접근하고
+// pics[i].addEventListener("click", showLightbox) 를 통해서 각 요소에 클릭이벤트를 추가
+//클릭하면 showLightbox 라는 함수가 실행되게 만듬
+
+ /* 간편 요약 : for문에 이벤트를 등록하고 클릭시 실행되게 만듬. */
+
+
+            function showLightbox(){
+               var bigLocation = this.getAttribute("data-src");
+                // var bigLocation = this.data-src;
+                lightboxImage.setAttribute("src", bigLocation);
+                // 라이트 박스를 보이게 합니다.    setAttribute : bigLocation을 다시 뭘 한다?
+                lightbox.style.display = "block";
+        }
+
+    // lightbox.onclick = function(){
+    //     lightbox.style.display='none';  아래랑 동일함 편한걸 외워
+    // }
+    lightbox.addEventListener("click", function(){
+        lightbox.style.display='none';
+    })
+    </script>
+</body>
+</html>
