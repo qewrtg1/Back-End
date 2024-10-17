@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>
+    function varExample(){
+        let x = 1;
+        if (true){
+            let x = 2;  // let은 var과 비슷함. 하지만 블록(중괄호{.})에서만 유효함.
+            document.write(x, "<br>"); //그래서 여기는 2여도
+        }
+        document.write(x, "<br>"); // 여기에선 1임 방금했던 지역변수와 같은 논리
+    }                              // 블록 외부 변수(전역범수)1이 들어감. 2는 내부변수니까.
+    varExample();
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

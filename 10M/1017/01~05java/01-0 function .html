@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    //자바스크립트의 함수 : 코드의 재사용과 관리를 효율적으로 하기 위한 방법
+
+
+
+    //함수 정의
+
+    //두 숫자를 더하는 함수
+    function addNum(a, b){// = 펑크션(함수를 선언합니다) 에드넘(a,b){에드넘이 함수입니다(그 안에는 a와 b가 있습니다)}
+        return a+b; // =a와b를 더한 후 그 값을 리턴합니다(되돌립니다, 되돌리면서 출력합니다){마무리하겠다는 일종의 태그임}
+    } 
+
+
+    //함수 호출하는 법
+    let result = addNum(5,3); // =let(변수를 선언합니다) resurlt는 addNum입니다(변수 result는 함수 addNum이 됩니다, addNum을 불러오는 값이 됩니다.)
+    let result1 = addNum(7,8); 
+
+    document.write(result+' '+ result1, "<br>");
+
+
+    //함수정의(매개변수) : 어느 인수가 준비가 되어 있는 변수를 매개 변수라고 함. 위의 예시가 매개변수인듯
+
+
+
+    //매개 변수가 없는 함수는 아래와 같다  (매개가 아마 매개체를 의미하는 거 같은데//매개체:중간에서 어떤 일을 맺어 주는 것.)
+    function sayHello( ){     // 괄호에 내용(함수)이 없고 함수의 호출만을 원할때????? 라는데
+        document.write("hello world");
+    }
+
+
+    //함수 호출은 아래와 같다
+    sayHello();  //출력 : 헬로우 월드가 나온다? (아마 document.write까지가 소괄호 안에 포함되어 있기 때문에 이것만 출력해도 나오는 것)
+
+
+    //익명함수(이름이 없는 함수)(보통 이벤트들은 다 익명함수로 활용함. click같은 것)
+    let multiply = function(x, y){
+        return x * y;
+    }
+    document.write(multiply(4, 5)); // 출력: 20
+
+
+
+    //화살표 함수 : 간결하게 표시하는 법. let multiply = function(x, y){return x / y;} 를 줄여 쓴 것
+    let divide = (x, y) =>  x / y;
+
+    document.write(divide(4, 8)); // 출력: 20
+
+
+    //재귀 함수 호출 : 작성한 코드로 함수를 다시 호출하는 행위 함수를 반복문처럼 여러번 호출함
+    function myFnc(){
+        myFnc;
+    }
+    myFnc(); //까지가 기본형태 142p
+
+
+    var num =0;
+    function testFnc(){
+        num++;
+        document.write(num, "<br>");
+        if(num ==10 )return;
+        testFnc();
+    }
+    testFnc();
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
