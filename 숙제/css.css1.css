@@ -1,0 +1,45 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{text-decoration: none;}
+
+
+.top{
+    width: 800px;
+    margin: 50px auto 0;
+}
+
+.top .t1{
+    display: flex;
+    color: #fff;
+}
+
+.top .t1 li{
+    width: 20%;
+    text-align: center;
+}
+.top .t1 li a{
+    display: block;
+    color: black;
+    background-color: #d9d9d9;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.top .t1 li a.active{ /*클릭했을때 색상이 들어오도록 하려고 만듬 이걸 js랑 엮을 거임*/
+    background-color: #32557f;
+    color: #fff;
+}
+
+
+#middle{
+    height: 160px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+}
+
+#middle > div {  /*일단 전부 감추고*/
+    display: none;
+}
+#middle > div:first-child{
+    display: block;
+}

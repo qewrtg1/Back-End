@@ -1,4 +1,3 @@
-
 const targetLink = document.querySelectorAll('.tab_menu a'); //탭버튼
 const tabContent=document.querySelectorAll('#tabContent>div');
 
@@ -7,9 +6,7 @@ const tabContent=document.querySelectorAll('#tabContent>div');
 targetLink.forEach(function(link){
 
     link.addEventListener('click',function(e){
-        e.preventDefault(); 
-        
-        //링크 금지 시키는 명렁어
+        e.preventDefault(); //링크 금지 시키는 명렁어
         let orgTarget = e.target.getAttribute('href');
         //클릭 (e.taget) = this로 변경이 가능함 똑같음.
         //getAttribute : 는 href, src 속성값을 읽어옴
