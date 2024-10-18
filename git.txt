@@ -1,0 +1,36 @@
+https://github.com/bhher/backend
+
+깃 공부한 거
+
+git init : 깃 내용 전체 초기화 및 새롭게 구성
+
+git add "파일명".확장자명 = 이걸하면 스테이징에 올라간다는데 뭔소린지 전혀 모르겠음 시발
+ 그냥 커밋 전에 저장하기 위한 단계인거같음
+
+git commit -m "파일명" : 어떤 이름으로 파일을 저장시킴.(회귀 가능하게 만들어주는 시스템)
+
+
+
+
+vsc 새 폴더 만들고.
+
+컨 쉬 ` = 터미널
+
+git init로 초기화 해주고
+
+터미널 창 우측에 + 버튼 눌러서 git bash
+
+vsc 파일 기본 설정 - 설정 -exclude 검색 후 .git 확장자 명 삭제해서 보이게 만듬
+/*기본 세팅*/
+
+
+
+
+
+
+git init :위에 설명 나와 있음
+git add README.md : 특정 파일을 올리는 것. 전부 다 올리고 싶으면 add . 이면 됨
+git commit -m "설명문" : 올리면서 현 파일의 상태에 대해서 설명하는 문구 적음 
+git branch -M main
+git remote add origin https:(이하생략)  : 한 번 하면 더 안 해도 되는 것 
+git push -u origin main : 파일 업로드 할 때 마다 해야하는 것.

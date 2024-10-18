@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="myDiv">hello, world</div>
+    
+
+
+    <script>
+        const element = document.getElementById("myDiv");
+        element.classList.add("newClass"); //html에 class 명칭을 add(추가)해주는 것.
+//이렇게 하면 vcs에서는 안보이지만 브라우저로 확인했을 시 class이 추가되어 있음을 알 수 있음
+        console.log(element.className);
+    </script>
+</body>
+</html>

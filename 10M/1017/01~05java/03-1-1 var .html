@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function varExample(){
+    var x = 1;
+    // var x = 2; 이거랑 다를 게 없음(1-1)
+    if (true){
+        var x = 2;// 이건 사실 상(1-1)
+        document.write(x,"<br>");
+    }
+    document.write(x,"<br>"); 
+}
+
+varExample(); // 안에 write가 2개 있으니 2개 출력되는 거임.
+
+
+document.write(x,"<br>");   //여기엔 적용되지 않음. var x는 지역변수 안에 들어가 있어서 혼자선 나오지 못함
+
+
+
+
+// 중괄호 안에 적용되는 걸 스코프라고 하는데??? 뭔소린지 모르겠음 144p
+// var은 함수스코프라서 중괄호는 전혀 신경 안쓴다?? 뭔소린지 모르겠음 144p 보셈
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

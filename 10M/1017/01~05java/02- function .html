@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    let globalVar = "난 전역 변수";   // (2)
+    
+    function showVar(){
+        let localVar = "난 지역변수";   // (2)
+        console.log(globalVar);  // (3)
+        console.log(localVar);  // (얘가 적용이 안됨)
+    }
+
+    showVar();  // (1 실행 순서임_얘가 윗 애들을 불러옴)
+    console.log(globalVar);  // ()
+    console.log(localVar);
+
+//globalVar : 함수 외부에서 선언한 값. - 전역변수(라고 부름) , 함수 내부외부에 접근이 가능.
+//localVar : 함수 내부에서 선언한 값. - 지역변수(라고 부름) , 함수 내부에서만 접근이 가능.
+//          외부에서 접근하면 error
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

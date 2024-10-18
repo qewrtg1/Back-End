@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>
+    function varEx(){
+        var x = 1;
+        if (true){
+            var x = 2;  //x는 재선언된 거임. 1이 아닌 2가 되어버림. 
+            document.write(x, "<br>");
+        }
+        document.write(x, "<br>"); //위에서 2로 재선언했으니 2가 나와야함.
+    }
+    varEx();
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

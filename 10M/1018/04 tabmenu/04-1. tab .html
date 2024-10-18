@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/tab.js" defer> </script>
+    <!-- script src="" : css처럼 js를 따로 만듬 -->
+     <!--defer: 문서가 로드가 된 후 js를 실행하겠다, 라는 명령어  -->
+    <script>
+        // document.addEventListener('DOMContentLoaded', function(){
+        //     자바스크립트
+        // }) 스크립트를 항상 맨 밑에 적는 이유: css와 html을 읽어야 스크립트가 돌아가니까.
+        // 근데 위의 코드를 쓰면 css html을 읽어 온 후에 실행하게 함으로 위에 사용할 수 있게 됨.
+//<script src="js/tab.js" defer>와 같은 효과임.
+
+    </script>
+
+
+
+</head>
+<body>
+    <div class="tabWrap">
+        <ul class="tab_menu">
+            <li><a href="#tab1s" class="active">menu 1</a></li>
+            <li><a href="#tabs2">menu 2</a></li>
+            <li><a href="#tabs3">menu 3</a></li>
+        </ul>
+
+        <div id="tabContent">
+            <div id="tabs1">
+                <h2>menu1</h2>
+                <p>01.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!</p>
+            </div>
+            <div id="tabs2">
+                <h2>menu2</h2>
+                <p>02.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!</p>
+            </div>
+            <div id="tabs3">
+                <h2>menu3</h2>
+                <p>03.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
