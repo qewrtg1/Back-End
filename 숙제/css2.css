@@ -1,0 +1,63 @@
+*{margin: 0;padding:0 ;}
+ul{list-style: none;}
+li{float: left; width:400px;
+    ;
+}
+
+
+
+
+
+#banner0{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    /* 전체넓이는 300(패딩포함 ) */
+
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 50px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+#banner1{ 
+    width:1600px;
+    /* border:1px solid red; */
+    transition: all 0.5s;
+}
+
+
+
+
+#frame1{
+    width: 400px;
+    /* height: 200px; */
+    background-size: cover;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+}
+
+#frame1 img{
+    width: 410px;
+}
+/* ul */
+
+
+#frame2{
+    position: absolute;
+    display: block;
+    top: 87%;
+
+    width: 400px;
+    height: 25px;
+    text-align: center;
+    background-color: #222;
+    opacity: 0.5;
+    border-radius: 0 0 5px 5px;
+}
