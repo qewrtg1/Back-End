@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 교수님이 나눠주신 pdf 파일(자바스크립트 명령어 간단 설명)집을 참고로 복습하는 거임 05는 -->
+
+
+</head>
+<body>
+    <div id="myDiv">Hello, World!</div>
+    <!-- 예제 1 -->
+
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+    <!-- 예제 2 -->
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <!-- 예제 3 -->
+
+    <script>
+        // const element = document.getElementById("myDiv"); 얜 명령어 자체에 by id 라고있기에 #을 안붙여도 돼 id밖에 안됨
+        const element = document.querySelector("#myDiv"); // 쿼리 셀렉터는 id class 전부 마음대로 선택이 가능함
+
+        console.log(element.textContent); // "Hello, World!" 출력
+//textContent: 이 안에 요소를 출력하게 하는 명렁어??
+// 예제 1
+
+
+
+        const elements = document.getElementsByClassName("myClass");
+            console.log(elements[0].textContent); // "First Div" 출력
+            console.log(elements[1].textContent); // "Second Div" 출력
+        //클레스 명칭이 똑같은 게 2개가 있을 경우. 이렇게 0, 1 나눠서 한 칸 씩 넣는 것.
+
+        const elements1 = document.getElementsByClassName("myClass");
+            console.log(elements1[0].textContent); 
+            console.log(elements1[1].textContent);
+        //const와 같이 변수 선언? 하는 명렁어는 같은 이름이 중복될 수 없음을 알려주는 예시임. html의 class명은 겹칠 수 있지만 js는 안되나봄
+// 예제 2
+
+
+        const paragraphs = document.getElementsByTagName("p");
+            console.log(paragraphs.length); // 2 출력
+            console.log(paragraphs[0].textContent); // 2 출력
+// 예제 3
+
+
+
+
+
+
+       </script>
+</body>
+</html>

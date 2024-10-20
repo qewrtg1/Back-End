@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="myDiv" class="oldClass">hello, world</div>
+    
+
+
+    <script>
+        const element = document.getElementById("myDiv");
+        element.classList.remove("oldClass"); 
+        console.log(element.className); // add와는 다르게 클래스 이름을 지워버리는 명령어를 만들어 본 거임.
+        
+    </script>
+
+</body>
+</html>
