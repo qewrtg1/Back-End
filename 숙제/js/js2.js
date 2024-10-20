@@ -9,19 +9,14 @@ var next = document.querySelector(".next");
 
 var show_num = 1; //보이는 사진의 갯수
 var total = 4;
-    //var total = listLi.length;
-    // alert(total);
-    //var li_width = document.querySelector("#banner > li").offsetWidth;
-    //alert(li_width);
-    var li_width = 400; //li크기 (이미지크기72 +8) 
-
-    var num = 0;
+var li_width = 400; //li크기 (이미지크기72 +8) 
+var num = 0;
 
 
 
 
     next.addEventListener('click',function(){
-        if(num==5){
+        if(num==3){
             num = 0;
             list.style.transition = 'none';
             list.style.marginLeft = 0;
@@ -37,7 +32,7 @@ var total = 4;
 
     prev.addEventListener('click',function(){
         if(num==0){
-            num = 5;
+            num = 3;
             list.style.transition = 'none';
             list.style.marginLeft = -li_width * num + "px";
             // 맨 끝의 사진의 위 -400px
@@ -54,7 +49,7 @@ var total = 4;
 
 
 function autoplay(){
-      if(num==5){
+      if(num==3){
             num = 0;
             list.style.transition = 'none';
             list.style.marginLeft = 0;
