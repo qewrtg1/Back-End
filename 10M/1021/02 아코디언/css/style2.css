@@ -1,0 +1,42 @@
+*{margin: 0; padding: 0;}
+ul li{list-style: none;}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.m_menu{
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.m_menu>li>a{
+    display: block;
+    height: 36px;
+    background-color: #390;
+    line-height: 36px;
+    border-top: 1 dotted #fff; /*dotted : 아마 선없애기*/
+    color: #fff;
+}
+
+.m_menu .sub{
+    height: 0;
+/*아래 a에 36준 것, x 3 =108이라는 걸 기억해야 함*/
+    overflow: hidden;
+/*높이 0을 줬기에 히든으로 가리면 안나오는 게 정상임*/
+    transition: all 0.4s;
+}
+
+.m_menu .sub li{
+    background-color: #cf9;
+}
+.m_menu .sub li a{
+    display: block;
+    line-height: 36px;
+    height: 36px;
+    color: #222;
+}
+.m_menu .sub li a:hover{
+    background-color: #cf0;
+}

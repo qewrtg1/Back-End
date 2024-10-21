@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #cat-sontainer{
+        position: relative;
+    }
+    #cat{
+        width: 100px;
+        position: absolute;
+        transition: transform 0.3s ease-in-out;
+    }
+</style>
+
+
+</head>
+<body>
+    <div id="cat-container">
+        <img id="cat" src="img/1.png" alt="Funny Cat">
+    </div>
+    
+</body>
+</html>
+
+<script>
+    const cat = document.querySelector('#cat');
+
+
+    let posX = 0;
+    let posY = 0;
+
+
+
+    document.addEventListener('keydown', function(event){ // keydown : 브라우저에서 f12로 보면 알겠지만 키보드 누른 값이 그대로 출력됨. 아마 움직임을 위한 것
+        // console.log(event.key);
+        moveCat(event.key);
+    });
+
+    function moveCat(direction){
+        const step = 20;
+        
+        // console.log(direction)
+
+        switch(direction){
+            case 'ArrowUp': 
+                posY -= step;
+                //위로 올라갈거니까 y값, 누를때마다 step(-20)
+                break;
+            case 'ArrowDown': 
+                posY += step;
+                break;
+            case 'ArrowLeft': 
+                posX -= step;
+                break;
+            case 'ArrowRight': 
+                posX += step;
+                break;
+        }
+    }
+    console.log(posX)
+    cat.style.transform = `translate(${posX}px, ${posY}px)`;
+    
+    // `을 쓰면 $를 써야한다 , 여기선translate은 xy안 붙이고 쓴다 
+
+</script>

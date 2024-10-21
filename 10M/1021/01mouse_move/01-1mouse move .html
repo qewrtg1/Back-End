@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    document.onmousemove =function(e){
+        var x = e.pageX; //event 객체의 x좌표(마우스의 움직임을 따라가는)
+        var y = e.pageY;  // client와 다르게 상대좌표? 절대 자표는 아님.
+
+        document.getElementById('m1').innerHTML = x;
+        document.getElementById('m2').innerHTML = y;
+    }
+    
+
+</script>
+<style>
+
+    #wrap{position: fixed;}
+    body{height: 3000px;}
+
+
+</style>
+
+</head>
+<body>
+<!-- 마우스 좌표값 보이게 만들기 -->
+    <div id="wrap">
+        <h1 id="m1">0000</h1>
+        <h1 id="m2">0000</h1>
+    </div>
+    
+</body>
+</html>
