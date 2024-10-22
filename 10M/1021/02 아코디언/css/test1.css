@@ -46,9 +46,13 @@ header p.icon{
     text-indent: -9999px; 
     cursor: pointer;
 }
-header p.icon1{background: url(../images/social_icon1.gif) no-repeat 50% 50%;}
-header p.icon2{background: url(../images/social_icon2.gif) no-repeat 50% 50%;}
-header p.icon3{background: url(../images/social_icon3.gif) no-repeat 50% 50%;}
+header p.icon1{
+    background-image: url(../images/social_icon1.gif);
+    background-repeat: no-repeat;
+    background-position: 300%;
+    }
+header p.icon2{background: url(../images/social_icon2.gif) no-repeat 50% 100%;}
+header p.icon3{background: url(../images/social_icon3.gif) no-repeat 150% 50%;}
 
 
 /************************************************************/

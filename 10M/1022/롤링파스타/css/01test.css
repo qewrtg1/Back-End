@@ -1,0 +1,108 @@
+*{margin: 0; padding: 0;}
+
+a{text-decoration: none;}
+
+
+
+#wrap{
+    width: 1920px;
+    height: 530px;
+    background-image: url(../images/intro_bg.png);
+    background-repeat: no-repeat;
+}
+
+
+.bigbox{
+    width: 1280px;
+    height: 535px;
+    margin: 0 auto;
+    /* background-color: aliceblue; */
+}
+
+.log a{
+    display: block;
+    width: 200px;
+    height: 250px;
+    background-image: url(../images/intro_logo.png);
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    background-position: center;
+    /* text-indent: -9999px;  */
+    /* text-align: center; */
+
+    float: left;
+    margin-top: 150px;
+    margin-left: 30px;
+}
+
+.cont{
+    width: 1000px;
+    float: left;
+    margin-top: 100px;
+    text-align: center;
+    /* background-color:  #333; */
+
+}
+.cont a{
+    display: block;
+    width: 1000px;
+    height: 50px;
+    background-image: url(../images/intro_img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0px;
+}
+
+
+.cont .text{width: 100%;}
+.cont .text h3{
+    color: #003b5a;
+    font-weight: 700;
+}
+
+
+
+.cont .intro{
+    width: 1000px;
+    margin-top: 25px;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+}
+
+.cont .intro .box{
+    margin-top: 10px;
+    margin-right: 60px;
+    width: 150px;
+    height: 150px;
+}
+.cont .intro span{
+    position: relative;
+    top: 175px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cont .intro .box:nth-child(4){
+    margin-right: 0px;
+}
+
+.cont .intro .box1{background-image: url(../images/intro_slide_ico1.png);}
+.cont .intro .box2{background-image: url(../images/intro_slide_ico2.png);}
+.cont .intro .box3{background-image: url(../images/intro_slide_ico3.png);}
+.cont .intro .box4{background-image: url(../images/intro_slide_ico4.png);}
+
+
+
+.cont .intro .box1:hover{
+    background: url(../images/intro_slide_ico1_on.png) no-repeat;
+}
+.cont .intro .box2:hover{
+    background: url(../images/intro_slide_ico2_on.png) no-repeat;
+}
+.cont .intro .box3:hover{
+    background: url(../images/intro_slide_ico3_on.png) no-repeat;
+}
+.cont .intro .box4:hover{
+    background: url(../images/intro_slide_ico4_on.png) no-repeat;
+}

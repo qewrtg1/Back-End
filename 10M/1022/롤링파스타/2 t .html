@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+.r_bottom{
+    width:400px;
+    height: 300px;
+}
+.r_bottom ul li{
+    text-align: center;
+    width:250px;
+    height:50px;
+    float:left;
+    border: 1px solid #333;/*공간 확인용*/
+}
+
+.r_bottom ul li a{
+    display: block;
+    width: 150px;
+    height: 15px;
+    margin: 10px auto;
+    margin-top: 50px;
+}
+.r_bottom ul li .s1{
+    display: block;
+}
+.r_bottom ul li .s2{
+    display: none;
+}
+
+.r_bottom ul li:hover .s1{
+    display: none;
+}
+.r_bottom ul li:hover .s2{
+    display: block;
+}
+
+</style>
+</head>
+<body>
+
+
+
+    <div class="r_bottom">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="s1">
+                        손이 가요 손이가
+                    </span> 
+                    <span class="s2">
+                        세우깡에 손이가요
+                    </span>    
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
