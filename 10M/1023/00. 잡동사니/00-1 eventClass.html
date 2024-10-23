@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+<style>
+    .highlight{
+        background-color: yellow;
+    }
+    .active{
+        color: red;
+    }
+</style>
+<script>
+    $(document).ready(function(){ //이게 add 어쩌고 인듯?
+
+        $("#myDiv").mouseenter(function(){
+            $(this).addClass('highlight');
+        });
+        $("#myDiv").mouseleave(function(){
+            $(this).removeClass('highlight');
+        });
+
+        
+// 버튼 클릭 시 active 클래스 토글
+        // $("#myButton").click(function() {
+        //         $("#myDiv").toggleClass("active");
+        // });
+//별로 좋은 방법은 아니라 자주 쓰지 않길 권장한다고 함.
+
+
+        $("#myButton").click(function() {
+            if($(myDiv).hasClass('active')){
+//hasClass: 클래스를 가지고 있느냐, active를. 가지고 있으면 ture, 없으면 false
+                alert("존재하는 클래스를 제거하겠습니다"); //트루일때 나오게
+                $("#myDiv").removeClass("active"); //그리고 트루일 때 class를 지움
+            }else{
+                alert("비어있는 클래스를 추가하겠습니다."); //현재 클래스가 존재하지 않습니다,가 본래 들어가있던 문장인데 아닌 거 같아서 바꿈
+                $("#myDiv").addClass('active');
+
+            }
+        });
+//이걸 자주쓰는게 공부에 도움이 됨.
+
+
+        
+
+
+
+    });
+</script>
+
+</head>
+<body>
+    <div id="myDiv">Hover over me!</div>
+    <button id="myButton">Toggle class</button>
+</body>
+</html>

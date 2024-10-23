@@ -142,6 +142,8 @@ menuLiA.forEach(function(item){ //메뉴 하나 하나를 아이템이라 불러
     item.addEventListener('click',function(){
         var subHeight = getComputedStyle(this.nextElementSibling).height; //02. 에서 했던놈
 //nextElementSibling: 클릭하면 그 다음에 있는 태그를 가르키는 명렁어??
+
+
         if(subHeight === '0px'){ //0이면 닫혀있다는 의미로 보면 됨
             slideUp(); //다른 sub =0px로 만들어서 닫게 만드는 것
             this.nextElementSibling.style.height = '120px'; //메뉴 하나당 높이 40 줬고 3개니까
