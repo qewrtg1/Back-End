@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ul li:nth-child(1){
+    background-color: tan;
+    color: aqua;
+} 
+/*여기서 h2는 li가 아니라 -child(1)로 적용이 안됨*/
+/*그런데 li 회사소개를 1번으로 인식하지도 못함. nth의 단점.*/
+
+ul li:nth-of-type(1){background-color: red;}
+/*그래서 type을 더 자주 씀.*/
+
+</style>
+</head>
+<body>
+    <ul>
+        <h2>메뉴선택</h2>
+        <li>회사소개</li>
+        <li>제품소개</li>
+        <li>커뮤니티</li>
+        <li>다운로드</li>
+    </ul>
+</body>
+</html>
