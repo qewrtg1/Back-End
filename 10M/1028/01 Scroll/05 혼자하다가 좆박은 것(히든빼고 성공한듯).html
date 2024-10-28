@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+<style>
+    #body{
+        width: 100vh;
+        position: relative;
+        margin: 0 auto;
+        
+
+    }
+    #bbox{
+        width:10000px;
+        height:300px;
+    }
+    .box{
+        width: 2500px;
+        height: 1000px;
+        float: left;
+        /* position: absolute; */
+    }
+    .box1{background-color: aliceblue;}
+    .box2{background-color: black;}
+    .box3{background-color: blue;}
+    .box4{background-color: red;}
+
+
+
+
+    nav{
+        position: fixed;
+        top:0;
+        height:100px;
+        width:100%;
+        background:rgba(255, 255, 255, 0.5);
+    }
+    nav ul{
+        width:400px; height:100px;
+        list-style: none;
+    }
+    nav ul li {
+        float: left;    
+    }
+    nav ul li a {
+        display: block;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 16px;
+        color: #000;
+        text-align: center;
+    }
+    nav ul li.on a {
+        color: orange;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 25px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+
+</style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="on"><a href="#article1">회사소개</a></li>
+            <li><a href="#article2">제품소개</a></li>
+            <li><a href="#article3">커뮤니티</a></li>
+            <li><a href="#article4">다운로드</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="bbox">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    </div>
+
+    <h2>현재스크롤위치 : <span id="sLeft">000</span></h2>
+
+    <script>
+
+    $(function(){
+        var a0 = $("#bbox > .box").eq(0).offset().left;
+        var a1 = $("#bbox > .box").eq(1).offset().left;
+        var a2 = $("#bbox > .box").eq(2).offset().left;
+        var a3 = $("#bbox > .box").eq(3).offset().left;
+
+
+
+        console.log(a0, a1, a2, a3);
+        //article이 화면 최상단부터 떨어진거리
+    
+        $(window).scroll(function(){
+           var sct = $(this).scrollLeft();
+           $('#sLeft').text(sct);
+    
+           if(sct >= $("#bbox > .box").eq(0).offset().left){
+                $('nav ul li').removeClass('on');       
+                $('nav ul li').eq(0).addClass('on');       
+            }  //(1-2) 그래서 이걸 만듬
+           if(sct >= $("#bbox > .box").eq(1).offset().left){
+                $('nav ul li').removeClass('on');       
+                $('nav ul li').eq(1).addClass('on');       
+            }  //(1-2) 그래서 이걸 만듬
+           if(sct >= $("#bbox > .box").eq(2).offset().left){
+                $('nav ul li').removeClass('on');       
+                $('nav ul li').eq(2).addClass('on');       
+            }  //(1-2) 그래서 이걸 만듬
+           if(sct >= $("#bbox > .box").eq(3).offset().left){
+                $('nav ul li').removeClass('on');       
+                $('nav ul li').eq(3).addClass('on');       
+            }  //(1-2) 그래서 이걸 만듬
+            
+ 
+    
+        });
+    
+        $('nav ul li').click(function(){
+            var i  = $(this).index();  //인덱스값 구하기(확인하기)
+            // alert(i);
+            var offset_t= $("#bbox > .box").eq(i).offset().left;
+    
+            $('html, body').stop().animate({scrollLeft:offset_t}, 1500);
+            // $('nav ul li').removeClass('on');
+    //        $('nav ul li').eq(i).addClass('on');  // 또는 $(this).addClass('on')
+    //그런데 이렇게 만들면 클릭을 안했을 시 위치에 따라 색이 변하지 않음. (1-1)
+            return false; //위 html의 앵커 기능을 없앰
+        });
+    
+    
+    });
+    
+    
+    </script>
+    
+</body>
+</html>

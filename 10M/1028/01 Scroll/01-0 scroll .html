@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+    *{margin: 0; padding: 0;}
+    .box{
+        width: 150px;
+        height: 150px;
+    }
+    .box1{background-color: red; position: absolute; top: 300px;}
+    .box2{background-color: aquamarine; position: absolute; top: 700px; left: 150px;}
+    .box3{background-color: palegoldenrod; position: absolute; top: 1200px; left: 300px;}
+    .box4{background-color: chocolate; position: absolute; top: 1800px; left: 575px;}
+</style>
+<script>
+
+$(function(){
+    var abox = $('.box1').offset().top;
+    var bbox = $('.box2').offset().top;
+    var cbox = $('.box3').offset().left;
+
+    // var dbox = $('.box4').css(top, "2300px"); //이렇게 속성을 2개를 적으면 오른쪽값을 왼쪽에 넣으란 의미임 보통은.
+    var dbox = $('.box4').css("top"); // box4의 속성값을 알아와라, 알아내라 라는 의미로 쓰임.
+    alert(dbox);
+    //offset , css 할 때 다른 점은 px가 나오는가 아닌가의 차이?
+    //offset은 계산이나 값을 다른 함수에 넘기기 좋음. px가 붙으면 계산 관련 함수에서 고장남. 이걸 offset처럼 함수값으로 쓰고자 한다면
+    // var dbox = parseInt($('.box4').css("top")); 로 쓰면 1800 정수값만 출력됨 
+
+});
+
+</script>
+
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+    
+</body>
+</html>
