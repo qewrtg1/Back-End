@@ -21,7 +21,8 @@ $(function(){
         }
        
         if(sct >= 2500){
-            // $('.s4_cover>div').addClass('active');  // css에서 별도로 부여하지 않았을 시 여기를 건들여야 함. 
+            // $('.s4_cover>div').addClass('active');  
+            // css에서 별도로 부여하지 않았을 시 여기를 건들여야 함. 
             setTimeout(function(){
                 $('.s4_1').addClass('active');
             },0);
@@ -35,6 +36,7 @@ $(function(){
                 $('.s4_4').addClass('active');
             },1200);
         }
+        // setTimeout:특정함수를 정해진 시간에 실행시켜라
     });
 
 });

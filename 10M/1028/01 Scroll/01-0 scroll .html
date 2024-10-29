@@ -22,10 +22,12 @@ $(function(){
     var abox = $('.box1').offset().top;
     var bbox = $('.box2').offset().top;
     var cbox = $('.box3').offset().left;
+    alert(cbox);
+
 
     // var dbox = $('.box4').css(top, "2300px"); //이렇게 속성을 2개를 적으면 오른쪽값을 왼쪽에 넣으란 의미임 보통은.
     var dbox = $('.box4').css("top"); // box4의 속성값을 알아와라, 알아내라 라는 의미로 쓰임.
-    alert(dbox);
+    // alert(dbox);
     //offset , css 할 때 다른 점은 px가 나오는가 아닌가의 차이?
     //offset은 계산이나 값을 다른 함수에 넘기기 좋음. px가 붙으면 계산 관련 함수에서 고장남. 이걸 offset처럼 함수값으로 쓰고자 한다면
     // var dbox = parseInt($('.box4').css("top")); 로 쓰면 1800 정수값만 출력됨 

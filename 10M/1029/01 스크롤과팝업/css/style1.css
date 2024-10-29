@@ -1,0 +1,64 @@
+*{margin:0;padding:0;}
+h1{
+    position: fixed;
+    right:10px;
+    bottom: 10px;
+    background: rgba(255,255,255,0.8);
+    z-index: 10;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+nav{
+    position: absolute; /*어제와 다르게 픽시드가 아닌 점이 중요*/
+    top:100px;
+    width:100%;
+    height:100px;
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.5s;
+}
+nav.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+nav ul{
+    width: 1000px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+nav ul li{float: left;}
+
+nav ul li a{
+    display: block;
+    width: 166px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul li.on a{color: orange;}
+section > div{
+/*포지션을 넣지 않는 100퍼센트 높이란 존재하지않음*/
+    width: 100%;
+    height: 100vh;
+}
+
+section > div > p{
+    color: #fff;
+}
+
+
+
+#area1{background-color: aqua;}
+#area2{background-color: sandybrown;}
+#area3{background-color: blueviolet;}
+#area4{background-color: chartreuse;}
+#area5{background-color: darkkhaki;}
+#area6{background-color: fuchsia;}

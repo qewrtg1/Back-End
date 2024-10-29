@@ -23,6 +23,14 @@ $(function(){
         if(sct >= 2500){
             $('.s4_cover>div').addClass('active');
         }
+        // 이게 정답이고 아랜 그냥 심심해서 넣어봄
+
+
+        // if(sct >= 2800  && sct <=3000){
+        //     $('.s4_cover>div').addClass('active');
+        // }else{
+        //     $('.s4_cover>div').removeClass('active');
+        // }
     });
 
 });
