@@ -26,21 +26,30 @@ $(function(){
     //     $(".pager li").removeClass("on");
     //     $(".pager li").eq(i).addClass("on");
     if(i == 5){
-        i=0;
-        $(".imgs").css("margin-left",0);
-    }
-    i++;
-    $(".imgs").stop().animate({
-        "margin-left":-i*100+"%"
-    },600);
-    if(i==5){
-        $(".pager li").removeClass("on");
-        $(".pager li").eq(0).addClass("on");
-    }else{
-        $(".pager li").removeClass("on");
-        $(".pager li").eq(i).addClass("on");
-    }
+            i=0;
+            $(".imgs").css("margin-left",0);
+        }
+        
+        i++;
+        $(".imgs").stop().animate({
+            "margin-left":-i*100+"%"
+        },600);
+
+
+        if(i==5){
+            $(".pager li").removeClass("on");
+            $(".pager li").eq(0).addClass("on");
+        }else{
+            $(".pager li").removeClass("on");
+            $(".pager li").eq(i).addClass("on");
+        }
+        // if(i<=4){
+        //     $(".pager li").removeClass("on");
+        //     $(".pager li").eq(i).addClass("on");
+        // } // 이것도 되긴함
     });
+
+
     $(".prev").click(function(){
         if(i == 0){
             i=5;

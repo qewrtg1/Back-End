@@ -13,7 +13,7 @@
 <body>
     <div id="container">
         <h1>Dom 공부합시다.</h1>
-        <a href="#" onclick="addp(); this.onclick='';">더보기</a>
+        <a href="#" onclick="addP(); this.onclick='';">더보기</a>
         <div id="info"></div>
     </div>
 
@@ -23,9 +23,7 @@
 
             var txtNode  = document.createTextNode("Dom은 Document object Model의 줄임말이다"); 
             //텍스트 노드 만들기 , 라고 함.
-
             newP.appendChild(txtNode); //자식 노드 연결하기 , 라고 함.
-
             document.getElementById('info').appendChild(newP);
         }
 // 예시) p태그를 만든다 가정할 때 위처럼 만들 수 있음
@@ -33,7 +31,7 @@
     
 
 
-//만들었는데 고장나서 새로함
+//만들었는데 고장나서 새로함 //고침 24.11.01
     </script>
     
 </body>

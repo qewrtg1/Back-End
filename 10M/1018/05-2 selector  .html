@@ -16,15 +16,16 @@
 
     <script>
 
-        // const element = document.querySelector(".myDiv"); // 첫 번째 myDiv 요소 선택
-        // console.log(element.textContent); // "First Div" 출력
+        const element = document.querySelector(".myDiv"); // 첫 번째 myDiv 요소 선택
+        console.log(element.textContent); // "First Div" 출력
 // 위와 아래는 동일함
-        const element = document.querySelectorAll(".myDiv"); // 첫 번째 myDiv 요소 선택
-        element.forEach(function(el){
+        const element1 = document.querySelectorAll(".myDiv"); // 모든 myDiv 요소 선택
+        element1.forEach(function(el){
             console.log(el.textContent);   //textContent: html에 있는 내용을 출력하려고 있는 명렁어인듯???
         });
         // for(var i = 0; i<element.length; textContent){
         //     console.log(element[i].textContent);
+        // };
 // }; 이것도 위와 동일함
 
 

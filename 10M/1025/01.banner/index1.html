@@ -15,6 +15,7 @@
         width:1300px;
         border: 1px solid #333;
         margin: 100px auto 0;
+        overflow: hidden;
       }
       #banner{
           width: 78px;
@@ -77,6 +78,9 @@
         //alert(total);
         var copy = $(".ban li:lt(6)").clone();
         $(".ban").append(copy);
+
+
+
        $("#banner li:nth-child(3)").click(function(){//next
           if(num==total){
             num = 0;
@@ -95,7 +99,7 @@
           $('.ban').stop().animate({marginLeft:-li_w*num},500)
        });
 
-       var id = setInterval(auto,3000);
+       var id = setInterval(auto,3000); //setInterval() 함수는 어떤 코드를 일정한 시간 간격을 두고 반복해서 실행하고 싶을 때 사용합니다.
        function auto(){
         if(num==total){
             num = 0;
