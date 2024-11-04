@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        var days = ["일", "월", "화", "수", "목", "금", "토"];
+        var today = new Date();
+        var yoil = today.getDay(); //오늘의 요일에 해당하는 값을 반환 일=0 ~토=6
+        // alert(yoil);
+
+        var yoil1=days[yoil];
+        document.write(yoil+"요일입니다. <br>");
+        
+        if(yoil == '0'){
+            yoil = '일';
+        }else if(yoil == '1'){
+            yoil = '월';
+        }else if(yoil == '2'){
+            yoil = '화';
+        }else if(yoil == '3'){
+            yoil = '수';
+        }else if(yoil == '4'){
+            yoil = '목';
+        }else if(yoil == '5'){
+            yoil = '금';
+        }else{
+            yoil = '토';
+        };
+        alert(yoil);
+
+    </script>
+</body>
+</html>

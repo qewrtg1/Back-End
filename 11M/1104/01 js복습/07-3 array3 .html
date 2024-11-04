@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        const fruits = ["apple", "banana", "orange"];
+
+        for(var i = 0; i < fruits.length; i++){ //for : 조건을 만족할때까지 반복시킴
+            document.write(fruits[i] + "<br>");
+    }
+        fruits.forEach(function(fruits){
+            document.write(fruits+" ");
+        }); 
+        // 이렇게 해도 되지만 화살표 함수로 만들어보겠음
+        
+
+        fruits.forEach(fruits => document.write(fruits+" ")); //위와 동일함
+
+    </script>
+</body>
+</html>
