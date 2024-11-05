@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        img {border: none; vertical-align: top; width: 150px; height: 150px;}
+        li {list-style: none; float: left; width: 150px;}
+
+        #banner_wrap{
+            width: 300px;
+            height: 300px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #333;
+        }
+        #frame{
+            width: 450px;
+            height: 150px;
+            border: 1px solid blue;
+        }
+        #banner{
+            width: 1000px;
+            height: 150px;
+            border: 1px solid red;
+
+            transition: all 0.5s;
+        }
+
+        .prev > img{
+            width: 50px;
+            height: 50px;            
+        }
+        .next > img{
+            width: 50px;
+            height: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_1.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_2.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_3.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_4.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_5.jpg" alt="사진1"></a></li>
+
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </p>
+    </div> 
+
+    <script>
+        var showpic = 3; // 보여줄 사진 갯수 설정해야하고.
+        var banner = document.getElementById('banner') // 움직임에 필요한 2가지 태그가 필요하고
+        var b_Li = document.querySelectorAll('#banner li') // 움직임에 필요한 2가지 태그가 필요하고
+        
+        // 총합 사진 갯수를 확인할 게 필요하고
+        // 이동하기 위한 넓이 값이 필요함.
+    
+    </script>
+</body>
+</html>

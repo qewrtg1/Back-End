@@ -1,0 +1,128 @@
+*{margin:0;padding:0;}
+
+body{
+	font:normal 18px/1.5 "Helvetica Neue", sans-serif;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.flex-wrapper{
+    display: flex;
+    height:100%;
+}
+.flex-wrapper a{
+    position: relative;
+    flex:1;
+    /*flex box내에서 비율을 정하는 것. a 전체에 1의 넓이를 줌*/
+    transition: all 0.4s;
+}
+.flex-wrapper a.one{
+    background: url(../images/a1.jpg) no-repeat 50% 50% / cover;
+    background-color: red; 
+}
+.flex-wrapper a.two{
+    background: url(../images/a2.jpg) no-repeat 50% 50% / cover;
+    background-color: green;
+  }
+  .flex-wrapper .three{
+  background:url(../images/a3.jpg) no-repeat 50% 50% / cover;
+  background-color:steelblue;
+  }
+  .flex-wrapper .four{
+  background:url(../images/a4.jpg) no-repeat 50% 50% / cover;
+  background-color:orange;
+  }
+  .flex-wrapper .five{
+  background:url(../images/a5.jpg) no-repeat 50% 50% / cover;
+  background-color:tomato;
+  }
+
+
+
+
+
+
+
+
+
+  .flex-wrapper a:hover{ /*위에 transition이랑 엮임*/
+    flex: 3;
+  }
+  .flex-wrapper .overlay{
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*위 내용은 top left 0, width, height 100% 와 같은 효과다*/
+
+    display: flex;
+    align-items: center; /*세로*/
+    justify-content: center; /*가로*/
+    transition: background-color .4s;
+    /**/
+  }
+  .flex-wrapper a:hover .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+
+
+
+
+
+
+
+
+  /* .flex-wrapper .overlay-inner h2,
+  .flex-wrapper .overlay-inner p{}  이렇게 한 번에 쓰기도 하지만*/
+
+  .flex-wrapper .overlay-inner *{/*이렇게하면 inner 아래 h2, p 전체에 적용한다는 의미*/
+    visibility: hidden;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .flex-wrapper .overlay-inner h2{
+    transform: translateY(-60px);
+  }
+  .flex-wrapper .overlay-inner p{
+    transform: translateX(60px);
+  } 
+
+  .flex-wrapper a:hover .overlay-inner *{
+    visibility: visible;
+    opacity: 1;
+    color: #fff;
+    transition: all 0.8s 0.8s ;
+    transform: none;/*원래 위치나 크기로 돌아오게 함*/
+
+  }
+
+
+
+
+  
+@media screen and (max-width:800px) {
+  .flex-wrapper{
+      flex-direction: column;
+      /*세로로나열*/  
+  }
+  .flex-wrapper a:hover{
+  flex:1;
+ }
+   .flex-wrapper a:hover .overlay{
+      background-color: transparent;
+    }
+    .flex-wrapper .overlay h2,
+    .flex-wrapper .overlay p{
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+  
+}
