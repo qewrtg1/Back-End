@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<style>
+	*{margin: 0 ; padding:  0;}
+	.section{
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+	#about{
+		background-color:plum;
+	}
+	#main{
+		background-color: pink;
+	}
+	/*정 중앙에 그래프를 위치 시킴*/
+	#bar{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 50%;
+	}
+
+	#bar .skillbar{
+		width:100%;
+		height:40px;
+		background-color:#fff;
+		margin:5px 0;
+		position:relative;
+	}
+	.skillbar .skill_title{
+		position:absolute;
+		top:0;
+		left:0;
+		width:110px;
+		height:40px;
+		text-align:center;
+		line-height:40px;
+		z-index:5;
+	}
+	.skillbar .skill_percent{
+		position:absolute;
+		right:0;
+		top:0;
+		height:40px;
+		line-height:40px;
+		padding-right:20px;
+		z-index:5;
+	}
+	.skillbar .skill_bar{
+		width:0;
+		/*0 넓이인 점을 기억해두셈*/
+		height:40px;
+		position:absolute;
+		left:0;
+		top:0;
+		background-color:salmon;
+	}
+
+
+
+</style>
+<script>
+$(function(){    
+   $(window).scroll(function(){
+        var sct = $(window).scrollTop();
+        var off = $("#about").offset().top;
+        var h = $(window).height(); // 뷰포트 높이
+
+        // #about 섹션이 뷰포트에 들어왔을 때 애니메이션 실행
+        if(sct + h > off && !$('#bar').hasClass('animated')) {
+            graph();  // 애니메이션을 한 번만 실행
+            $('#bar').addClass('animated');  // 애니메이션 완료 후 실행 방지
+        }
+   });
+
+   function graph(){
+    $('.skillbar').each(function(){
+        var percent = $(this).attr("data-percent");  // data-percent 값 가져오기
+        $(this).find('.skill_bar').animate({
+            "width": percent + "%"  // width 애니메이션
+        }, 5000);
+    });
+   }
+});
+
+</script>
+
+</head>
+<body>
+    <div id="wrap">
+		<div class="section" id="main">
+			<h1 data-percent="99">00</h1>
+		</div>
+		<div class="section" id="about">
+			<div id="bar">
+				<div class="skillbar" data-percent="85">
+					<div class="skill_title">HTML5</div>
+					<div class="skill_bar"></div>
+					<div class="skill_percent Count">85</div>
+				</div>
+				<div class="skillbar" data-percent="98">
+					<div class="skill_title">CSS3</div>
+					<div class="skill_bar"></div>
+					<div class="skill_percent Count">98</div>
+				</div>
+				<div class="skillbar" data-percent="87">
+					<div class="skill_title">jQuery</div>
+					<div class="skill_bar"></div>
+					<div class="skill_percent Count">87</div>
+				</div>
+				<div class="skillbar" data-percent="98">
+					<div class="skill_title">Java</div>
+					<div class="skill_bar"></div>
+					<div class="skill_percent Count">80</div>
+				</div>
+				<div class="skillbar" data-percent="100">
+					<div class="skill_title">Spring</div>
+					<div class="skill_bar"></div>
+					<div class="skill_percent Count">75</div>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+</body>
+</html>

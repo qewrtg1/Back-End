@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+    $(function(){
+        var count = 0 ;
+        var text1 = $('#text');
+        var msg; //메세지 약자
+        var comp;
+        var kkk; 
+        
+        main();
+
+        function main(){
+            msg = text1.text();
+            // alert(msg)
+            comp =msg.length //글자의 개수를 컴프에 넣는 것.
+            // alert(comp); 31
+
+            tatata();
+
+        }
+        function tatata(){
+            if(count <= comp ){ //31보다 작다면
+                kkk = msg.substring(0,count) // substring은 06에서 했음
+                text1.text(kkk);
+                count++;
+                setTimeout(tatata, 100) //tatata에 있는 함수를 0.1초마다 부르겠다? //재귀함수호출 이라고  함
+            }else{ //else 넣기 이전엔 딱 한번만 실행됐음
+                count=0;
+                main(); //이제 반복할거임
+            }
+        }
+
+    });
+</script>
+    
+</head>
+<body>
+    <h1 id='text'>타이핑 효과를 시험해 보세요 타다다다다 이렇게 쳐집니다.</h1>
+</body>
+</html>
