@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+:root {
+    --swiper-theme-color: #fefefe;
+}
+body{font-family: 'Noto Sans KR', sans-serif; }
+.cf:after{
+    content:"";
+    display: block;
+    clear: both;
+}
