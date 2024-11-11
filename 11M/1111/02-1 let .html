@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function example() {
+    // console.log(b); // referneceError : 초기화 전임으로 접근 불가능(TDZ)
+    let b = 10;
+    // let b = 20; //  재선언 안됨
+
+    b = 30;  // 이렇게 재할당은 가능함
+
+    console.log(b); // 30
+} //그러나 최종적으론 접근이 안됨. 그래서 콘솔 로그(10번줄)을 주석처리
+example();
+
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//객체를 프로퍼티로 품을 수 있음 프로퍼티: {}를 말하나봄? 확실하지 않음
+    const sam = {
+        name : "Sam",
+        info:{
+            age : "20",
+            class: "Javascript",
+        },
+    };
+
+    document.write(sam.name, "<br>");
+    document.write(sam.info.age, "<br>");
+    document.write(sam.info.class, "<br>");
+    document.write(sam.info["age"], "<br>");//가져올 수 있는 방법은 많다.
+    document.write(sam["info"].age, "<br>");
+    document.write(sam["info"]["age"], "<br>","<br>");  
+    // document.write(sam["info"]"<br>");// 이건 안되나봄
+    //함수도 담을 수 있다.
+    
+    sam.etc = function( ){
+        return "Bonk!";
+    };
+    // sam.etc(); //"Bonk!"
+    // document.write(sam.etc, "<br>"); // 이렇게하면 전체가 다 나옴
+    document.write(sam.etc(), "<br>");
+    
+    delete sam.info;
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
