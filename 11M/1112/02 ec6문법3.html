@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//2. 객체 해체
+
+
+    const person = {
+        name:"Alice",
+        age : 25,
+        country : "USA"
+    }
+    //객체 해체
+    const{name, age, country} = person;
+    console.log(name);
+    console.log(age);
+    console.log(country);
+    console.log(person);
+
+
+
+
+//변수명 변명 및 기본값 설정
+    
+    const user ={
+        username : "John",
+        email : "1234@gmail.com"
+    }
+    //변수명 변경하고 기본값을 설정해볼 거임
+
+    const{username:name1 , email, phone="N/A"} = user;
+    //phone는 없어서 없다는 의미로 N/A
+    console.log(name1); //이렇게 하면 username이  name1로 바뀌어 있다는 걸 알 수 있음
+    console.log(email);
+    console.log(phone);
+
+    console.log(user); //근데 원본은 그대로네.
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

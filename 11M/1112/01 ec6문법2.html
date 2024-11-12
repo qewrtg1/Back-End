@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//1. 
+    const fruits= ["apple","banana", "cherry"]
+    //이 배열을 해체
+
+    const [first,second,third] = fruits // const 안에 1 2 3 에 각각 사과 바나나 체리를 넣겠다는 뜻
+
+    
+    console.log(first);
+    console.log(second);
+    console.log(third);
+    // console.log(fruits); // 해체되도 원본은 남아 있는듯?
+
+//2. 부분해체와 기본값    
+
+    const colors = ["red", "green"];
+
+    //세번째 값은 없음으로 기본값 blue 사용
+    const [primary, secondary, tertiary = "blue"] = colors;
+
+    console.log(primary);
+    console.log(secondary);
+    console.log(tertiary);
+    // console.log(colors);
+
+// 나머지 요소 ... 연산자로 받을 수도 있다?
+    
+    const numbers = [1,2,3,4,5];
+    const [fir, sec, ...rest] = numbers; //여기서 ...은 나머지 값 전체를 의미함
+    
+    console.log(fir);
+    console.log(sec);
+    console.log(rest);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
