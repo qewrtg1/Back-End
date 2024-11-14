@@ -1,0 +1,65 @@
+기초 배경 지식
+
+ 초기화 : 변수를 선언하고 변수에 값을 넣어주지 않았을 때 '초기화 하지 않았다.'라고 표현함
+          : 변수에 최초로 값을 대입하는 행위를 변수 초기화라고 한다. 이때 값을 초기값이라 한다.
+
+ 리터널 : 코드에서 프로그래머가 직접 입력한 값을 리터널이라고 부른다.
+
+
+
+
+
+
+
+
+
+----------이하 명령어 ---------------
+
+
+
+  [System.out.print__]
+	- System : 시스템으로
+ 	- out : 출력하는데 
+ 	- print : 이하 아래 참고
+
+print : 괄호 안의 내용을 출력하고 행은 바꾸지 않는다.
+
+print ln : 괄호 안의 내용을 출력하고 행을 바꿈
+
+print tf : 형식 문자열에 맞춰서 뒤의 값을 출력하라
+ - ex ) System.out.print tf
+	("이름 :" %s  : s는 문자열
+	("나이 :" %d  : d는 정수, f는 실수
+
+
+
+
+Scanner : 객체 생성 하는 명령어.
+ -  사용자로부터 데이터를 입력받고, 그 입력값을 프로그램 내에서 사용할 수 있는 형식으로 변환함
+
+예시  
+        Scanner scan = new Scanner(System.in);
+        System.out.println();
+        System.out.print("하나의 단어를 입력받아 그대로 출력해보자: (ex_Informatics)");
+        String word = scan.nextLine();
+
+1)객체 생성
+
+Scaner: 객체 이름임 맘대로 쓰면 됨
+new Scanner(System.in) : 새로운 콘소를 입력하고 값을 받는다. 
+	- System.in : 콘솔 입력 창에서
+
+2)입력 메서드 사용
+대표적으로 nextInt(), nextDouble(), nextLine(), next() 등이 있습니다.
+
+
+nextLine 와 next의 차이
+	// 차이점 : next는 단어까지만. 
+	// nextLine은 문장까지 담을 수 있음
+
+
+
+
+반복문. 
+ for는 정해진 횟수 반복. 
+ while은 무한정

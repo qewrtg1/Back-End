@@ -1,0 +1,72 @@
+
+간단 요점만 정리함
+
+header 등 태그에서 margin 태그가 이상하게 적용 될 경우
+ : '마진 병합 현상' 이라고 검색하면 도움이 될 것
+
+        width: 100%; 
+        margin: 0 auto; : 100퍼센트라 중앙정렬 할 게 없음 
+    }
+
+
+https://devinus.tistory.com/69 / 임시 이미지 사이즈 만드는 법
+
+
+
+jquery ui(홈페이지)
+
+bxslider (홈페이지)
+
+
+프로그래머스 lv4 이상의 문제를 풀수있어야 함
+
+
+포트폴리오 : 벨로그(velog) 사이트 참고
+
+
+https://blog.outsider.ne.kr/322 :자바스크립트 키보드 키코드"
+
+
+
+https://velog.io/@mongsukim/swiper-%EC%9E%AC%EC%83%9D-%EC%A0%95%EC%A7%80-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+swiper 재생, 정지 자바스크립트
+
+
+https://fontawesome.com/search?q=sun&o=r  : 아이콘 어썸 5.15버전 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://openweathermap.org/ : 날씨 관련 해서
+https://openweathermap.org/weather-conditions :아이콘 관련인가봄
+// b626657550e4e22e64603be521869ddd : 키값 
+b626657550e4e22e64603be521869ddd
+//1835553 : 수원
+//http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}  : 기본값
+
