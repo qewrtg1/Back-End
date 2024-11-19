@@ -1,8 +1,8 @@
-package a1118;
+package a1119;
 
 import java.util.Scanner;
 
-public class A_7Marray2 {
+public class A_2Marray2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -24,7 +24,37 @@ public class A_7Marray2 {
            System.out.printf("학생%d의 총점, %d, 평균: %.2f\n",i+1, sum, avg);
         }
 
+
+
+
+
+
+
 //숙제 전체 총점 . 전체 평균을 구하시오.
-//1119 2-2
+
+
+        int totalSum = 0;
+        int totalSub = 0;
+
+        for(int i = 0; i < scores.length;i++){
+
+            // totalSub = totalSub + scores[i].length; //(1)이렇게 총 (과목?)을 구할 수도 있고
+
+            for(int j=0; j < scores[i].length;j++){
+                totalSum = totalSum + scores[i][j];
+            }
+        } //여기까지가 총합
+        totalSub = scores.length * scores[0].length;  //(1)이렇게 구할 수도 있음
+        
+        System.out.println("총 과목"+totalSub);
+
+        double totalAvg = (double)totalSum / totalSub;
+        System.out.printf("전체 총점: %d, 전체 평균: %.2f\n", totalSum, totalAvg);
+
+
+
+
+
+
     }
 }

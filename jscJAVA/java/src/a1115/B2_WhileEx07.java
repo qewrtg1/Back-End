@@ -32,10 +32,6 @@ public class B2_WhileEx07 {
                     // balance = balance+money;  //(1-1) : 변수를 따로 사용하여 입력받고 진행하는 방법1.
                     balance += Integer.parseInt(sc.nextLine()); //변수를 따로 만들고 싶지않을때 이렇게 한번에 요약해서 사용할 수 있음
                     break;
-
-
-
-
                 case 2:
                     System.out.print("출금액>");
                     balance -= Integer.parseInt(sc.nextLine()); 
