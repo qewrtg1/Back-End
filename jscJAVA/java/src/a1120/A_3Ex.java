@@ -1,6 +1,6 @@
 package a1120;
 
-import javax.management.relation.Role;
+// import javax.management.relation.Role; 이거 그냥 잘못 가져온듯?
 
 public class A_3Ex {
     public static void main(String[] args) {
