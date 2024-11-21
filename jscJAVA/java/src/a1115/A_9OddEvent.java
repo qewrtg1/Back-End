@@ -15,7 +15,7 @@ public class A_9OddEvent {
         while (a<=20) {
             //홀수
             if(a % 2 == 1){
-                sum1 += a;
+                sum1 += a; // sum1 = a + sum1
             }
 
             //짝수
@@ -23,6 +23,7 @@ public class A_9OddEvent {
                 sum2 += a;
             }
             a++;
+
         }
         System.out.println("홀수의 합계 : " + sum1);
         System.out.println("짝수의 합계 : " + sum2);

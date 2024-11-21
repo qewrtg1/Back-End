@@ -22,18 +22,9 @@ public class B_2_2Hak09 {
 
 
 
-
-
-
-
             System.out.print("선택>");
 
             try{ // 이거랑 (1-1)
-
-
-
-
-
 
 
 
@@ -60,11 +51,6 @@ public class B_2_2Hak09 {
                     continue;
                 }
                 //더 좋은 방법도 있지만 당장은 이렇게 해서 모든 for문에 넣어주면 임시 해결 가능? 한듯
-
-
-
-
-
 
 
 

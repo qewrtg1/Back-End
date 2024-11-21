@@ -59,7 +59,7 @@ ul{list-style: none;}
 
         $('#navi>li>a').click(function(){
                 var abc =  $(this).next('.sub').css('display'); //(1-1)display의 상태를 물어보는 문구임. 열려있는지(block?), none인지.
-                alert(abc);
+                // alert(abc);
 
                 if(abc == 'none'){  //(1-1) 그래서 display(abc)가 none면, 닫게하고. 아니면 열게 하는걸 아래 만든 것
                     $('.sub').slideUp(); //모든 서브를 up(닫고)하고
