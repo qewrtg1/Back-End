@@ -1,4 +1,4 @@
-package class1;
+package a1120.class1;
 
 
 public class A1_StudentEx {

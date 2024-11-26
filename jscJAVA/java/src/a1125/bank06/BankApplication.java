@@ -3,12 +3,14 @@ package a1125.bank06;
 import java.util.Scanner;
 
 public class BankApplication {
+
     private static Account[] accountArray = new Account[100]; //100이 아니라 100개의 방
 //모든 계좌 정보를 저장할 곳임
 //하나의 배열에 저장함으로 새로운 배열을 만들 필요가 없음. = 그러기 위해서 static을 씀
 
     private static Scanner scanner =new Scanner(System.in);
 
+    
     public static void main(String[] args) {
         boolean run = true;
 

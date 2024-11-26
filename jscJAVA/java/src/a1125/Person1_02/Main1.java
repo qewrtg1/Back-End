@@ -9,6 +9,8 @@ public class Main1 {
 
         System.out.println(person1.getName());
         System.out.println(person1.getAge());
+        System.out.println(person2.getName());
+        System.out.println(person2.getAge());
 
         // Person.count;  //이건 그냥 안된다?
         // System.out.println(Person.count); //private라서 접근이 안되는 모습.

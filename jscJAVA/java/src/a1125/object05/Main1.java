@@ -14,7 +14,7 @@ public class Main1 {
         
                 if(result){
                     System.out.println("로그인되있습니다.");
-                    memberService.logout("hong");
+                    // memberService.logout("hong"); 왠진 몰라도 이거 안 만들었음
                 }else{
                     System.out.println("id 또는 passward가 올바르지 않아요");
                 }

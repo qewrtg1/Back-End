@@ -6,6 +6,9 @@ public class Account {
     private String owner; // 계좌 주소
     private int balance; //잔액
 
+
+
+
     public Account(String ano, String owner, int balance) {
         this.ano = ano;
         this.owner = owner;
