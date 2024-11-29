@@ -17,8 +17,8 @@ public class Compare1 {
 //  값이 같은 a라서 => 0이 나옴
 
 
-        System.out.println(str2.compareTo(str1)); // 1 
+        System.out.println(str2.compareTo(str1)); // +1 
 //  b가 더 커서 양수.1이 나옴
-
+//compareTo: 이퀄스처럼 compareTo,라는 메소드가 있는 거임.
     }
 }

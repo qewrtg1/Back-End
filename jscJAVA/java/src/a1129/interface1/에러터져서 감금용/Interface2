@@ -1,0 +1,58 @@
+package a1129.interface1;
+
+
+interface Flyable{
+    void fly();  // 자바 8 이후로 일반 메서드 정의가 가능하다
+
+    // void sleep(){
+    //     System.out.println();
+    // }; // 이런 느낌(내용이 있는)은 안된다. 그러나 꼭 쓰고 싶다면 
+
+    default void sleep(){
+        System.out.println();
+    }; // 자바 8 이후 default를 쓴 메서드는 사용할 수 있다. 오버라이드도 가능
+    static void sleep2(){
+        System.out.println();
+    }; // 정적 변수(static)으로도 만들 수 있음. 그러나 오버라이드로 상속이 안됨.
+       // 대신, 객체를 만들지 않고 Flyable.sleep2(), 직접 호출이 가능함
+
+
+    static void abcde(){
+        System.out.println();
+    };//무조건 flyable만 되나봄.
+}
+
+
+interface Swimmalbe{
+    void Swim();
+}
+
+
+class Bird implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("새가 난다");
+        Flyable.sleep2();
+    }
+
+}
+
+class Fish implements Swimmalbe {
+
+    @Override
+    public void Swim() {
+        System.out.println("물고기가 수영한다.");
+        Flyable.abcde();
+    }
+
+}
+
+//2_1은 그냥 지저분해서 만듬
+
+public class Interface2{
+    public static void main(String[] args) {
+        Bird bird = new Bird();
+        System.out.println(bird);
+        bird.fly();
+    }
+}
