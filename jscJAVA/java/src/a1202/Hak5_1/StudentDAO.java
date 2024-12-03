@@ -1,4 +1,4 @@
-package a1202.Hak5;
+package a1202.Hak5_1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,6 +8,8 @@ public class StudentDAO {
     
     private ArrayList<StudentDTO> slist; //S, list 라는 이름인거임
     Scanner sc = new Scanner(System.in);
+
+    // FileClass file = new FileClass("student", "student_Grade");
 
     public StudentDAO(){ //생성 메서드를 만듬
         slist = new ArrayList<StudentDTO>(); // StudentDTO 는 <>안에 안 써도 자동인식되지만 보고 이해하라고 적어둠
@@ -71,47 +73,47 @@ public class StudentDAO {
 
 
     public void userInsert() {
-        System.out.println("<학생을 추가하기>");
-        System.out.print("이름 :");
-        String name = sc.next();
-        System.out.print("나이 :");
-        int age = sc.nextInt();
-        System.out.print("국어 :");
-        int kor = sc.nextInt();
-        System.out.print("영어 :");
-        int eng = sc.nextInt();
-        System.out.print("수학 :");
-        int math = sc.nextInt();
+        // System.out.println("<학생을 추가하기>");
+        // System.out.print("이름 :");
+        // String name = sc.next();
+        // System.out.print("나이 :");
+        // int age = sc.nextInt();
+        // System.out.print("국어 :");
+        // int kor = sc.nextInt();
+        // System.out.print("영어 :");
+        // int eng = sc.nextInt();
+        // System.out.print("수학 :");
+        // int math = sc.nextInt();
 
-        StudentDTO student = new StudentDTO(slist.size(), name, age, kor, eng, math);
-
-
-        slist.add(student); // 배열 slist +  StudentDTO student = new S...
-        System.out.println(slist); // 1번 방식. 이렇게 했던 게 지금까지 배웠던 거고
+        // StudentDTO student = new StudentDTO(slist.size(), name, age, kor, eng, math);
 
 
-    // StudentDTO s = new StudentDTO();
-    //     s.setId(slist.size());
-    //         System.out.println("<학생 추가하기>");
-
-    //         System.out.print("이름 : " );
-    //     s.setName(sc.next());
-    //         System.out.print("나이 : ");
-    //     s.setAge(sc.nextInt());
-    //         System.out.print("국어점수 : ");
-    //     s.setKor(sc.nextInt());
-    //         System.out.print("영어점수 : ");
-    //     s.setEng(sc.nextInt());
-    //         System.out.print("수학점수 : ");
-    //     s.setMath(sc.nextInt());
-
-    //     // slist.add(s);
-    //     //이게 두번째 방법임. 1번 방법과 같은 결과임
+        // slist.add(student); // 배열 slist +  StudentDTO student = new S...
+        // System.out.println(slist); // 1번 방식. 이렇게 했던 게 지금까지 배웠던 거고
 
 
-    //     insert(s);//이후 메서드는 위로 올림
+    StudentDTO s = new StudentDTO();
+        s.setId(slist.size());
+            System.out.println("<학생 추가하기>");
 
-    //     System.out.println(slist);
+            System.out.print("이름 : " );
+        s.setName(sc.next());
+            System.out.print("나이 : ");
+        s.setAge(sc.nextInt());
+            System.out.print("국어점수 : ");
+        s.setKor(sc.nextInt());
+            System.out.print("영어점수 : ");
+        s.setEng(sc.nextInt());
+            System.out.print("수학점수 : ");
+        s.setMath(sc.nextInt());
+
+        // slist.add(s);
+        //이게 두번째 방법임. 1번 방법과 같은 결과임
+
+
+        insert(s);//이후 메서드는 위로 올림
+
+        System.out.println(slist);
 
     }
 
@@ -210,6 +212,13 @@ public class StudentDAO {
             for(int i = 0; i < slist.size(); i++){ //arraylist slist.size() = 배열 .length
                 System.out.println(slist.get(i).toString());
             }
+            
+        }
+
+
+
+        public void dataSave() {
+            // file.create(); 
             
         }
                 

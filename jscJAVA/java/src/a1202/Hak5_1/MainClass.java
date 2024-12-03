@@ -1,4 +1,4 @@
-package a1202.Hak5;
+package a1202.Hak5_1;
 
 // import java.util.ArrayList;
 import java.util.Scanner;
@@ -56,6 +56,8 @@ public class MainClass {
 
             }else if(choice == 5){
                 test.printAll();
+            }else if(choice == 6){
+                test.dataSave();
             }
 
 

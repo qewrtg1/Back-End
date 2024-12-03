@@ -1,4 +1,4 @@
-package a1202.Hak5;
+package a1202.Hak5_1;
 
 public class StudentDTO {
     //각종 전달할 변수를 선언하자

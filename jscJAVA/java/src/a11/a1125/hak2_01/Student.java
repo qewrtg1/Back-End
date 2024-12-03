@@ -1,6 +1,8 @@
 package a11.a1125.hak2_01;
 
 public class Student {
+
+    
     private String name;
     private int StudentId;
     private int kor, math, eng; //인스턴스 변수.
