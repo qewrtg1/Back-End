@@ -15,13 +15,15 @@ public class Coffee {
             instance = new Coffee();
         }
         return instance;
-    }
+    }// 객체를 하나만 만든다 = 싱글톤 패턴.
 
-    ArrayList<String> coffeeList; //커피의 종류
+
+    ArrayList<String> coffeeList; //커피의 종류, 예시)아메리카노 카푸치노 같은 것.
     ArrayList<Integer> coffeePrice; //커피의 가격
-    Map<String, Integer> menu; //menu [커피종류, 커피가격]
+    Map<String, Integer> menu; //menu [커피종류, 커피가격] 둘 다 받아서 => {아메리카노, 2000} 이렇게 만들려고 만든 것?
     
-    public void getMenu(){
+
+    public void getMenu(){//커피 서비스java에서 부를 내용.
         menu = new LinkedHashMap<String, Integer>();//순서가 있는 Map
         coffeeList = new ArrayList<>();
         coffeePrice = new ArrayList<>();
@@ -40,21 +42,25 @@ public class Coffee {
         coffeePrice.add(3000);
         coffeePrice.add(3500);
 
-        for(int i = 0; i < coffeeList.size();i++){
-            menu.put(coffeeList.get(i),coffeePrice.get(i));
+        for(int i = 0; i < coffeeList.size();i++){ //0~5까지
+            menu.put(coffeeList.get(i),coffeePrice.get(i)); //get: list에 있는걸 뽑아올 때 쓰려고 있는 것
         }  // menu1[아메리카노, 2000]
         // menu2[카푸치노, 4500]
+
+
+
         DecimalFormat f = new DecimalFormat("0,000원");
         StringBuffer st = new StringBuffer();
         st.append("\n\n")
             .append("+---------------------------------------------------+\n")
             .append("+------------------------메뉴판----------------------+\n")
             .append("|            Menu                   price           |\n");
+   
         System.out.println(st.toString());
         int s = 1;
         for(Entry<String, Integer> get : menu.entrySet()){
             System.out.printf("| [%d번] %-20s\t: %s      |\n"
-            , s, get.getKey(), f.format(get.getValue()));
+            , s, get.getKey(), f.format(get.getValue())); //포멧이 뭐하는 거였는지 까먹었다.
             s++;
         } 
         System.out.println("+-------------------------------------------------+\n");

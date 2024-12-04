@@ -4,7 +4,9 @@ import java.io.File;
 
 public class DirectoryCheck {
     public static void main(String[] args) {
+
         File dir = new File("testDir");
+
         if (dir.exists() && dir.isDirectory()) { // exists(): 존재하냐 안하냐 유무 파악용?
             String[] list = dir.list();
             
@@ -26,7 +28,7 @@ public class DirectoryCheck {
 
 
 
-// exists(): 파일 또는 디렉토리가 존재하는지 확인
+// exists(): 파일 또는 디렉토리가 존재하는지 확인 *디렉토리(Directory)는 파일을 담고 있는 폴더
 // isDirectory(): 디렉토리인지 확인
 // isFile(): 파일인지 확인
 // getName(): 파일 또는 디렉토리 이름 반환

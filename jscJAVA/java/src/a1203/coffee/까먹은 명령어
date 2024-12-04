@@ -1,0 +1,5 @@
+// coffee.java
+싱글톤.
+format, append도 까먹었다  
+DecimalFormat f = new DecimalFormat("0,000원");
+StringBuffer st = new StringBuffer();
