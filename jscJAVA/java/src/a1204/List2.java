@@ -104,32 +104,9 @@ public class List2 {
         
         
                 
-                
-                
-                
-                
-                
-        
-                
-                
-                
-
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            //ArrayList 출력 메서드
+    //ArrayList 출력 메서드
     private static void printList(List<Student> studentList) {
         for(Student student : studentList){
             System.out.println(student);

@@ -51,7 +51,7 @@ public class Map1_1 {
 // Integer는 인덱스 번호 말고 값을 구분할 수 있는 키 값을 별도로 넣어줌. (일종의 번지? 인듯)
 
 
-    // 객체 추가
+    // 객체 추가(list에서 add같은 놈)
     studentMap.put(1, new Student(101, "Alice", 20));
     studentMap.put(2, new Student(102, "Bob", 22));
     studentMap.put(3, new Student(103, "Charlie", 21));
@@ -63,9 +63,10 @@ public class Map1_1 {
 //entry뜻 : 항목
 
 // Map.Entry<Integer, Student>  : 모름
-// entry: 이 객체의 이름
+// entry: 이 객체의 이름 // 앞에 있는 Entry와 뒤 entry는 관계없.
 // studentMap : map생성한 초기 변수명
-// entrySet : 자바에서 정해준 메서드 이름?
+// entrySet : 자바에서 정해준 메서드 이름? s
+//키와 값의 쌍으로 구성된 모든 Map.Entry 객체를 Set 에 담아서 리턴한다. Set 타입을 리턴한다.
     System.out.println("key "+entry.getKey() + ".value:" +entry.getValue());
     }
 
