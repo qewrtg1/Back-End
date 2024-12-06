@@ -1,0 +1,42 @@
+우선 씀.
+integer _)
+//완전한 것, 완전체, 정수 (명사). 발음 : [ín 인 ti 티 dʒər 져] 
+//정수. 소수 또는 소수점 구성 요소 없이 쓸 수 있는 숫자. 
+
+
+
+
+
+int :   int는 변수의 타입(data type = 자료형, 이라고 부름).
+
+   - 변수) 변수(variable)는 '값을 저장할 수 있는 메모리 상의 공간'(임의로 이름 짓는 거, 파란색 글씨)
+
+   - 자료형) 'data의 type에 따라 값이 저장될 공간의 크기와 저장 형식을 정의한 것
+	- 자료형은 기본형(primitive type)과 참조형(referece type)이 있음
+	- 기본형은 많이 보던 거, boolean, char int long float double 같은 거임
+
+integer :  
+	매개변수로 객체를 필요로 할 때
+	기본형 값이 아닌 객체로 저장해야할 때
+	객체 간 비교가 필요할 때
+
+기본형을 객체로 다루기 위해 사용하는 클래스들을 래퍼 클래스(wrapper class)라 하며
+Integer는 int의 레퍼클레스 이다.
+모든 기본형은 래퍼클래스를 생성할 수 있다. (char와 int빼곤 다 대문자로 바꾸면 끝)
+
+
+
+
+차이점(솔직히 봐도 모르겠더라)
+
+int : 자료형(primitive type)
+
+산술 연산 가능함
+null로 초기화 불가
+Integer : 래퍼 클래스 (Wrapper class)
+
+Unboxing하지 않을 시 산술 연산 불가능함
+null값 처리 가능
+**
+boxing : primitive type -> wrapper class 변환 ( int to Integer )
+unboxing : wrapper class -> primitive type 변환 ( Integer to int )
