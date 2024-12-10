@@ -3,7 +3,7 @@ package a1201.hak5;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import a1201.Exception1.Exception1;
+
 
 public class StudentDAO {
     private ArrayList<StudentDTO> slist;

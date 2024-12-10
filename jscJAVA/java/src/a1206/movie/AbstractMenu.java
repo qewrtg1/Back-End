@@ -2,7 +2,7 @@ package a1206.movie;
 
 import java.util.Scanner;
 
-abstract class AbstractMenu implements Menu{
+abstract class AbstractMenu implements Menu{ //implements: 인플리멘츠_구현하다
 //추상클래스
 //  abstract 클래스는 Menu 인터페이스를 구현하며, 추후 메인메뉴(Mainmenu)
 //와 관자메뉴(AdminMenu)의 부모클래스가된다.

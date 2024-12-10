@@ -37,10 +37,10 @@ public class Reservation {
                     System.out.println("\n 예약가능한 숙소를 조회합니다.");
                     manager.disAvailAccommodations();// disAvailAccommodations라는 메서드를 하나 만들 거임. 처음엔 당연히 없고 이후에 만들어짐.
                     //메서드를 만들면 acc매니저에 가있음
+                    
+                    // System.out.println("\n 1. 처음으로 되돌아가기 2. 숙소 예약하기");
+
                     break;
-
-
-
                 case 2:
                     System.out.println("\n 숙소를 예약합니다.");
                     System.out.print("예약하려는 숙소의 이름을 입력하세요: ");

@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.nio.Buffer;
+// import java.nio.Buffer;
 
 public class FileClass {
     private File file; //자바에서 제공하는 파일 객체를 저장
