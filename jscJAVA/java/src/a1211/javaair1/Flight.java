@@ -107,7 +107,7 @@ public String getDestination() {
 // [1-3] toString , 목적지와 시간만 넣음.
     @Override
     public String toString() {
-        String priceComma= priceFormat.format(price); // 위에 만든 값을 쓰려고 이렇게 메소드 적용
+        String priceComma = priceFormat.format(price); // 위에 만든 값을 쓰려고 이렇게 메소드 적용
         //포멧 메서드 사용(활용)하는 방법이란 느낌으로 공부하면 됨
         return " ." + "목적지: " + destination + ", 출발 시간" + time + ", 가격: "+ priceComma;
     }
