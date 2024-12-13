@@ -1,0 +1,60 @@
+package a1129.interface1;
+// 인터페이스 : 중앙 처리 장치와 그 주변 장치를 서로 잇는 부분. 또는, 그 접속 장치.
+//(위는 사전적 의미임)
+
+interface Animal {//최근 인터페이스를 사용할 땐 추상클래스 위주로 사용하는 게 추세라고 한다
+    //일반 메소드 생성시 에러 생김(애초에 못 쓰는 듯?)
+
+
+    public abstract void cry(); // 추상 클래스 생성.
+    
+}
+
+
+
+//implements: 인터페이스를 상속받을 때 사용하는 키워드임.
+class Cat implements Animal{
+
+    @Override
+    public void cry() {
+        System.out.println("야옹야옹");
+    }
+
+
+}
+class Dog implements Animal{
+    @Override
+    public void cry() {
+        System.out.println("멍멍멍멍");
+    }
+}
+// 요컨대, 일반 메서드를 못 쓰니까 인터페이스는 더욱 추상적이게 됨.
+
+
+//java는 기본적으로 다중상속이 안 됨. 
+// but 유일하게 가능하게 만들어주는 것이 interface.
+
+
+
+public class Interface1 {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        Dog d = new Dog();
+        
+        c.cry();
+        d.cry();//출력
+
+
+        //업 캐스팅
+        Animal e = new Cat();
+        Animal f = new Dog();
+
+        e.cry();
+        f.cry();
+
+
+
+
+
+    }
+}

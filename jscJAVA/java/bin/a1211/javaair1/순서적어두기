@@ -1,0 +1,20 @@
+Flight 프라이트 라고 읽나봄
+
+Passenger
+
+
+FlightManger -> 잠깐 FileC 갔다가 다시 돌아옴.(아마 미리 만들어도 될듯 메서드 역할이니까.)
+
+
+FileC ->FlightManger
+
+
+FlightReservationMain
+
+
+만들다가 어디 고장났음. 자동으로 프로그램 종료하는 명령어가 섞여 있을 것. 
+
+정담은 javaAir임. air1은 공부용
+
+
+파일 저장하고 마는 것에 대해선 크게 집착하지 말 것. 
